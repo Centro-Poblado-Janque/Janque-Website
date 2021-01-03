@@ -1,7 +1,7 @@
 
 # Janque Town Center 
 > Visit __[cp-janque.com](https://cp-janque.com)__ for view this Website
-#### **This projects make with [`Nuxt`](https://nuxtjs.org/) and [`Vue`](https://vuejs.org/)**
+#### **This project was made with [`Nuxt`](https://nuxtjs.org/) and [`Vue`](https://vuejs.org/)**
 
 > The website of the town of __[Janque](https://cp-janque.com)__ is made to show the beauty of its town, and make it public in the world, and that people feel proud of it.
 #### Developed by [Alex Segundo](https://github.com/Segundo-hub)
