@@ -1,7 +1,12 @@
 let data = 'Alex Segundo';
 export default{
-    target: 'static',
     srcDir: './',
+    target: 'static',
+    loadingIndicator: {
+        name: 'fading-circle',
+        color: '#214524',
+        background: 'white'
+    },
     head: {
         title: 'Centro Poblado Janque - Inicio',
         link: [

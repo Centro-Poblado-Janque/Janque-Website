@@ -10,6 +10,7 @@
 
 <script>
 import { Fragment } from 'vue-fragment'
+import icon from './../static/logo.svg'
 import AppFooter from '../components/layout/AppFooter.vue'
 import AppNavigation from '../components/layout/AppNavigation.vue'
 export default {
@@ -17,13 +18,32 @@ export default {
         Fragment,
         AppNavigation,
         AppFooter
+    },
+    head(){
+      return {
+        link: [ { rel:'icon', href: icon }]
+      }
     }
 }
 </script>
 
 <style lang="scss" >
 @import './../static/libs/theme';
-
+@media screen and (min-width: $desktop_breakpoints) {
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+  background-color: #1b272f;
+  border-radius: 5px;
+  &-thumb{
+    background-color:#1b272f;
+    border-radius: 5px;
+  } 
+  &-track {
+    background: #566169;
+    }  
+  }
+}
 html{
   background-color: $background_primary;
   height: 100%;
@@ -38,30 +58,21 @@ html{
   margin: 0;
   padding: 0;
 } 
-::-webkit-scrollbar{
-  width: 8px;
-  height: 8px;
-  background-color: grey;
-  border-radius: 3px;
-  &-thumb{
-    background-color: #f1f1f1;
-    border-radius: 3px;
-  }   
-}
 
 body{
   -webkit-font-smoothing: antialiased;
   color: $color_text_base;
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
-  overflow-x: hidden;
   display: flex;
+  overflow-x: hidden;
   flex-wrap: nowrap;
   flex-direction: column;
   text-rendering: optimizeLegibility;
 }   
 main{
   width: 100vw;
+  overflow-x: hidden;
 }
 a{
   color: $color_link;
