@@ -1,0 +1,53 @@
+:root{
+
+/* =========   COLOR PALLETE   ========== */
+
+    --dark-primary              : #1C2120;
+    --dark-light                : #525554;
+    --dark-active-link          : #8d8c8cc7;
+    --light-primary             : #fbfbfe;
+    --light-second              : #d8d8d8;
+    --light-border-1            : #c9c9c9;
+    --gap                       : 2rem;
+    --text-body                 : #4c5251;
+    --text-dark                 : #353d3c;
+
+    --dark-shadow               : #8a8a8a;
+    --light-error               : #cac0b9;
+
+    --dark-light-100            : #aaaaaa;
+    --dark-light-200            : #868686;
+    --dark-300                  : #313131;
+
+    --bg-opacity                : rgba(0,0,0,.9);
+    --text-color-primary        : #414645;
+    --bg-error                  : #d35216;
+    --blog-title-color          : #4c5251;
+    --blog-title-color-white    : #c5cccb;
+    --card-bg-blog              : #f7f7f7;
+    --card-border-bg            : #eeeeee;
+
+
+/* ========== FONTS  ============= */
+    --blog-font                 : 'Open Sans', sans-serif;
+    --blog-title-font           : 'Nunito', sans-serif;
+}
+:root.dark_mode{
+    --dark-primary              : #efefef;
+    --light-second              : #1c2120;
+    --light-border-1            : #555555;
+    --white-primary             : #525554;
+    --text-dark                 : #838383;
+}
+
+    $device_pixel_radio : 2;
+    $phone_breakpoints : 400px;
+    $tablet_breakpoints : 890px;
+    $desktop_breakpoints: 1200px;
+
+@mixin normalize_img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}

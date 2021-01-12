@@ -11,6 +11,7 @@
                     <footer-details />
                 </div>
             </Grid>
+            <h5 class="copyright">Copyright {{date}} &copy | Janque - All right reserved</h5>
         </Container>
     </footer>
 </template>
@@ -29,17 +30,28 @@ export default {
         FooterLogoOne,
         FooterLogoTwo,
         FooterDetails 
+    },
+    methods:{
+        getYear(){
+            this.date =  new Date().getFullYear()
+        }
+    },
+    data: () => ({
+        date: 0,
+    }),
+    mounted(){
+        this.getYear()
     }
 }
 </script>
 
 <style lang="scss" scoped>
 .main_footer{
-    background-color: var(--dark-primary);
+    background-color: var(--light-second);
     padding: 2rem 0;
     font-weight: 400;
     font-size: 14px;
-    color: #ffffff80;
+    color: var(--text-dark);
 }
 .footer_info{
     padding: .5rem;
@@ -56,6 +68,14 @@ export default {
             background-color: currentColor;
             left: 0;
         }
+    }
+}
+.copyright{
+    padding-top: 1rem;
+    font-size: 1em;
+    text-align: center;
+    @media screen and(min-width: 1000px) {
+        text-align: left;
     }
 }
 .svg-icon{

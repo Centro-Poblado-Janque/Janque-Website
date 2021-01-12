@@ -15,13 +15,13 @@ const propsBtn = {
 
 const ButtonChild = styled("div", propsBtn)`
     display: inline-block;
-	width: 34px;
-	height: 3px;
+	width: 30px;
+	height: 2px;
 	border-radius: 1px;
 	position: absolute;
 	transition: all .35s;
 	background-color: silver;
-	left: 18px;
+	left: 20px;
 	top: ${props => props.top || '17px' };
 `;
 
@@ -37,11 +37,10 @@ const ToggleButton = styled.a`
 	::after{
 		content: '';
 		display: block;
-		width: 76%;
-		height: 76%;
-		border-radius: 2px;
-		border: .5px solid #404040;
-		margin: 12%;
+		width: 70%;
+		height: 60%;
+		border: 1px solid #404040;
+		margin: 20% 15%;
 	}
 `;
 export default {
@@ -52,9 +51,9 @@ export default {
 	},
 	data(){
 		return{
-			top_one : '21px',
-			top_two : '30px',
-			top_tree : '39px'
+			top_one : '23px',
+			top_two : '32px',
+			top_tree : '41px'
 		}
 	},
 	props:{

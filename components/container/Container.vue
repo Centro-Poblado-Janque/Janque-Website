@@ -15,14 +15,13 @@ export default {
 .container_s{
     max-width: 1400px;
     width: 100%;
-    padding: .25rem;
     margin: 0 auto;
     @media screen and(min-width: $desktop_breakpoints) {
         width: 80%;
         padding: 0;
     }
     @media screen and(min-width: $tablet_breakpoints) {
-        padding: 1rem;
+        padding: 0;
         width: 90%;
     }
 }

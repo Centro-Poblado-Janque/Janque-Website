@@ -1,8 +1,8 @@
 <template>
         <ul>
-            <li itemprop="address">Lima - Perú</li>
-            <li itemprop="address">Bogotá - Colombia</li>
-            <li itemprop="address">Cochabamba - Bolivia</li>
+            <li itemprop="address">Centro Poblado de Janque</li>
+            <li itemprop="address">Incahuasi - Lambayeque</li>
+            <li itemprop="address">Lambayeque - Peru</li>
         </ul>
 </template>
 

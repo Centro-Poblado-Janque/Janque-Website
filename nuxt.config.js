@@ -1,18 +1,31 @@
-let data = 'Alex Segundo';
 export default{
+    modules: ['@nuxt/content'], 
     srcDir: './',
-    target: 'static',
     loadingIndicator: {
         name: 'fading-circle',
-        color: '#214524',
+        color: 'teal',
         background: 'white'
     },
+    target: 'static',
+    generate: {
+        fallback: '404.html'
+    },
+    content: {
+        liveEdit: false
+    },
+    build:{
+        extractCSS: true
+    },
     head: {
+        htmlAttrs: {
+            lang: 'es'
+        },
         title: 'Centro Poblado Janque - Inicio',
         link: [
             { rel: 'autor', content:'Alex Segundo' },
             { rel: 'publisher', href: "<a href='https://segundoalex.com/about'></a>" },
-            { href: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&amp;family=Roboto:wght@100;300;400;500&amp;family=Noto+Sans+JP:wght@300;400;500&amp;display=swap", rel:"stylesheet"}
+            { href: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&amp;family=Roboto:wght@100;300;400;500&amp;family=Noto+Sans+JP:wght@300;400;500&amp;display=swap", rel:"stylesheet"},
+            { href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap", rel:"stylesheet"}
         ],
         meta: [
             { charset: 'UTF-8' },
@@ -22,7 +35,7 @@ export default{
             { name: 'keywords', content: 'Yanque, Janque, Janque.com, Centro Poblado de Janque, Incahuasi-Janque'},
 
             //----Twitter Support------>
-            { name: 'twitter:card', content: data },
+            { name: 'twitter:card', content: '' },
             { name: 'twitter:site', content: ''},
             { name: 'twitter:title', content: ''},
             { name: 'twitter:description', content: ''},
@@ -39,7 +52,8 @@ export default{
             { property: 'website:publish_time', content: '20/12/2020' }
         ],
         script: [
-            { src:"https://kit.fontawesome.com/c5e61bb352.js", crossorigin:"anonymous" }
+            { src:"https://kit.fontawesome.com/c5e61bb352.js", crossorigin:"anonymous" },
+            { src: "/disqus.js"}
         ]
     },
 }

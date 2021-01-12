@@ -1,7 +1,9 @@
 <template>
     <section class="home">
         <header class="top_home">
-
+            <Container>
+                <Caption title="Welcome to Janque Tower City" />
+            </Container>
         </header>
         <div class="data">
             <Container>
@@ -21,23 +23,51 @@
 
 <script>
 import Container from '../components/container/Container.vue'
+import Caption from '../components/styled/Caption.vue'
 
 export default {
-  components: { Container },
-
+  components: { 
+        Container,
+    Caption
+    }
+    
 }
 </script>
 
 <style lang="scss" scoped>
 .home{
-    background-color: #1b1b1b;
-    color: silver
+    color: var(--text-body);
 }
 .top_home{
-    background-image: url('./../assets/img/home_img.png');
+    background-color: #c7c4ac;
     min-height: 80vh;
     padding-top: 80px;
+    position: relative;
+    transition: all .1s ease-in-out;
     background-size: cover;
     background-repeat: no-repeat;
+   /*  animation: change_banner 14s infinite linear;  */
+}
+@keyframes change_banner {
+    0%{
+       background-image: url('./../assets/img/banner_1.png'); 
+    }
+    32%{
+        background-image: url('./../assets/img/banner_1.png')
+    }
+
+    33%{
+       background-image: url('./../assets/img/banner_2.jpg'); 
+    }
+    65%{
+        background-image: url('./../assets/img/banner_2.jpg')
+    }
+
+    66%{
+       background-image: url('./../assets/img/banner_3.png'); 
+    }
+    100%{
+        background-image: url('./../assets/img/banner_3.png')
+    }
 }
 </style>>

@@ -5,6 +5,7 @@
             <nuxt/>
         </main>
         <AppFooter />
+        <script id="dsq-count-scr" src="//cp-janque-com.disqus.com/count.js" async></script>
     </Fragment>
 </template>
 
@@ -19,11 +20,9 @@ export default {
         AppNavigation,
         AppFooter
     },
-    head(){
-      return {
-        link: [ { rel:'icon', href: icon }]
-      }
-    }
+    head: () =>({
+        link: [ { hid:'favicon', rel:'icon', href: icon }]
+    })
 }
 </script>
 
@@ -45,7 +44,7 @@ export default {
   }
 }
 html{
-  background-color: $background_primary;
+  background-color: var(--light-primary);
   height: 100%;
 } 
 *,
@@ -61,7 +60,7 @@ html{
 
 body{
   -webkit-font-smoothing: antialiased;
-  color: $color_text_base;
+  color: var(--text-color-primary);
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   display: flex;
@@ -75,7 +74,6 @@ main{
   overflow-x: hidden;
 }
 a{
-  color: $color_link;
   text-decoration: none;
   outline: none;
   transition: color .2s;
