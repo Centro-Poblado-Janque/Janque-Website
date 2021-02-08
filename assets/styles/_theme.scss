@@ -1,0 +1,109 @@
+
+/* =========   COLOR PALLETE   ========== */
+
+:root{
+    --dark-primary              : #1C2120;
+    --dark-light                : #465458;
+    --dark-active-link          : #2129294d;
+    --light-primary             : #fbfbfe;
+    --light-second              : #eff3f5;
+    --light-border-1            : #c9c9c9;
+    --gap                       : 2rem;
+    --text-body                 : #4c5251;
+    --text-dark                 : #353d3c;
+
+    /* ==== GREY DARK == */
+
+    --grey-dark                 : #25343a;
+    --grey-dark                 : #182327;
+    --grey-second               : #283336;
+
+    --grey-border               : #c7cdd1;
+
+    --dark-shadow               : #8a8a8a;
+    --light-error               : #cac0b9;
+
+    --dark-light-100            : #aaaaaa;
+    --dark-light-200            : #868686;
+    --dark-300                  : #313131;
+
+    --bg-opacity                : rgba(0,0,0,.9);
+    --text-color-primary        : #414645;
+    --bg-error                  : #d35216;
+    --blog-title-color          : #4c5251;
+    --blog-title-color-white    : #c5cccb;
+    --card-bg-blog              : #f7f7f7;
+    --card-border-bg            : #e4e4e4;
+
+    --blue-depth                : #07658a;
+    --blue-depth-200            : #0e7face1;
+
+    --nav-border                : #505757;
+
+
+/* ========== FONTS  ============= */
+    --nav-font                  : 'Noto Sans JP', 'Roboto', sans-serif;
+    --noto-font                 : 'Noto Sans JP', 'Roboto', sans-serif;
+    --blog-font                 : 'Open Sans', sans-serif;
+    --blog-title-font           : 'Nunito', sans-serif;
+}
+:root.dark_mode{
+    //--light-primary             : #242525;
+    --light-primary             : #182327;
+    --dark-primary              : #efefef;
+    --light-second              : #131c1f;
+    --light-border-1            : #555555;
+    --white-primary             : #525554;
+    --text-dark                 : #838383;
+
+    --grey-border               : #2a3b47;
+
+    --card-bg-blog              : #1f2a2e;
+    --card-border-bg            : #1f2c31;
+    --card-border-bg-1          : #243338;
+
+    --blue-depth                : #087ead;
+    --blue-depth-200            : #0b8cbee1;
+
+    --blog-color-txt-content    : #c2c1c1;
+
+    --brand-color               : rgb(133, 133, 133);
+
+    --grey-200                  : #9aabb1;
+
+    --nav-border                : #2c3538ce;
+}
+
+    $device_pixel_radio : 2;
+    $phone_breakpoints : 400px;
+    $tablet_breakpoints : 890px;
+    $desktop_breakpoints: 1200px;
+    $bg-color            : teal;
+
+// =====  MIXINGS  =======//
+
+@mixin normalize_img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+@mixin absolute_position {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+@mixin line_bottom($color){
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 15%;
+        height: 2px;
+        background-color: $color;
+    }
+}

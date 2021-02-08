@@ -26,9 +26,11 @@ export default {
         return{
             title: this.error_title,
             meta: [
-                { name: 'description', content: 'Error page' }
+                { hid: 'description', name: 'description', content: 'This page no exicts with response 404 - Not Found' }
             ],
-            link:[{ hid:'favicon' ,rel:'icon', href: error_icon}]
+            link:[
+                { hid:'favicon' , rel:'icon', href: error_icon}
+            ]
         }
     },
     data: () => ({
@@ -37,7 +39,6 @@ export default {
 
     mounted () {
         this.error_title = 'Error 404 - Not Found';
-        console.log(this);
     },
     components: { 
         Container, 
@@ -49,11 +50,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../static/libs/theme';
+@import './../assets/styles';
 .page-not-found{
-    background-image: url('./../assets/img/error_bg.jpg');
-    @include normalize_img;
     min-height: 100vh;
+    position: relative;
 /*     position: fixed;
     top: 0;
     bottom: 0;
@@ -66,6 +66,19 @@ export default {
         background-color: rgb(180, 76, 28);
         color: whitesmoke;
         border-radius: 2px;
+    }
+    &::after{
+        content: '';
+        display: block;
+        background-image: url('./../assets/img/error_bg.jpg');
+        @include normalize_img;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        filter: brightness(0.2);
     }
 }
 .override{

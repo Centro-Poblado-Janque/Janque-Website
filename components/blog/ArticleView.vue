@@ -1,18 +1,18 @@
 <template>
-    <div class="blog-post-container">
+    <div class="blog-post-container ly_grid ly_grid_10">
         <article class="blog-content lg_grid_7 card-template pg-4">
             <slot></slot>
 
         </article>
         <section class="aside-content lg_grid_3">
-            <article class="autor-content card-template pg-3">
+            <article class="autor-content card-template top-blue pg-3">
                 <slot name="autor-content"></slot>
 
             </article>
-            <aside class="others-blogs card-template pg-3">
+            <div class="others-blogs card-template top-blue pg-3">
                 <slot name="others-blog"></slot>
 
-            </aside>
+            </div>
         </section>
     </div>
 </template>
@@ -23,18 +23,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.blog-post-container{
-    display: grid;
-    grid-template-columns: 100%;
-    column-gap: var(--gap);
-    width: calc(100% - 2rem);
-    margin-left: 1rem;
-    margin-right: 1rem;
-    @media screen and (min-width: 1024px){
-        grid-template-columns: repeat(10,calc(10% - var(--gap)*9/10)); 
-    }
-}
+<style lang="scss">
 .lg_grid_7{
     @media screen and (min-width: 1024px){
         grid-column-end: span 7;  
@@ -49,6 +38,7 @@ export default {
     background-color: var(--card-bg-blog);
     border-radius: .5rem;
     border: 1px solid var(--card-border-bg);
+    position: relative;
 }
 .autor-content{
     display: flex;
@@ -64,10 +54,27 @@ export default {
 }
 .pg-3{
     padding: 1rem;
-    margin-top: var(--gap);
+    margin-top: calc(var(--gap) / 2 );
     @media screen and (min-width: 1024px){
         padding: 1.5rem; 
         margin: 0;  
     }
+}
+.top-blue{
+    &::after{
+        content: "";
+        position: absolute;
+        background: var(--blue-depth);
+        left: 0;
+        height: .20rem;
+        width: 100%;
+        border-radius: 2rem 2rem 0 0;
+        top: 0;
+    }
+}
+.others-blogs{
+    margin-top: calc(var(--gap) / 2 );
+    position: sticky;
+    top: calc(4rem + 32px);
 }
 </style>

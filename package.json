@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nuxt",
+    "gulp": "gulp",
     "build": "nuxt build",
     "generate": "nuxt generate"
   },
@@ -12,6 +13,10 @@
   "author": "alex segundo",
   "license": "LicenseRef-LICENSE",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "@nuxt/content": "^1.11.1",
     "core-js": "^3.8.1",
     "nuxt": "^2.14.12",
@@ -19,6 +24,8 @@
     "vue-styled-components": "^1.6.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "sass": "^1.32.0",
     "sass-loader": "^10.1.0"
   }

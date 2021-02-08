@@ -10,7 +10,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import './../../static/libs/theme';
+@import './../../assets/styles/theme';
 .a-grid{
     display: grid;
     row-gap: var(--gap);

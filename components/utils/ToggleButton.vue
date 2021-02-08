@@ -39,7 +39,7 @@ const ToggleButton = styled.a`
 		display: block;
 		width: 70%;
 		height: 60%;
-		border: 1px solid #404040;
+		border: 1px solid var(--grey-border);
 		margin: 20% 15%;
 	}
 `;

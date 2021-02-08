@@ -1,15 +1,19 @@
 ---
 title: La misteriosa piedra de la plaza central
-description: Learning how to use @nuxt/content to create a blog
+description: La piedra de la plaza central tiene una historia
 img: blog-img/home_img.png
 alt: my first blog post
 time: 6
 date: 20 de agosto del 2020
 author: Alex Segundo
 twitter: '@asegundo'
-avatar: blog-img/alex-avatar.png
+avatar: avatar-img/avatar-alex.jpg
 ---
 
 ## La misteriosa piedra de la plaza central
 
-Welcome to my first blog post using content module
+Auqnue parezca inonfensivo, la piedra de la plaza central tiene una historia que vale contarlo.
+
+## Era de los incas 
+
+## Quedó de los hacendados

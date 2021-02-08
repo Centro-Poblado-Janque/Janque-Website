@@ -1,13 +1,13 @@
 ---
 title: Santa Rosa de Lima y la iglesia Janqueña.
 description: Santa Rosa es la patrona de Janque
-img: blog-img/font.png
+img: blog-img/santa_rosa_post.jpg
 alt: my first blog post
 time: 4
 date: 03 de septiembre del 2020
-author: Alex Segundo
-twitter: '@asegundo'
-avatar: avatar-img/alex_avatar.jpg
+author: Alex Segundo Llaguento
+twitter: '@asegundo442'
+avatar: avatar-img/avatar-alex.jpg
 ---
 
 ## ¿Quien es Santa Rosa de Lima?
@@ -26,10 +26,11 @@ José Manuel Bermúdez, uno de sus biógrafos, contribuyó a extender la opinió
 
 A temprana edad - emulando a la terciaria dominica santa Catalina de Siena - empezó a ayunar tres veces por semana y a realizar severas penitencias en secreto. Su compañero de juegos fue su hermano Hernando, quien siempre la apoyó y ayudó. A los doce años se mudó con su familia hacia Quives, un pueblo a 60 kilómetros de Lima, ubicado en el valle del río Chillón. Es aquí donde recibió la confirmación de manos del futuro santo católico Toribio de Mogrovejo, su padrino fue el sacerdote del pueblo Francisco González. Es en Quives donde, al parecer, empezó con sus mortificaciones contrayendo un reuma muy fuerte, con consecuencias dolorosas para su recuperación, que ella ocultaba a su madre.
 
+![image](./../blog_img/descarga.jpg)
 
-## La municipalidad de Janque lo consede como su patrona para fines religiosos y políticos
+## Patrona de Janque
 
-La municiplidad viendo la hazaña que habia hecho y de las cosas que habia hecho Santa Rosa de Lima, lo toman como la patrona del pueblo por su trabajo y coperacion con Dios para con la humanidad, mostrando humildad, y respet hacia las personas. Lo cual encaja muy bien con todo los janqueños y de su procedencia.
+La municiplidad de Janque reconce la labor que hizo Santa Rosa de Lima con la humanidad, por eso lo toman como la patrona del pueblo por su trabajo y coperacion con Dios para con la humanidad, mostrando humildad, y respeto hacia las personas. Lo cual representa muy bien con todo los janqueños y de su procedencia.
 
 
 A temprana edad - emulando a la terciaria dominica santa Catalina de Siena - empezó a ayunar tres veces por semana y a realizar severas penitencias en secreto. Su compañero de juegos fue su hermano Hernando, quien siempre la apoyó y ayudó. A los doce años se mudó con su familia hacia Quives, un pueblo a 60 kilómetros de Lima, ubicado en el valle del río Chillón. Es aquí donde recibió la confirmación de manos del futuro santo católico Toribio de Mogrovejo, su padrino fue el sacerdote del pueblo Francisco González. Es en Quives donde, al parecer, empezó con sus mortificaciones contrayendo un reuma muy fuerte, con consecuencias dolorosas para su recuperación, que ella ocultaba a su madre.

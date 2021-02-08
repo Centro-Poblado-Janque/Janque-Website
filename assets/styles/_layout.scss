@@ -1,0 +1,44 @@
+.ly_grid{
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: var(--gap);
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    color: var(--blog-color-txt-content);
+    margin-right: 1rem;
+}
+.ly_grid_10{
+    @media screen and (min-width: 1024px){
+        grid-template-columns: repeat(10,calc(10% - var(--gap)*9/10)); 
+    }
+}
+
+.ly-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.lg_fixed, .position_right_top{
+    position: fixed;
+    z-index: 10;
+}
+
+.position_right_top{
+    top: 0;
+    right: 0;
+}
+
+
+
+
+.center_by_hg_60{
+    height: 64px;
+    width: 64px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

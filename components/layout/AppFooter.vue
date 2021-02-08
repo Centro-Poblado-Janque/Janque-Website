@@ -11,7 +11,7 @@
                     <footer-details />
                 </div>
             </Grid>
-            <h5 class="copyright">Copyright {{date}} &copy | Janque - All right reserved</h5>
+            <FollowIcons />
         </Container>
     </footer>
 </template>
@@ -19,6 +19,7 @@
 <script>
 import Container from '../container/Container.vue'
 import Grid from '../container/Grid.vue'
+import FollowIcons from '../utils/FollowIcons.vue'
 import FooterLogoOne from '../utils/footer-logo-one.vue'
 import FooterLogoTwo from '../utils/footer-logo-two.vue'
 import FooterDetails from './FooterDetails.vue'
@@ -29,29 +30,22 @@ export default {
         Grid,
         FooterLogoOne,
         FooterLogoTwo,
-        FooterDetails 
-    },
-    methods:{
-        getYear(){
-            this.date =  new Date().getFullYear()
-        }
-    },
-    data: () => ({
-        date: 0,
-    }),
-    mounted(){
-        this.getYear()
+        FooterDetails,
+        FollowIcons 
     }
 }
 </script>
 
 <style lang="scss" scoped>
+@import './../../assets/styles/theme';
 .main_footer{
     background-color: var(--light-second);
     padding: 2rem 0;
     font-weight: 400;
     font-size: 14px;
     color: var(--text-dark);
+    align-self: flex-end;
+    width: 100%;
 }
 .footer_info{
     padding: .5rem;
@@ -68,14 +62,6 @@ export default {
             background-color: currentColor;
             left: 0;
         }
-    }
-}
-.copyright{
-    padding-top: 1rem;
-    font-size: 1em;
-    text-align: center;
-    @media screen and(min-width: 1000px) {
-        text-align: left;
     }
 }
 .svg-icon{

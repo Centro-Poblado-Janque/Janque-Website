@@ -1,0 +1,9 @@
+
+@keyframes move_right_to_left{
+    from{
+        transform: translateX(-20px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}

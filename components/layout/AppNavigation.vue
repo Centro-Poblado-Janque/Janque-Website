@@ -4,12 +4,14 @@
         <ToggleButton @click.native="OpenNav" ref="toggleBtn" />
         <LogoJanque />
       </div>
-      <NavigationLinks ref="nav" @click.native="HideNav"/>
+      <NavigationLinks ref="nav" @click.native="HideNav" />
+      <ThemeButton />
   </nav>
 </template>
 
 <script>
 import LogoJanque from '../utils/LogoJanque.vue';
+import ThemeButton from '../utils/theme-buttom.vue';
 import ToggleButton from '../utils/ToggleButton.vue';
 import NavigationLinks from './NavigationLinks.vue'
 export default {
@@ -17,9 +19,11 @@ export default {
   components: { 
     NavigationLinks,
     ToggleButton,
-    LogoJanque
+    LogoJanque,
+    ThemeButton
   },
   mounted () {
+    console.log(this.isActive)
     window.addEventListener('scroll', this.changeNavState);
   },
   onmounted () {
@@ -45,11 +49,12 @@ export default {
 </script>
 
 <style lang="scss" >
-@import './../../static/libs/theme';
+@import './../../assets/styles/theme';
 .nav_toggle{
   min-height: 64px;
   height: 64px;
-  background-color: var(--dark-primary);
+  background-color: var(--light-second);
+  border-bottom: 1px solid var(--grey-border);
   @media screen and(min-width: $desktop_breakpoints){
     background-color:  transparent;
     display: none;

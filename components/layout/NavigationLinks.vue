@@ -1,33 +1,55 @@
 <template>
-  <div class="nav_items">
-    <Container class="container_reset">
-        <GridView>
-            <div class="logo_contain">
-                <Logo />
-            </div>
-            <div class="nav_links">
-                <NuxtLink to="/" data-action="home"><span class="fas fa-home size"></span>Inicio</NuxtLink>
-                <NuxtLink to="/costumbres" data-action="customs"><span class="fab fa-accusoft size"></span>Costumbres</NuxtLink>
-                <NuxtLink to="/historia" data-action="history"><span class="fas fa-monument size"></span>Historia</NuxtLink>
-                <NuxtLink to="/about" data-action="about"><span class="fas fa-align-center size"></span>Sobre Janque</NuxtLink>
-                <NuxtLink to="/blog" data-action="blog"><span class="fas fa-blog size"></span>Blog</NuxtLink>
-            </div>
-            <form class="nav_search">
-                <input class="nav-input-search" type="text" placeholder="Que desea buscar">
-                <input type="submit" value="" id="send" hidden="">
-                <label for="send" class="send-search">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </label>
-            </form> 
-        </GridView>
-    </Container>
-  </div>
+    <div class="nav_items">
+        <Container class="container_reset">
+            <GridView>
+                <div class="logo_contain">
+                    <Logo />
+                </div>
+                <div class="nav_links ly-flex">
+                    <NuxtLink to="/" data-action="home">
+                        <FontAwesomeIcon class="size" :icon="faHome" />
+                        <span>Inicio</span>
+                    </NuxtLink>
+                    <NuxtLink to="/costumbres" data-action="customs">
+                        <FontAwesomeIcon class="size" :icon="faSlidersH" />
+                        <span>Costumbres</span>
+                    </NuxtLink>
+                    <NuxtLink to="/historia" data-action="history">
+                        <FontAwesomeIcon class="size" :icon="faLandmark" />
+                        <span>Historia</span>
+                    </NuxtLink>
+                    <NuxtLink to="/about" data-action="about">
+                        <BrandIconSvg class="size svg-inline--fa fa-w-16"/>
+                        <span>Sobre Janque</span>
+                    </NuxtLink>
+                    <NuxtLink to="/blog" data-action="blog">
+                        <FontAwesomeIcon class="size" :icon="faBlog" />
+                        <span>Blog</span>
+                    </NuxtLink>
+                </div>
+                <form class="nav_search">
+                    <input
+                        class="nav-input-search"
+                        type="text"
+                        placeholder="Que desea buscar"
+                    />
+                    <input type="submit" value="" id="send" hidden="" />
+                    <label for="send" class="send-search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </label>
+                </form>
+            </GridView>
+        </Container>
+    </div>
 </template>
 
 <script>
-import Container from '../container/Container.vue';
-import styled from 'vue-styled-components';
-import Logo from '../utils/Logo.vue';
+import Container from '../container/Container.vue'
+import styled from 'vue-styled-components'
+import Logo from '../utils/Logo.vue'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faHome, faLandmark, faBlog, faBreadSlice, faSlidersH } from '@fortawesome/free-solid-svg-icons'
+import BrandIconSvg from '../utils/brand-icon.svg.vue'
 
 const GridView = styled.div`
     width: 100%;
@@ -36,124 +58,160 @@ const GridView = styled.div`
     height: 100%;
     grid-template-rows: 100%;
     grid-template-columns: 1fr;
-    @media screen and (min-width: 1200px){
+    @media screen and (min-width: 1200px) {
         grid-template-columns: 2fr 8fr;
     }
-`;
+`
 
 export default {
-    components: { 
+    name: 'NavigationLinks',
+    components: {
         Container,
         GridView,
-        Logo
+        Logo,
+        FontAwesomeIcon,
+        BrandIconSvg,
     },
-    name: 'NavigationLinks'
+    data: () => ({
+        faHome,
+        faBreadSlice,
+        faBlog,
+        faLandmark,
+        faSlidersH,
+    }),
 }
 </script>
 
-<style lang="scss" scoped>
-@import './../../static/libs/theme';
-.nav_items{
+<style lang="scss">
+@import './../../assets/styles/theme';
+.nav_items {
     background-color: var(--bg-opacity);
     height: calc(100vh - 64px);
     height: -webkit-calc(100vh - 64px);
     width: 100%;
     margin-left: -100%;
-    transition: all .25s ease-in;
-    @media screen and(min-width: $desktop_breakpoints){
+    transition: all 0.25s ease-in;
+    @media screen and(min-width: $desktop_breakpoints) {
         height: 100px;
         background-color: transparent;
         margin: 0;
     }
-    &.is_active{
+    &.is_active {
         margin: 0;
     }
 }
-.container_reset{
+.container_reset {
     padding: 0;
     height: 100%;
 }
-.nav_links{
+.nav_links {
     display: flex;
     width: 100%;
     height: 100%;
     flex-direction: column;
-    a{
-        font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+    a {
         display: block;
-        background-color: rgba(82, 82, 82, 0.314);
+        background-color: rgba(76, 79, 80, 0.314);
         font-size: 1.25rem;
         text-transform: uppercase;
+        font-family: var(--nav-font);
         padding: 1.25rem;
-        transition: all .25s;
+        transition: all 0.25s;
         font-weight: 500;
-        border: solid .5px var(--dark-300);
+        border: solid 0.5px var(--nav-border);
         border-top: none;
+        position: relative;
+        transition: all .5s ease;
         color: var(--dark-light-100);
-        &:hover{
+        &:hover {
             background-color: transparent;
+            &::after {
+                position: absolute;
+                content: '';
+                padding: .5rem;
+                width: 90%;
+                margin: 17px auto;
+                left: 20px;
+                bottom: 0;
+                height: 30px;
+                border-radius: 3px;
+                background-color: var(--dark-active-link);
+            }
         }
     }
-    .size{
-        margin-right: .5rem;
+    .size {
+        margin-right: 0.5rem;
         width: 40px;
         text-align: center;
         color: var(--dark-light-200);
     }
-    @media screen and(min-width: $desktop_breakpoints){
+    @media screen and(min-width: $desktop_breakpoints) {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        a{
+        a {
             background-color: transparent;
             text-transform: capitalize;
             border: none;
+            position: relative;
             font-size: 1.1rem;
             color: var(--dark-primary);
-            &:hover{
-                color: var(--dark-light);
-                transform: translateY(-4px);
+            &::before {
+                content: '';
+                display: block;
+                opacity: 0.1;
+                position: absolute;
+                right: 0;
+                top: 0;
+                left: 0;
+                transform: scale3d(0, 0, 0);
+                width: 100%;
+                height: 100%;
+                border-radius: 3px;
+                background-color: currentColor;
+                transition: 0.1s;
             }
         }
     }
 }
-.nuxt-link-exact-active{
+.nuxt-link-exact-active {
     position: relative;
     background-color: transparent !important;
     @media screen and (min-width: $desktop_breakpoints) {
-        &::after{
+        &::after {
             position: absolute;
             content: '';
+            padding: .5rem;
             width: 90%;
-            margin: 0 auto;
+            margin: 17px auto;
             left: 20px;
             bottom: 0;
-            height: 1px;
+            height: 30px;
+            border-radius: 3px;
             background-color: var(--dark-active-link);
         }
     }
 }
-.logo_contain{
+.logo_contain {
     display: none;
     @media screen and (min-width: $desktop_breakpoints) {
         display: block;
         width: 100%;
         height: 100%;
-    }  
+    }
 }
-.nav_search{
+.nav_search {
     display: none;
 }
 @media screen and (min-width: $desktop_breakpoints) {
-    .bg_dark{
+    .bg_dark {
         background-color: var(--light-second);
         height: 64px;
-        border-bottom: 1px solid var(--light-border-1);
-        .logo_contain{
+        border-bottom: 1px solid var(--grey-border);
+        .logo_contain {
             height: 100%;
             width: 80%;
         }
     }
 }
-
 </style>
