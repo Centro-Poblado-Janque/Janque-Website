@@ -44,19 +44,7 @@ export default {
         Container,
         BlogViews,
         MainContent
-    },
-    async asyncData({ $content, params }) {
-        const articles = await $content('costumbres', params.slug)
-            .only(['title', 'description', 'img', 'slug', 'author', 'date', 'time'])
-            .sortBy('createdAt', 'asc')
-            .fetch()
-        return{ articles }
-    },
-    data() {
-        return {
-            article: [],
-        }
-    },
+    }
 }
 </script>
 
