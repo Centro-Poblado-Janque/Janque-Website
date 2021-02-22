@@ -4,7 +4,7 @@
   "description": "this projects is an website of c.p. janque",
   "main": "index.js",
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt && console.log(procces.cwd())",
     "gulp": "gulp",
     "build": "nuxt build",
     "generate": "nuxt generate"

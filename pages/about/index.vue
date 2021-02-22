@@ -1,37 +1,42 @@
 <template>
-    <section class="page about-page">
+    <MainContent class="page about-page">
         <header class="about-head">
             <Container>
                 <Caption title="Conoce un poco mas de que trata C.P Janque" />
             </Container>
         </header>
-        <div class="about_data">
-            <Container>
-                <div class="ly_grid ly_grid_10">
-                    <div class="lg_grid_7">
-                        <p>Hablemos un poco de janque y nos sentamos a tomar un poco de aguardiente</p>
-                    </div>
-                    <div class="lg_grid_3">
-                        <p>Distrito de Incahuasi</p>
-                    </div>
+        <section class="about_content">
+            <Grid :grids="10">
+                <div class="lg_grid_7">
+                    <p>Hablemos un poco de janque y nos sentamos a tomsar un poco de aguardiente</p>
                 </div>
-            </Container>
-        </div>
-    </section>
+                <div class="lg_grid_3">
+                    <p>Distrito de Incahuasi</p>
+                </div>
+            </Grid>
+        </section>
+        <MapsLocation/>
+    </MainContent>
 </template>
 
 <script>
+import { Grid } from './../../components/container/Grid'
+import MapsLocation from '../../components/utils/GoogleMaps.vue'
 import Container from './../../components/container/Container.vue'
 import Caption from './../../components/styled/Caption.vue'
+import MainContent from '../../components/layout/MainContent.vue'
 
 export default {
     head: () => ({
-        title: 'Janque - Sepa quienes somos'
+        title: 'Sobre Nosotros | Centro Poblado Janque'
     }),
     name: 'Home',
     components: { 
         Container,
-        Caption
+        Caption,
+        MapsLocation,
+        Grid,
+        MainContent
     },
 }
 </script>

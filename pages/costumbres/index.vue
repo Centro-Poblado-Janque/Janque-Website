@@ -1,5 +1,5 @@
 <template>
-    <section class="page costumer-page">
+    <MainContent class="page costumer-page">
         <header class="costumer-head">
             <Container>
                 <div class="position_left costumer-caption">
@@ -27,21 +27,23 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </MainContent>
 </template>
 
 <script>
 import BlogViews from '../../components/blog/BlogViews.vue'
+import MainContent from '../../components/layout/MainContent.vue'
 import Container from './../../components/container/Container.vue'
 
 export default {
     head: () => ({
-        title: 'Janque - Nuestras costumbres',
+        title: 'Nuestras costumbres | Centro Poblado Janque',
 
     }),
     components: {
         Container,
-        BlogViews
+        BlogViews,
+        MainContent
     },
     async asyncData({ $content, params }) {
         const articles = await $content('costumbres', params.slug)

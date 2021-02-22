@@ -1,5 +1,5 @@
 <template>
-  <div>
+    <div>
         <Copyright>Copyright 2020 - {{date}} © | Janque - Todos los derechos reservados</Copyright>
         <IconContainer>
             <BrandLink href="#">
@@ -15,7 +15,7 @@
                 <BrandIcon :icon="faLinkedin" />
             </BrandLink>
         </IconContainer>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -30,12 +30,11 @@ const BrandIcon = styled(FontAwesomeIcon)`
 const BrandLink = styled.a`
     padding: .5rem;
     display: inline-block;
-    color: var(--brand-color);
+    text-align: center;
+    margin: 0 15px;
+    color: var(--blue-depth);
 `;
 
-const FlexContainer = styled.div`
-
-`;
 
 const IconContainer = styled.div`
     display: flex;

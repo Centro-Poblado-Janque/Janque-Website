@@ -48,6 +48,10 @@ export default {
                     'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Nunito:ital,wght@0,200;0,300;0,400;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Roboto:wght@100;300;400&display=swap',
                 rel: 'stylesheet',
             },
+            {
+                rel:"preconnect", href:"https://fonts.gstatic.com"
+            },
+            { href:"https://fonts.googleapis.com/css2?family=Viga&display=swap", rel:"stylesheet"}
         ],
         meta: [
             { charset: 'UTF-8' },
@@ -55,8 +59,7 @@ export default {
             },
             { hid: 'description', name: 'description', content: description },
             { name: 'mobile-wep-app-capable', content: 'yes' },
-            { name: 'keywords', content: 'Yanque Janque Janque.com Centro Poblado de Janque Incahuasi-Janque',
-            },
+            { name: 'keywords', content: 'Yanque Janque Janque.com Centro Poblado de Janque Incahuasi-Janque'},
 
             //----Twitter Support------>
             { name: 'twitter:card', content: '' },
@@ -76,10 +79,6 @@ export default {
             { property: 'website:publish_time', content: '20/12/2020' },
         ],
         script: [
-            {
-                src: 'https://kit.fontawesome.com/c5e61bb352.js',
-                crossorigin: 'anonymous',
-            },
             { src: '/disqus.js' },
         ],
     },

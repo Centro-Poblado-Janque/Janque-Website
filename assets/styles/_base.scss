@@ -1,11 +1,11 @@
 @media screen and (min-width: $desktop_breakpoints) {
     ::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-        background-color: #1b272f;
+        width: var(--sz-scroll-size);
+        height: var(--sz-scroll-size);
+        background-color: var(--bg-scroll-thumb);
         border-radius: 5px;
         &-thumb {
-            background-color: #1b272f;
+            background-color: var(--bg-scroll-thumb);
             border-radius: 5px;
         }
         &-track {
@@ -40,7 +40,7 @@ body {
     overflow-x: hidden;
 }
 main {
-    width: 100vw;
+    width: calc(100vw - var(--sz-scroll-size));
 }
 a {
     text-decoration: none;

@@ -6,9 +6,11 @@
     --dark-light                : #465458;
     --dark-active-link          : #2129294d;
     --light-primary             : #fbfbfe;
+    --bg-input-primary          : #cdcece;
     --light-second              : #eff3f5;
     --light-border-1            : #c9c9c9;
-    --gap                       : 2rem;
+    --grid-gap                  : 2rem;
+    --gap                       : var(--grid-gap);
     --text-body                 : #4c5251;
     --text-dark                 : #353d3c;
 
@@ -39,39 +41,55 @@
     --blue-depth-200            : #0e7face1;
 
     --nav-border                : #505757;
+    --dt-nav                    : #9ea8a8;
+    --dt-nav-alpha              : #959797;
 
+    --bg-scroll-thumb           : #1b272f;
 
 /* ========== FONTS  ============= */
     --nav-font                  : 'Noto Sans JP', 'Roboto', sans-serif;
     --noto-font                 : 'Noto Sans JP', 'Roboto', sans-serif;
     --blog-font                 : 'Open Sans', sans-serif;
     --blog-title-font           : 'Nunito', sans-serif;
+
+
+    --brand-color               : rgb(40, 131, 119);
+    --max-width                 : 1400px;
+    --sz-scroll-size            : 10px;
+    --nav-color                 : #b15b0b;
+
+    --dt-color                  : #131c1f;
 }
-:root.dark_mode{
-    //--light-primary             : #242525;
-    --light-primary             : #182327;
-    --dark-primary              : #efefef;
-    --light-second              : #131c1f;
-    --light-border-1            : #555555;
-    --white-primary             : #525554;
-    --text-dark                 : #838383;
+@media screen and (prefers-color-scheme: dark){
+    :root.dark_mode{
+        //--light-primary             : #242525;
+        --light-primary             : #161f22;
+        --bg-input-primary          : #212f33;
+        --dark-primary              : #efefef;
+        --light-second              : #131c1f;
+        --light-border-1            : #555555;
+        --white-primary             : #525554;
+        --text-dark                 : #838383;
 
-    --grey-border               : #2a3b47;
+        --grey-border               : #2a3b47;
 
-    --card-bg-blog              : #1f2a2e;
-    --card-border-bg            : #1f2c31;
-    --card-border-bg-1          : #243338;
+        --card-bg-blog              : #1f2a2e;
+        --card-border-bg            : #1f2c31;
+        --card-border-bg-1          : #243338;
 
-    --blue-depth                : #087ead;
-    --blue-depth-200            : #0b8cbee1;
+        --blue-depth                : rgb(8, 126, 173);
+        --blue-depth-200            : #0b8cbee1;
 
-    --blog-color-txt-content    : #c2c1c1;
+        --blog-color-txt-content    : #c2c1c1;
 
-    --brand-color               : rgb(133, 133, 133);
 
-    --grey-200                  : #9aabb1;
+        --grey-200                  : #9aabb1;
+        --dt-nav                    : var(--blue-depth);
+        --dt-nav-alpha              : var(--blue-depth-200);
+        --nav-border                : #2c3538ce;
 
-    --nav-border                : #2c3538ce;
+        --dt-color                  : #9e9e9e;
+    }
 }
 
     $device_pixel_radio : 2;

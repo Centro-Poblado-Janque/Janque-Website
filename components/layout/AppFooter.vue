@@ -1,13 +1,13 @@
 <template>
     <footer id="main-footer" class="main_footer">
         <Container>
-            <Grid>
+            <Grid :grids="2" RowGap="1rem">
                 <div class="footer_info">
-                    <footer-logo-one />
+                    <FooterLogoOne />
                     <footer-details />
                 </div>
                 <div class="footer_info">
-                    <footer-logo-two />
+                    <FooterLogoTwo />
                     <footer-details />
                 </div>
             </Grid>
@@ -18,10 +18,10 @@
 
 <script>
 import Container from '../container/Container.vue'
-import Grid from '../container/Grid.vue'
+import { Grid } from '../container/Grid'
 import FollowIcons from '../utils/FollowIcons.vue'
-import FooterLogoOne from '../utils/footer-logo-one.vue'
-import FooterLogoTwo from '../utils/footer-logo-two.vue'
+import FooterLogoOne from '../utils/svg/footer-logo-one.vue'
+import FooterLogoTwo from '../utils/svg/footer-logo-two.vue'
 import FooterDetails from './FooterDetails.vue'
 export default {
     name: 'AppFooter',
@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import './../../assets/styles/theme';
 .main_footer{
     background-color: var(--light-second);

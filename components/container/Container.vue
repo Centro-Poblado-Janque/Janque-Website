@@ -10,10 +10,10 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss" global>
 @import './../../assets/styles/theme';
-.container_s{
-    max-width: 1400px;
+.container_s, .container{
+    max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
     @media screen and(min-width: $desktop_breakpoints) {

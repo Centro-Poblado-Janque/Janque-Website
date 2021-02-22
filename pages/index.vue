@@ -1,22 +1,24 @@
-<template>
-    <div class="page home-page">
+<template name="template home__page">
+    <MainContent class="page home-page">
         <header class="home-head">
             <Container>
                 <Caption title="Bienvenido a la pagina web de Janque" />
             </Container>
         </header>
 
-    </div>
+    </MainContent>
 </template>
 
 <script>
 import Container from '../components/container/Container.vue'
+import MainContent from '../components/layout/MainContent.vue'
 import Caption from '../components/styled/Caption.vue'
 
 export default {
     components: { 
         Container,
-        Caption
+        Caption,
+        MainContent
     }
     
 }

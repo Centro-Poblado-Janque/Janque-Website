@@ -1,13 +1,11 @@
 <template>
-    <Fragment>
+    <MainWrapperApp>
         <PageLoader />
         <AppNavigation />
-        <main id="main-app-wrapper">
-            <Nuxt />
-        </main>
+            <Nuxt/>
         <AppFooter />
         <script id="dsq-count-scr" src="//cp-janque-com.disqus.com/count.js" async></script>
-    </Fragment>
+    </MainWrapperApp>
 </template>
 
 <script>
@@ -18,11 +16,12 @@ import AppFooter from '../components/layout/AppFooter.vue'
 import AppNavigation from '../components/layout/AppNavigation.vue'
 import PageLoader from '../components/utils/PageLoader.vue'
 export default {
+    name: 'MainLayout',
     components: {
-        Fragment,
         AppNavigation,
         AppFooter,
         PageLoader,
+        MainWrapperApp: Fragment,
     },
     head: () => ({
         link: [
@@ -39,6 +38,4 @@ export default {
     min-height: 100vh;
     flex-wrap: wrap;
 }
-
 </style>
-

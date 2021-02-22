@@ -1,5 +1,5 @@
 <template> 
-    <div class="post-main">
+    <MainContent class="post-main">
         <header class="post-head">
             <img :src="'./../' + article.img" :alt="article.slug" class="img-background">
             <Container class="container-reset">
@@ -16,7 +16,7 @@
                 </div>
             </Container>
         </header>
-        <div class="blog-post">
+        <section class="blog-post">
             <Container>
                 <div class="redirect_links">
                     <NuxtLink to="/"><FontAwesomeIcon :icon="faHome" /></NuxtLink>
@@ -28,7 +28,7 @@
                         <NuxtContent :document="article" />
                     </template>
 
-                    <template v-slot:autor-content>
+                    <template #autor-content>
                         <img class="avatar-model" :src="'./../' + article.avatar" :alt="article.alt">
                         <span class="author-dates">
                             <p class="blog-author">{{ article.author }}</p>
@@ -39,7 +39,7 @@
                         </span>
                     </template>
 
-                    <template v-slot:others-blog>
+                    <template #items-view>
                         <ul>
                             <li v-for="ids of id" :key="ids.id">
                                 <a :href="`#${ ids.id }`" class="content_item">
@@ -52,8 +52,8 @@
                 </ArticleViews>
                 <div id="disqus_thread" class="disqus-comment"></div>
             </Container>
-        </div>
-    </div>
+        </section>
+    </MainContent>
 </template>
 
 <script>
@@ -62,11 +62,13 @@ import Container from '../../components/container/Container.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import MainContent from '../../components/layout/MainContent.vue';
 export default {
     components: { 
         Container,
         ArticleViews,
-        FontAwesomeIcon
+        FontAwesomeIcon,
+        MainContent
     },
     head () {
         return{

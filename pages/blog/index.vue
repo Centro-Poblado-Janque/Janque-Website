@@ -1,13 +1,12 @@
 <template>
-    <div class="page blog-page">
-
+    <MainContent class="page blog-page">
         <header class="blog-head">
             <Container>
                 <Caption title="Nuestro Blog" />
             </Container>
         </header>
 
-        <div class="blog-center">
+        <section class="blog-center">
             <Container class="container-reset">
                 <h1 class="blog-caption">Tenemos muchos articulos para usted</h1>
                 <ul class="blog-card-container">
@@ -23,24 +22,25 @@
                     </li>
                 </ul>
             </Container>
-        </div>
-
-    </div>
+        </section>
+    </MainContent>
 </template>
 
 <script>
 import BlogViews from '../../components/blog/BlogViews.vue'
+import MainContent from '../../components/layout/MainContent.vue'
 import Container from './../../components/container/Container.vue'
 import Caption from './../../components/styled/Caption.vue'
 
 export default {
     head: () => ({
-        title: 'Janque - Blog',
+        title: 'Blogs | Centro Poblado Janque',
     }),
     components: {
         Container,
         Caption,
-        BlogViews
+        BlogViews,
+        MainContent
     },
     async asyncData({ $content, params }) {
         const articles = await $content('articles', params.slug)

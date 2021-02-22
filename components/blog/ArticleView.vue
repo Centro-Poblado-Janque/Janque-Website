@@ -10,7 +10,7 @@
 
             </article>
             <div class="others-blogs card-template top-blue pg-3">
-                <slot name="others-blog"></slot>
+                <slot name="items-view"></slot>
 
             </div>
         </section>

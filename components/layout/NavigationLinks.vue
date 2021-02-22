@@ -1,76 +1,61 @@
 <template>
-    <div class="nav_items">
-        <Container class="container_reset">
-            <GridView>
+
+    <nav class="nav_items">
+        <Container class="override">
+            <SimpleGrid Columns="2fr 8fr" RowGap="0" ColumnGap="0">
                 <div class="logo_contain">
                     <Logo />
                 </div>
                 <div class="nav_links ly-flex">
-                    <NuxtLink to="/" data-action="home">
+                    <form class="nav_search nav_item">
+                        <input class="nav-input-search" type="text" placeholder="Que desea buscar"/>
+                        <input type="submit" value="" id="send" />
+                        <label for="send" class="send-search">
+                            <FontAwesomeIcon :icon="faSearch" />
+                        </label>
+                    </form>
+                    <NuxtLink to="/" data-action="home" class="nav_item" >
                         <FontAwesomeIcon class="size" :icon="faHome" />
                         <span>Inicio</span>
                     </NuxtLink>
-                    <NuxtLink to="/costumbres" data-action="customs">
+                    <NuxtLink to="/costumbres" data-action="customs" class="nav_item" >
                         <FontAwesomeIcon class="size" :icon="faSlidersH" />
                         <span>Costumbres</span>
                     </NuxtLink>
-                    <NuxtLink to="/historia" data-action="history">
+                    <NuxtLink to="/historia" data-action="history" class="nav_item" >
                         <FontAwesomeIcon class="size" :icon="faLandmark" />
                         <span>Historia</span>
                     </NuxtLink>
-                    <NuxtLink to="/about" data-action="about">
+                    <NuxtLink to="/about" data-action="about" class="nav_item" >
                         <BrandIconSvg class="size svg-inline--fa fa-w-16"/>
                         <span>Sobre Janque</span>
                     </NuxtLink>
-                    <NuxtLink to="/blog" data-action="blog">
+                    <NuxtLink to="/blog" data-action="blog" class="nav_item" >
                         <FontAwesomeIcon class="size" :icon="faBlog" />
                         <span>Blog</span>
                     </NuxtLink>
                 </div>
-                <form class="nav_search">
-                    <input
-                        class="nav-input-search"
-                        type="text"
-                        placeholder="Que desea buscar"
-                    />
-                    <input type="submit" value="" id="send" hidden="" />
-                    <label for="send" class="send-search">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </label>
-                </form>
-            </GridView>
+            </SimpleGrid>
         </Container>
-    </div>
+    </nav>
 </template>
 
 <script>
 import Container from '../container/Container.vue'
-import styled from 'vue-styled-components'
 import Logo from '../utils/Logo.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faHome, faLandmark, faBlog, faBreadSlice, faSlidersH } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faLandmark, faBlog, faBreadSlice, faSlidersH, faSearch } from '@fortawesome/free-solid-svg-icons'
 import BrandIconSvg from '../utils/brand-icon.svg.vue'
-
-const GridView = styled.div`
-    width: 100%;
-    display: grid;
-    align-content: center;
-    height: 100%;
-    grid-template-rows: 100%;
-    grid-template-columns: 1fr;
-    @media screen and (min-width: 1200px) {
-        grid-template-columns: 2fr 8fr;
-    }
-`
+import { SimpleGrid } from '../container/Grid'
 
 export default {
     name: 'NavigationLinks',
     components: {
         Container,
-        GridView,
         Logo,
         FontAwesomeIcon,
         BrandIconSvg,
+        SimpleGrid,
     },
     data: () => ({
         faHome,
@@ -78,6 +63,7 @@ export default {
         faBlog,
         faLandmark,
         faSlidersH,
+        faSearch
     }),
 }
 </script>
@@ -85,23 +71,23 @@ export default {
 <style lang="scss">
 @import './../../assets/styles/theme';
 .nav_items {
-    background-color: var(--bg-opacity);
     height: calc(100vh - 64px);
     height: -webkit-calc(100vh - 64px);
     width: 100%;
-    margin-left: -100%;
-    transition: all 0.25s ease-in;
+    position: relative;
+    z-index: 3;
+    top: 80px;
+    transition: all .25s ease-in-out;
     @media screen and(min-width: $desktop_breakpoints) {
+        top: 0;
         height: 100px;
-        background-color: transparent;
-        margin: 0;
+        transform: translateX(0);
     }
     &.is_active {
-        margin: 0;
+        transform: translateX(0);
     }
 }
-.container_reset {
-    padding: 0;
+.container_s.override {
     height: 100%;
 }
 .nav_links {
@@ -111,18 +97,15 @@ export default {
     flex-direction: column;
     a {
         display: block;
-        background-color: rgba(76, 79, 80, 0.314);
-        font-size: 1.25rem;
+        font-size: 1.6rem;
         text-transform: uppercase;
-        font-family: var(--nav-font);
         padding: 1.25rem;
-        transition: all 0.25s;
         font-weight: 500;
-        border: solid 0.5px var(--nav-border);
-        border-top: none;
+        transform: translateX(-100px);
+        opacity: 0;
+        font-family: 'Viga', sans-serif;
         position: relative;
-        transition: all .5s ease;
-        color: var(--dark-light-100);
+        color: var(--nav-color);
         &:hover {
             background-color: transparent;
             &::after {
@@ -138,6 +121,13 @@ export default {
                 background-color: var(--dark-active-link);
             }
         }
+    }
+    .nav_search{
+        padding: .75rem;
+        width: 90%;
+        margin: .5rem auto;
+        transform: translateX(-100px);
+        opacity: 0;
     }
     .size {
         margin-right: 0.5rem;
@@ -155,6 +145,10 @@ export default {
             border: none;
             position: relative;
             font-size: 1.1rem;
+            transform: translateX(0);
+            opacity: 1;
+            font-family: var(--nav-font);
+            text-align: left;
             color: var(--dark-primary);
             &::before {
                 content: '';
@@ -171,6 +165,9 @@ export default {
                 background-color: currentColor;
                 transition: 0.1s;
             }
+        }
+        .nav_search{
+            display: none;
         }
     }
 }
@@ -201,7 +198,15 @@ export default {
     }
 }
 .nav_search {
-    display: none;
+    background-color: var(--bg-input-primary);
+    padding: .5rem;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-input-search{
+        background-color: transparent;
+    }
 }
 @media screen and (min-width: $desktop_breakpoints) {
     .bg_dark {
@@ -211,6 +216,9 @@ export default {
         .logo_contain {
             height: 100%;
             width: 80%;
+        }
+        &.nav_item span {
+            color: var(--dark-light-100)
         }
     }
 }
