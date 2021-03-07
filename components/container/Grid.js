@@ -1,7 +1,7 @@
 import styled from 'vue-styled-components';
 
 const CustomProps = {
-    grids: {
+    Rows: {
         type: Number,
         required: true,
         default: 2
@@ -27,8 +27,8 @@ export const Grid = styled('div', CustomProps)`
     margin-right: auto;
     max-width: var(--max-width);
     @media (min-width: 1200px){
-        grid-template-columns: repeat(${props => props.grids || 1 } 
-            ,calc(${props => (100/props.grids) }% - var(--grid-gap)* ${props => (props.grids - 1) || 0 }/${props => props.grids || 1 }));
+        grid-template-columns: repeat(${props => props.Rows || 1 } 
+            ,calc(${props => (100/props.Rows ) }% - var(--grid-gap)* ${props => (props.Rows - 1) || 0 }/${props => props.Rows || 1 }));
     }
 `;
 
@@ -48,15 +48,3 @@ export const SimpleGrid = styled(SimpleProps.tag , SimpleProps)`
         grid-template-columns: ${props => props.Columns || '1fr' };
     }
 `;
-
-const GridView = styled.div`
-    width: 100%;
-    display: grid;
-    align-content: center;
-    height: 100%;
-    grid-template-rows: 100%;
-    grid-template-columns: 1fr;
-    @media screen and (min-width: 1200px) {
-        grid-template-columns: 2fr 8fr;
-    }
-`

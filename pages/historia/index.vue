@@ -18,8 +18,6 @@
 </template>
 
 <script>
-import MainContent from '../../components/layout/MainContent.vue'
-import Container from './../../components/container/Container.vue'
 import Caption from './../../components/styled/Caption.vue'
 
 export default {
@@ -27,16 +25,13 @@ export default {
         title: 'Conoce nuestra historia | Centro Poblado Janque'
     }),
     components: { 
-        Container,
         Caption,
-        MainContent
     }
     
 }
 </script>
 
 <style lang="scss">
-@import './../../assets/styles/theme';
 .history-page{
     color: var(--text-body);
 }
@@ -48,7 +43,6 @@ export default {
         content: '';
         display: block;
         background-image: url('./../../assets/img/history-head.jpg');
-        @include normalize_img; @include absolute_position;
         transition: all .1s ease-in-out;
         z-index: -1;
         filter: brightness(0.45);

@@ -1,5 +1,5 @@
 <template>
-    <button class="redirect_btn" role="button">
+    <button :class="$style.redirect_btn" role="button">
         <NuxtLink to="/">
             REGRESAME A MI CAMINO
         </NuxtLink>
@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" module>
 .redirect_btn{
     border: none;
     outline: none;

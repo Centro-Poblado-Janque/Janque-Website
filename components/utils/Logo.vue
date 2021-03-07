@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../../assets/styles/theme';
+@import '~/assets/styles/mixin';
 .nuxt-link-exact-active{
     position: relative;
     @media screen and (min-width: $desktop_breakpoints) {

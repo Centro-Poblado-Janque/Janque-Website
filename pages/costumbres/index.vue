@@ -9,31 +9,10 @@
                 </div>
             </Container>
         </header>
-        <div>
-            <ul class="blog-card-container">
-                <li
-                    v-for="article of articles"
-                    :key="article.slug"
-                    class="blog-card"
-                >
-                    <BlogViews
-                        :slug="article.slug"
-                        :img="article.img"
-                        :alt="article.slug"
-                        :title="article.title"
-                        :time="article.time"
-                        :date="article.date"
-                    />
-                </li>
-            </ul>
-        </div>
     </MainContent>
 </template>
 
 <script>
-import BlogViews from '../../components/blog/BlogViews.vue'
-import MainContent from '../../components/layout/MainContent.vue'
-import Container from './../../components/container/Container.vue'
 
 export default {
     head: () => ({
@@ -41,15 +20,11 @@ export default {
 
     }),
     components: {
-        Container,
-        BlogViews,
-        MainContent
     }
 }
 </script>
 
 <style lang="scss">
-@import './../../assets/styles/theme';
 .page {
     color: var(--text-body);
 }

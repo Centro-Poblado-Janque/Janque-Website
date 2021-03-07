@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" global>
-@import './../../assets/styles/theme';
+@import '~/assets/styles/mixin';
 .container_s, .container{
     max-width: var(--max-width);
     width: 100%;

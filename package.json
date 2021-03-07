@@ -4,7 +4,7 @@
   "description": "this projects is an website of c.p. janque",
   "main": "index.js",
   "scripts": {
-    "dev": "nuxt && console.log(procces.cwd())",
+    "dev": "nuxt",
     "gulp": "gulp",
     "build": "nuxt build",
     "generate": "nuxt generate"
@@ -24,6 +24,7 @@
     "vue-styled-components": "^1.6.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "sass": "^1.32.0",

@@ -1,7 +1,7 @@
 <template> 
     <MainContent class="post-main">
         <header class="post-head">
-            <img :src="'./../' + article.img" :alt="article.slug" class="img-background">
+            <img :src="'https://cp-janque.com/blog-img/' + article.img" :alt="article.slug" class="img-background">
             <Container class="container-reset">
                 <div class="post-metadates">
                     <h1 class="article-title">{{ article.title }}</h1>
@@ -29,7 +29,7 @@
                     </template>
 
                     <template #autor-content>
-                        <img class="avatar-model" :src="'./../' + article.avatar" :alt="article.alt">
+                        <img class="avatar-model" :src="'./../avatar-img/' + article.avatar" :alt="article.alt">
                         <span class="author-dates">
                             <p class="blog-author">{{ article.author }}</p>
                             <a class="blog-contact" :href="'https://twitter.com/' + article.twitter" rel="noopeper" target="_blank">
@@ -58,21 +58,20 @@
 
 <script>
 import ArticleViews from '../../components/blog/ArticleView.vue';
-import Container from '../../components/container/Container.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import MainContent from '../../components/layout/MainContent.vue';
 export default {
     components: { 
-        Container,
         ArticleViews,
-        FontAwesomeIcon,
-        MainContent
+        FontAwesomeIcon
     },
     head () {
         return{
-            title: this.article.title
+            title: this.article.title,
+            script: [
+                { src: 'http://localhost:3000/disqus.js' },
+            ],
         }
     },
     async asyncData({ $content, params }) {
@@ -86,7 +85,6 @@ export default {
 }
 </script>
 <style lang="scss">
-@import './../../assets/styles/theme';
 .post-main{
     width: 100%;
 }
@@ -110,7 +108,6 @@ export default {
     position: relative;
     padding: .5rem;
     margin-bottom: 1rem;
-    @include line_bottom(var(--blue-depth-200));
     a{
         color: var(--grey-200);
         &::after{

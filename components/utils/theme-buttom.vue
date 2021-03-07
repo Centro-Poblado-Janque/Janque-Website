@@ -1,88 +1,83 @@
 <template>
-    <span class="lg_fixed position_right_top center_by_hg_60 right-20">
-        <input type="checkbox" id="theme__toggle" v-model="checked" hidden/>
-        <label for="theme__toggle" class="rounded-toggle">
-            <div class="after">
-                <FontAwesomeIcon class="fill-content" :icon="checked === true ? faMoon : faSun" />
-            </div>
-            <!--  -->
+    <div :class="`${$style.switch} grid`" v-css:module>
+        <input type="checkbox" name="" id="theme__toggle" :class="$style.checkbox" hidden v-model="checked" checked="false"/>
+        <label for="theme__toggle" :class="$style.dot">       
         </label>
-    </span>
+    </div>
 </template>
 
 <script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 export default {
     name: 'ThemeButton',
-    components:{
-        FontAwesomeIcon
+    components: {
+        FontAwesomeIcon,
     },
-    data () {
-        return{
-            faSun, faMoon, checked: false
+    data() {
+        return {
+            faSun,
+            faMoon,
+            checked: false,
+            getTheme: ''
         }
     },
-    head () {
-        return{
-            htmlAttrs:{
-                class: this.getContext()
-            }
+    head() {
+        return {
+            htmlAttrs: {
+                'data-theme': this.getContext(),
+            },
         }
+    },
+    mounted () {
+        this.getContext()
     },
     methods: {
-        getContext () {
-        if(this.checked){
-            return 'dark_mode'
-        }
-        else{
-            return ''
-        }
-        }
+        getContext() {
+            if (this.checked) {
+                return 'dark';
+            } else {
+                return 'light'
+            }
+        },
     }
 }
 </script>
 
-<style lang="scss">
-.rounded-toggle{
+<style lang="scss" module>
+.switch{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    padding: 1rem;
+}
+.dot{
     display: inline-block;
-    border: 1.5px solid var(--grey-border);
-    border-radius: 2px;
+    border-radius: 50px;
     background-color: var(--grey-dark);
-    width: 4rem;
-    height: 2rem;
-    .after{
-        color: var(--light-primary);
-        width: 50%;
-        transition: all .5s ;
-        height: 80%;
-        margin: 5%;
-        text-align: center;
+    width: 64px;
+    position: relative;
+    border: 2px solid #47646c;
+    height: 34px;
+    cursor: pointer;
+    &::after {
+        content: "";
+        width: 25px;
+        transition: all 0.5s;
+        height: 24px;
         display: block;
-        border-radius: 2px;
-        background-color: var(--dark-light);
+        border-radius: 50px;
+        background-color: #47646c;
+        position: absolute;
+        top: 3px;
+        left: 3px;
     }
 }
-.right-20{
-    left: 15px;
-    @media screen and(min-width: 1200px) {
-        right: 20px !important;
-        left: auto
-    }
-}
-.fill-content{
-    width: 100%;
-    height: 100%;
-}
-.fa-sun{
-    color: #0e7face1;
-}
-.fa-moon{
-    color: #c4b003;
-}
-#theme__toggle{
-    &:checked ~ .rounded-toggle .after{
-        transform: translateX(75%);
+.checkbox:checked + .dot{
+    background: #25454d;
+    &::after{
+        left: 33px;
     }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <main id="main-app-wrapper">
+    <main id="main-app-wrapper" class="main--content">
         <slot></slot>
     </main>
 </template>

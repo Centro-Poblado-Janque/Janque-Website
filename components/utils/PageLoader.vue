@@ -11,22 +11,23 @@
 
 <script>
 export default {
-    data: () => {
-        return {
-            isloaded: false,
-        }
-    },
+    data: () => ({
+        isloaded: false
+    }),
     mounted() {
         document.onreadystatechange = () => {
             if (document.readyState == 'complete') {
                 this.isloaded = true
             }
         }
+        setTimeout(() => {
+            this.isloaded = true
+        }, 3000);
     },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
 // -----------------------------------------------------
 .page-loader {
@@ -38,7 +39,7 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--light-primary);
+    background-color: var(--light-first);
     z-index: 1200;
 }
 // -----------------------------------------------------

@@ -1,5 +1,5 @@
 <template>
-	<ButtonContainer class="dt-btn">
+	<ButtonContainer class="dt-btn" @click="$emit('open')">
 		<ToggleButton role="button">
 			<span class="dt"></span>
 			<span class="dt"></span>
@@ -69,9 +69,6 @@ export default {
 	components:{
 		ToggleButton,
 		ButtonContainer
-	},
-	props:{
-		className: String
 	}
 }
 </script>

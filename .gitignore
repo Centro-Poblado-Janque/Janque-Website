@@ -20,3 +20,9 @@ coverage
 dist
 .nuxt
 build-app/
+
+
+#config
+
+prepros.config 
+ 

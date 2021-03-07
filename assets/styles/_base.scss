@@ -1,20 +1,27 @@
 @media screen and (min-width: $desktop_breakpoints) {
-    ::-webkit-scrollbar {
-        width: var(--sz-scroll-size);
-        height: var(--sz-scroll-size);
-        background-color: var(--bg-scroll-thumb);
-        border-radius: 5px;
-        &-thumb {
-            background-color: var(--bg-scroll-thumb);
+    ::-webkit-scrollbar{
+        height: 10px;
+        width: 10px;
+        background-color: transparent;
+        &-thumb{
+            background-color:  #274952;
             border-radius: 5px;
+            transition: all .5s ease-in-out;
+            border: 2px solid var(--light-first);
+            outline: 2px solid var(--light-first);
+            &:hover{
+                background-color: #274952;
+            }
         }
-        &-track {
-            background: #566169;
+        &-button{
+            background-color: transparent;
+            height: 10px;
+            width: 10px;
         }
     }
 }
 html {
-    background-color: var(--light-primary);
+    background-color: var(--light-first);
     scroll-behavior: smooth;
 }
 *{
@@ -34,8 +41,7 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    color: var(--text-color-primary);
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--global-font);
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }

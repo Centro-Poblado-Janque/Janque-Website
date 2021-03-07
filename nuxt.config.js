@@ -1,13 +1,26 @@
 
-const description = 'La localidad de Janque es uno de los Centros Poblados mas grandes de Incahuasi y alberga una poblacion de mas de 200 habitantes. Se caracteriza principalmente por sus costumbres y la acogida de su gente, y, en mayor proporcion, por la historia que le antecede como Centro Poblado y por albergar la hacienda mas grande de Incahuasi '
+import { resolve } from "path";
+import MetaConfig from './meta.config';
 
 export default {
+    head: MetaConfig,
     modules: ['@nuxt/content'],
+    plugins: ['~/assets/vue/directives.client.js', '~/components/global'],
+    css:['~/assets/styles/index.scss'],
     srcDir: './',
     loadingIndicator: {
         name: 'fading-circle',
         color: 'teal',
         background: 'white',
+    },
+    loading: {
+        color: 'teal',
+        height: '2px',
+        continue: true,
+    },
+    alias: {
+        'blog-img': resolve(__dirname, './assets/img/blog-img'),
+        'blog-autor': resolve(__dirname, './assets/img/avatar')
     },
     target: 'static',
     generate: {
@@ -24,62 +37,24 @@ export default {
                 decodeEntities: false,
                 minifyCSS: false,
                 minifyJS: false,
-                processConditionalComments: false,
+                processConditionalComments: true,
                 removeEmptyAttributes: true,
-                removeRedundantAttributes: false,
+                removeRedundantAttributes: true,
                 trimCustomFragments: true,
-                useShortDoctype: false,
+                removeComments: true,
             },
         },
-    },
-    head: {
-        htmlAttrs: {
-            lang: 'es',
-            class: 'dark_mode',
+        loaders: {
+            cssModules: {
+                modules: {
+                    localIdentName: 'md--[local]-[hash:base32:6]',
+                },
+            },
         },
-        title: 'Centro Poblado Janque - Inicio',
-        link: [
-            { rel: 'autor', content: 'Alex Segundo' },
-            { rel: 'publiher', href: "<a href='https://segundoalex.com/about'></a>",
-            },
-            { rel: 'stylesheet', href: '/styles/normalize.css' },
-            {
-                href:
-                    'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Nunito:ital,wght@0,200;0,300;0,400;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Roboto:wght@100;300;400&display=swap',
-                rel: 'stylesheet',
-            },
-            {
-                rel:"preconnect", href:"https://fonts.gstatic.com"
-            },
-            { href:"https://fonts.googleapis.com/css2?family=Viga&display=swap", rel:"stylesheet"}
-        ],
-        meta: [
-            { charset: 'UTF-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover',
-            },
-            { hid: 'description', name: 'description', content: description },
-            { name: 'mobile-wep-app-capable', content: 'yes' },
-            { name: 'keywords', content: 'Yanque Janque Janque.com Centro Poblado de Janque Incahuasi-Janque'},
-
-            //----Twitter Support------>
-            { name: 'twitter:card', content: '' },
-            { name: 'twitter:site', content: '' },
-            { name: 'twitter:title', content: '' },
-            { name: 'twitter:description', content: description },
-            { name: 'twitter:creator', content: '' },
-            { name: 'twitter:image:src', content: '' },
-
-            //----Open Graph------>
-            { property: 'og:title', content: 'Centro Poblado Janque' },
-            { property: 'og:type', content: 'Website' },
-            { property: 'og:url', content: 'https://cp-janque.com' },
-            { property: 'og:image', content: 'https://example.com/img.png' },
-            { property: 'og:description', content: description },
-            { property: 'og:site_name', content: 'Centro Poblado de Janque' },
-            { property: 'website:publish_time', content: '20/12/2020' },
-        ],
-        script: [
-            { src: '/disqus.js' },
-        ],
-    },
+        postcss: [
+            require('autoprefixer')({
+                browsers: ['> 2%']
+        })
+        ]
+    }
 }

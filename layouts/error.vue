@@ -1,11 +1,11 @@
 <template>
-    <div class="page-not-found">
+    <div :class="$style.pageNotFound">
         <Container>
-            <div class="override">
-                <span class="error_img_contain">
+            <div :class="$style.override">
+                <span :class="$style.error_img_contain">
                     <ErrorLogo />
                 </span>
-                <div class="error_help">
+                <div :class="$style.error_help">
                     <ErrorCaption/>
                     <HelpErrorButton />
                 </div>
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import Container from '../components/container/Container.vue'
 import ErrorCaption from '../components/errors/ErrorCaption.vue'
 import ErrorLogo from '../components/errors/ErrorLogo.vue'
 import HelpErrorButton from '../components/errors/HelpErrorButton.vue'
@@ -40,8 +39,7 @@ export default {
     mounted () {
         this.error_title = 'Error 404 - Not Found';
     },
-    components: { 
-        Container, 
+    components: {
         ErrorLogo,
         ErrorCaption,
         HelpErrorButton
@@ -49,17 +47,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import './../assets/styles';
-.page-not-found{
+<style lang="scss" module>
+@import '~/assets/styles/mixin';
+.pageNotFound{
     min-height: 100vh;
     position: relative;
-/*     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999; */
+    width: 100%;
     a{
         display: block;
         padding: 1.5rem;

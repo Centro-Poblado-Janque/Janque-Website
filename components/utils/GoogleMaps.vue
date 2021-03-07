@@ -9,12 +9,8 @@
 </template>
 
 <script>
-import Container from '../container/Container.vue'
 export default {
     name: 'MapsLocations',
-    components: { 
-      Container 
-    },
 }
 </script>
 <style lang="scss">
@@ -22,4 +18,4 @@ export default {
     width: 100%;
     height: 100%;
 }
-</style>le
+</style>

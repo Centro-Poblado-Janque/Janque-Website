@@ -1,16 +1,95 @@
-
-/* =========   COLOR PALLETE   ========== */
-
 :root{
+
+//============#>   GREY : COLOR SCHEME =====|
+
+    --v-grey-dark               : #101d21;
+    --v-grey-primary            : #122226;
+    --v-grey-100                : #122c30;
+    --v-grey-150                : #132f33;
+    --v-grey-200                : #143136;
+    --v-grey-250                : #153439;
+    --v-grey-300                : #16373c;
+    --v-grey-350                : #17393e;
+    --v-grey-400                : #183c41;
+    --v-grey-450                : #193e44;
+    --v-grey-500                : #1a4147;
+    --v-grey-550                : #23494e;
+    --v-grey-600                : #2c5056;
+    --v-grey-650                : #35585d;
+    --v-grey-700                : #3f5f64;
+    --v-grey-750                : #48676c;
+    --v-grey-800                : #516f73;
+
+//============#>   NIGHT  : COLOR SCHEME =====|
+
+    --v-night-dark              : #202121;
+    --v-night-primary           : #232424;
+    --v-night-100               : #2c2d2d;
+    --v-night-150               : #353636;
+    --v-night-200               : #3d3e3e;
+    --v-night-250               : #464747;
+    --v-night-300               : #4f5050;
+    --v-night-350               : #585959;
+    --v-night-400               : #616161;
+    --v-night-450               : #696a6a;
+    --v-night-500               : #727373;
+    --v-night-550               : #7b7c7c;
+    --v-night-600               : #848484;
+    --v-night-650               : #8d8d8d;
+    --v-night-700               : #959696;
+    --v-night-750               : #9e9f9f;
+    --v-night-800               : #a7a7a7;
+
+//============#>   SMOKE  : COLOR SCHEME ========|
+
+    --v-smoke-dark              : #595959;
+    --v-smoke-primary           : #878787;
+    --v-smoke-100               : #949494;
+    --v-smoke-150               : #a0a0a0;
+    --v-smoke-200               : #a7a7a7;
+    --v-smoke-250               : #b9b9b9;
+    --v-smoke-300               : #c6c6c6;
+    --v-smoke-350               : #cccccc;
+    --v-smoke-400               : #d3d3d3;
+    --v-smoke-450               : #d9d9d9;
+    --v-smoke-500               : #dfdfdf;
+    --v-smoke-550               : #e6e6e6;
+    --v-smoke-600               : #ececec;
+    --v-smoke-650               : #f2f2f2;
+    --v-smoke-700               : #f9f9f9;
+
+//==========######  SIZES : CUSTOM =============|
+    --max-width                 : 1400px;
+    --sz-scroll-size            : 10px;
+    --grid-gap                  : 2rem;
+    --gap                       : var(--grid-gap);
+
+//==========######  FONTS : CUSTOM =============|
+
+    --global-font               : -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --optional-font             : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --noto-font                 : 'Noto Sans JP', 'Roboto', sans-serif;
+    --open-sans-font            : 'Open Sans', 'Roboto', sans-serif;
+    --nunito-sans-font          : 'Nunito', 'Open Sans', 'Roboto', sans-serif;
+
+}
+:root[data-theme="light"]{
+    --light-first               : var(--v-smoke-500);
+
+
+    --smoke-100                 : var(--v-smoke-100);
+    --smoke-150                 : var(--v-smoke-150);
+    --smoke-200                 : var(--v-smoke-200);
+    --smoke-250                 : var(--v-smoke-250);
+    --smoke-300                 : var(--v-smoke-300);
+    --smoke-350                 : var(--v-smoke-350);
+    --smoke-150                 : var(--v-smoke-150);
     --dark-primary              : #1C2120;
     --dark-light                : #465458;
     --dark-active-link          : #2129294d;
-    --light-primary             : #fbfbfe;
     --bg-input-primary          : #cdcece;
-    --light-second              : #eff3f5;
+    --light-second              : #e8eced;
     --light-border-1            : #c9c9c9;
-    --grid-gap                  : 2rem;
-    --gap                       : var(--grid-gap);
     --text-body                 : #4c5251;
     --text-dark                 : #353d3c;
 
@@ -54,74 +133,51 @@
 
 
     --brand-color               : rgb(40, 131, 119);
-    --max-width                 : 1400px;
-    --sz-scroll-size            : 10px;
     --nav-color                 : #b15b0b;
 
     --dt-color                  : #131c1f;
 }
-@media screen and (prefers-color-scheme: dark){
-    :root.dark_mode{
-        //--light-primary             : #242525;
-        --light-primary             : #161f22;
-        --bg-input-primary          : #212f33;
-        --dark-primary              : #efefef;
-        --light-second              : #131c1f;
-        --light-border-1            : #555555;
-        --white-primary             : #525554;
-        --text-dark                 : #838383;
+:root[data-theme="dark"]{
+    --light-first               : var(--v-grey-primary);
 
-        --grey-border               : #2a3b47;
+    --smoke-100                 : var(--v-smoke-100);
+    --smoke-150                 : var(--v-smoke-150);
+    --smoke-200                 : var(--v-grey-600);
+    --smoke-250                 : var(--v-smoke-250);
+    --smoke-300                 : var(--v-grey-300);
+    --smoke-350                 : var(--v-smoke-350);
+    --smoke-150                 : var(--v-smoke-150);
 
-        --card-bg-blog              : #1f2a2e;
-        --card-border-bg            : #1f2c31;
-        --card-border-bg-1          : #243338;
+    --light-primary             : #101d21;
+    --bg-input-primary          : #212f33;
+    --dark-primary              : #efefef;
+    --light-second              : var(--v-grey-primary);
+    --light-border-1            : #555555;
+    --white-primary             : #525554;
+    --text-dark                 : #838383;
 
-        --blue-depth                : rgb(8, 126, 173);
-        --blue-depth-200            : #0b8cbee1;
+    --grey-border               : #2a3b47;
 
-        --blog-color-txt-content    : #c2c1c1;
+    --card-bg-blog              : #1f2a2e;
+    --card-border-bg            : #1f2c31;
+    --card-border-bg-1          : #243338;
+
+    --blue-depth                : rgb(8, 126, 173);
+    --blue-depth-200            : #0b8cbee1;
+
+    --blog-color-txt-content    : #c2c1c1;
 
 
-        --grey-200                  : #9aabb1;
-        --dt-nav                    : var(--blue-depth);
-        --dt-nav-alpha              : var(--blue-depth-200);
-        --nav-border                : #2c3538ce;
+    --grey-200                  : #9aabb1;
+    --dt-nav                    : var(--blue-depth);
+    --dt-nav-alpha              : var(--blue-depth-200);
+    --nav-border                : #2c3538ce;
 
-        --dt-color                  : #9e9e9e;
-    }
+    --dt-color                  : #9e9e9e;
 }
 
-    $device_pixel_radio : 2;
-    $phone_breakpoints : 400px;
-    $tablet_breakpoints : 890px;
-    $desktop_breakpoints: 1200px;
-    $bg-color            : teal;
 
-// =====  MIXINGS  =======//
-
-@mixin normalize_img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-}
-
-@mixin absolute_position {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-@mixin line_bottom($color){
-    &::after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        display: block;
-        width: 15%;
-        height: 2px;
-        background-color: $color;
-    }
-}
+$device_pixel_radio: 2;
+$phone_breakpoints: 400px;
+$tablet_breakpoints: 890px;
+$desktop_breakpoints: 1200px;
