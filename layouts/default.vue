@@ -1,22 +1,22 @@
 <template>
     <MainWrapperApp>
         <PageLoader />
-        <AppNavigation />
+        <VHeader />
             <Nuxt/>
-        <AppFooter />
+        <VFooter />
     </MainWrapperApp>
 </template>
 
 <script>
 import { Fragment } from 'vue-fragment'
-import AppFooter from '../components/layout/AppFooter.vue'
-import AppNavigation from '../components/layout/AppNavigation.vue'
+import VFooter from '../components/layout/VFooter.vue'
+import VHeader from '../components/layout/MainHeader.vue'
 import PageLoader from '../components/utils/PageLoader.vue'
 export default {
     name: 'MainLayout',
     components: {
-        AppNavigation,
-        AppFooter,
+        VHeader,
+        VFooter,
         PageLoader,
         MainWrapperApp: Fragment,
     },

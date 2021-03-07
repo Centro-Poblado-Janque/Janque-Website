@@ -1,15 +1,15 @@
 <template>
-   <header class="main-header" aria-label="header" ref="header" v-scroll="changeNavState">
+   <header class="Header main-header" ref="header" v-scroll="changeNavState" role="banner">
       <ThemeButton />
 
-      <ViewBox class="nav_toggle" ref="toggle">
+      <ViewBox class="movil-nav" ref="toggle">
          <ToggleButton @open="OpenMenu" ref="toggleBtn" />
          <LogoJanque />
       </ViewBox>
 
       <Menu ref="nav" @close="HideMenu" />
 
-      <ViewBox class="no-desktop">
+      <ViewBox class="DrawerOut--001">
          <div class="menu-background top" />
          <div class="menu-background bottom" />
       </ViewBox>
@@ -17,10 +17,12 @@
 </template>
 
 <script>
+
 import LogoJanque from '../utils/LogoJanque.vue'
 import ThemeButton from '../utils/theme-buttom.vue'
 import ToggleButton from '../utils/ToggleButton.vue'
-import Menu from './NavigationLinks.vue'
+import Menu from './MenuItems.vue'
+
 export default {
    name: 'AppNavigation',
    components: {
@@ -64,23 +66,18 @@ export default {
 
 <style lang="scss">
 @import '~/assets/styles/mixin';
-.nav_toggle {
+.movil-nav {
    min-height: 64px;
    height: 64px;
-   position: fixed;
-   margin: 0;
-   left: 0;
-   right: 0;
-   height: 50px;
    z-index: 11;
-   background-color: var(--light-first);
+   background-color: var(--bg-color-second);
    border-bottom: 1px solid var(--smoke-300);
    @media screen and(min-width: $desktop_breakpoints) {
       display: none;
    }
 }
 
-.no-desktop {
+.DrawerOut--001 {
    @media screen and(min-width: $desktop_breakpoints) {
       display: none;
    }
@@ -130,8 +127,9 @@ export default {
    height: 250px;
    position: absolute;
    left: -120%;
-   top: 100px;
-   background-color: var(--light-first);
+   top: 20vh;
+   z-index: -1;
+   background-color: var(--bg-drawer);
    visibility: hidden;
    transition: all 0.25s cubic-bezier(0.83, 0.65, 0.47, 1);
    &.top {
@@ -152,7 +150,7 @@ export default {
          transform: rotate(-45deg) translateY(-150%) scaleY(4.1);
       }
    }
-   .nav_item {
+   .Menu--item {
       opacity: 1;
       transform: translateX(0px);
       transition: transform 0.35s, opacity 0.5s ease-in;

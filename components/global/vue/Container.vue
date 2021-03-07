@@ -1,5 +1,5 @@
 <template>
-    <div class="container_s">
+    <div :class="$style.Container">
         <slot></slot>
     </div>
 </template>
@@ -10,9 +10,9 @@ export default {
 }
 </script>
 
-<style lang="scss" global>
+<style lang="scss" module>
 @import '~/assets/styles/mixin';
-.container_s, .container{
+.container_s, .container, .Container{
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;

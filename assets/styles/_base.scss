@@ -21,7 +21,7 @@
     }
 }
 html {
-    background-color: var(--light-first);
+    background-color: var(--bg-color-primary);
     scroll-behavior: smooth;
 }
 *{
@@ -41,7 +41,7 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    font-family: var(--global-font);
+    font-family: var(--global-font), var(--optional-font);
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }

@@ -1,20 +1,20 @@
 <template>
-   <nav class="nav_items" @click="$emit('close')">
-      <Container class="override">
+   <nav class="MenuContainer" @click="$emit('close')" role="navigation">
+      <Container class="Container--override">
          <SimpleGrid Columns="2fr 8fr" RowGap="0" ColumnGap="0">
             <ViewBox class="logo_contain">
                <Logo />
             </ViewBox>
-            <ViewBox class="nav_links ly-flex">
+            <ViewBox class="Menu ly-flex">
                <SearchModel />
-               <NextLink to="/" data-action="home" css="nav_item" :icon="faHome" content="Inicio" />
-               <NextLink to="/costumbres" data-action="customs" css="nav_item" :icon="faSlidersH" content="Costumbres" />
-               <NextLink to="/historia" data-action="history" css="nav_item" :icon="faLandmark" content="Historia" />
-               <NuxtLink to="/about" data-action="about" class="nav_item">
+               <NextLink to="/" data-action="home" css="Menu--item" :icon="faHome" content="Inicio" />
+               <NextLink to="/costumbres" data-action="customs" css="Menu--item" :icon="faSlidersH" content="Costumbres" />
+               <NextLink to="/historia" data-action="history" css="Menu--item" :icon="faLandmark" content="Historia" />
+               <NuxtLink to="/about" data-action="about" class="Menu--item">
                   <BrandIconSvg class="size svg-inline--fa fa-w-16" />
                   <span>Sobre Janque</span>
                </NuxtLink>
-               <NextLink to="/blog" data-action="blog" css="nav_item" :icon="faBlog" content="Blog" />
+               <NextLink to="/blog" data-action="blog" css="Menu--item" :icon="faBlog" content="Blog" />
             </ViewBox>
          </SimpleGrid>
       </Container>
@@ -31,7 +31,7 @@ import { SimpleGrid } from '../container/Grid'
 import SearchModel from '../widgets/SearchModel.vue'
 
 export default {
-   name: 'NavigationLinks',
+   name: 'Menu',
    components: {
       Logo,
       FontAwesomeIcon,
@@ -51,14 +51,13 @@ export default {
 
 <style lang="scss">
 @import '~/assets/styles/mixin';
-.nav_items {
+.MenuContainer {
    height: calc(100vh - 64px);
    height: -webkit-calc(100vh - 64px);
    width: 100%;
    position: relative;
    pointer-events: none;
    z-index: 3;
-   top: 80px;
    transition: all 0.25s ease-in-out;
    @media screen and(min-width: $desktop_breakpoints) {
       top: 0;
@@ -71,15 +70,14 @@ export default {
       pointer-events: auto;
    }
 }
-.container_s.override {
+.Container--override {
    height: 100%;
 }
-.nav_links {
-   display: flex;
+.Menu {
    width: 100%;
    height: 100%;
    flex-direction: column;
-   a {
+   &--item {
       display: block;
       font-size: 1.6rem;
       text-transform: uppercase;
@@ -91,19 +89,7 @@ export default {
       position: relative;
       color: var(--nav-color);
       &:hover {
-         background-color: transparent;
-         &::after {
-            position: absolute;
-            content: '';
-            padding: 0.5rem;
-            width: 90%;
-            margin: 17px auto;
-            left: 20px;
-            bottom: 0;
-            height: 30px;
-            border-radius: 3px;
-            background-color: var(--dark-active-link);
-         }
+         opacity: .8;
       }
    }
    .nav_search {
@@ -183,7 +169,7 @@ export default {
 }
 @media screen and (min-width: $desktop_breakpoints) {
    .bg_dark {
-      background-color: var(--light-second);
+      background-color: var(--bg-color-second);
       height: 64px;
       border-bottom: 1px solid var(--grey-border);
       .logo_contain {

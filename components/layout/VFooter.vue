@@ -1,7 +1,7 @@
 <template>
-   <footer id="main-footer" class="main_footer">
+   <footer id="main-footer" class="Footer" role="footer">
       <Container>
-         <Grid :Rows="2" RowGap="1rem">
+         <Grid :Rows="2" RowGap="1rem" data-class="grid-system">
             <ViewBox class="footer_info">
                <FooterLogoOne />
                <ul class="address--declarations">
@@ -42,12 +42,12 @@ export default {
 
 <style lang="scss">
 @import '~/assets/styles/mixin';
-.main_footer {
-   background-color: var(--light-second);
+.Footer {
+   background-color: var(--bg-color-second);
    padding: 2rem 0;
    font-weight: 400;
-   font-size: 14px;
-   color: var(--text-dark);
+   font-size: .9rem;
+   color: var(--txt-color-primary);
    align-self: flex-end;
    width: 100%;
 }

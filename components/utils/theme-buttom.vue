@@ -1,7 +1,8 @@
 <template>
-    <div :class="`${$style.switch} grid`" v-css:module>
-        <input type="checkbox" name="" id="theme__toggle" :class="$style.checkbox" hidden v-model="checked" checked="false"/>
-        <label for="theme__toggle" :class="$style.dot">       
+    <div :class="[$style.switch]" v-css:module>
+        <input type="checkbox" id="theme__toggle" :class="$style.checkbox" v-model="checked"/>
+        <label for="theme__toggle" :class="$style.dot">
+            <FontAwesomeIcon :icon="checked ?faSun :faMoon" />     
         </label>
     </div>
 </template>
@@ -46,13 +47,13 @@ export default {
 
 <style lang="scss" module>
 .switch{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 110;
     padding: 1rem;
 }
-.dot{
+/* .dot{
     display: inline-block;
     border-radius: 50px;
     background-color: var(--grey-dark);
@@ -73,11 +74,14 @@ export default {
         top: 3px;
         left: 3px;
     }
-}
-.checkbox:checked + .dot{
-    background: #25454d;
-    &::after{
-        left: 33px;
+} */
+.checkbox{
+    display: none;
+    &:checked + .dot{
+        background: #25454d;
+        &::after{
+            left: 33px;
+        }
     }
 }
 </style>
