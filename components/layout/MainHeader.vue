@@ -43,7 +43,7 @@ export default {
       },
       HideMenu() {
          const ref = this.$refs.nav.$el
-         let data = ref.querySelectorAll('[data-action]').forEach(element => {
+         ref.querySelectorAll('[data-action]').forEach(element => {
             element.onclick = () => {
                this.$refs.nav.$el.classList.remove('is_active')
                this.$refs.toggleBtn.$el.classList.remove('is_active')
@@ -91,37 +91,7 @@ export default {
    z-index: 999;
    left: 0;
 }
-.dt-btn.is_active {
-   .dt:nth-child(1) {
-      left: 1.5px;
-      top: 3px;
-      transform: rotate(45deg);
-   }
-   .dt:nth-child(2) {
-      left: calc(50% - 3px);
-      top: 2px;
-      transform: rotate(45deg);
-   }
-   .dt:nth-child(3) {
-      left: -50%;
-      opacity: 0;
-   }
 
-   .dt:nth-child(4) {
-      left: 100%;
-      opacity: 0;
-   }
-   .dt:nth-child(5) {
-      left: 1.25px;
-      top: 11px;
-      transform: rotate(45deg);
-   }
-   .dt:nth-child(6) {
-      left: calc(50% - 2px);
-      top: 11px;
-      transform: rotate(45deg);
-   }
-}
 .menu-background {
    width: 300%;
    height: 250px;
@@ -154,9 +124,6 @@ export default {
       opacity: 1;
       transform: translateX(0px);
       transition: transform 0.35s, opacity 0.5s ease-in;
-      &:nth-child(1) {
-         transition-delay: 0.1s;
-      }
       &:nth-child(2) {
          transition-delay: 0.2s;
       }
@@ -172,6 +139,12 @@ export default {
       &:nth-child(6) {
          transition-delay: 0.6s;
       }
+   }
+   .Menu--search{
+      opacity: 1;
+      transform: translateX(0px);
+      transition: transform 0.35s, opacity 0.5s ease-in;
+      transition-delay: 0.1s;
    }
 }
 </style>

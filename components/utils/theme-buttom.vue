@@ -1,10 +1,12 @@
 <template>
-    <div :class="[$style.switch]" v-css:module>
-        <input type="checkbox" id="theme__toggle" :class="$style.checkbox" v-model="checked"/>
-        <label for="theme__toggle" :class="$style.dot">
-            <FontAwesomeIcon :icon="checked ?faSun :faMoon" />     
-        </label>
-    </div>
+    <ViewBox :class="[$style.switchContainer]">
+        <div :class="[$style.switch]" v-css:module>
+            <input type="checkbox" id="theme__toggle" :class="$style.checkbox" v-model="checked"/>
+            <label for="theme__toggle" :class="[$style.dot, $style.fixedLeft]">
+                <FontAwesomeIcon :icon="checked ?faSun :faMoon" />     
+            </label>
+        </div>
+    </ViewBox>
 </template>
 
 <script>
@@ -46,11 +48,26 @@ export default {
 </script>
 
 <style lang="scss" module>
+@import '~/assets/styles/mixin';
+.switchContainer{
+    position: absolute;
+    width: 100px;
+    top: 0;
+    height: 110%;
+    overflow: hidden;
+    @media(min-width: $desktop_breakpoints){
+        overflow: visible;
+    }
+}
 .switch{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -50px;
+    left: -25px;
     z-index: 110;
+    height: 140px;
+    width: 70px;
+    transform: rotate(45deg);
+    background-color: #25454d;
     padding: 1rem;
 }
 /* .dot{
@@ -75,6 +92,14 @@ export default {
         left: 3px;
     }
 } */
+.fixedLeft{
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 63px;
+    right: 15px;
+    color: var(--v-orange-primary);
+    font-size: 1.25rem;
+}
 .checkbox{
     display: none;
     &:checked + .dot{

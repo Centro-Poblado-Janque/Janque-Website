@@ -1,5 +1,5 @@
 <template>
-    <form class="nav_search nav_item">
+    <form class="nav_search">
         <input class="nav-input-search" type="text" placeholder="Que desea buscar"/>
         <input type="submit" value="" id="send" hidden />
         <label for="send" class="send-search" role="button">
@@ -27,6 +27,7 @@ export default {
     background-color: var(--bg-input-primary);
     padding: .5rem;
     border-radius: 3px;
+    font-family: var(--viga-font);
     display: flex;
     justify-content: space-between;
     align-items: center;

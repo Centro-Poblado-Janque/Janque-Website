@@ -27,6 +27,6 @@ export default {
 
 <style lang="scss" module>
 .NextLink{
-    font-family: var(--noto-font) !important;
+    display: inline-block;
 }
 </style>

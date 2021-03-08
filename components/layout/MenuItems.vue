@@ -6,7 +6,7 @@
                <Logo />
             </ViewBox>
             <ViewBox class="Menu ly-flex">
-               <SearchModel />
+               <SearchModel class="Menu--search"/>
                <NextLink to="/" data-action="home" css="Menu--item" :icon="faHome" content="Inicio" />
                <NextLink to="/costumbres" data-action="customs" css="Menu--item" :icon="faSlidersH" content="Costumbres" />
                <NextLink to="/historia" data-action="history" css="Menu--item" :icon="faLandmark" content="Historia" />
@@ -58,6 +58,7 @@ export default {
    position: relative;
    pointer-events: none;
    z-index: 3;
+   color: teal;
    transition: all 0.25s ease-in-out;
    @media screen and(min-width: $desktop_breakpoints) {
       top: 0;
@@ -85,17 +86,26 @@ export default {
       font-weight: 500;
       transform: translateX(-100px);
       opacity: 0;
-      font-family: 'Viga', sans-serif;
+      font-family: var(--viga-font);
       position: relative;
       color: var(--nav-color);
-      &:hover {
-         opacity: .8;
+      @media screen and(min-width: $desktop_breakpoints){
+         background-color: transparent;
+         text-transform: capitalize;
+         border: none;
+         position: relative;
+         font-size: 1.1rem;
+         transform: translateX(0);
+         opacity: 1;
+         font-family: var(--noto-font);
+         text-align: left;
+         color: var(--dark-primary);
       }
    }
    .nav_search {
       padding: 0.75rem;
       width: 90%;
-      margin: 0.5rem auto;
+      margin: 1rem auto;
       transform: translateX(-100px);
       opacity: 0;
    }
@@ -109,33 +119,6 @@ export default {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      a {
-         background-color: transparent;
-         text-transform: capitalize;
-         border: none;
-         position: relative;
-         font-size: 1.1rem;
-         transform: translateX(0);
-         opacity: 1;
-         font-family: var(--nav-font);
-         text-align: left;
-         color: var(--dark-primary);
-         &::before {
-            content: '';
-            display: block;
-            opacity: 0.1;
-            position: absolute;
-            right: 0;
-            top: 0;
-            left: 0;
-            transform: scale3d(0, 0, 0);
-            width: 100%;
-            height: 100%;
-            border-radius: 3px;
-            background-color: currentColor;
-            transition: 0.1s;
-         }
-      }
       .nav_search {
          display: none;
       }
@@ -165,6 +148,7 @@ export default {
       display: block;
       width: 100%;
       height: 100%;
+      padding: .2rem;
    }
 }
 @media screen and (min-width: $desktop_breakpoints) {

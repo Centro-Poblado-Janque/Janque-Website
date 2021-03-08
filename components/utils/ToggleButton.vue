@@ -16,15 +16,45 @@ import styled from 'vue-styled-components';
 
 const ButtonContainer = styled.div`
 	flex: 0 0 auto;
-    padding-right: 0;
+   padding-right: 0;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+   align-items: center;
+   justify-content: center;
 	right: 0;
 	height: 100%;
 	width: 64px;
 	position: absolute;
-	z-index: 1000
+	z-index: 1000;
+	&.is_active{
+		.dt:nth-child(1) {
+			left: 1.5px;
+			top: 3px;
+			transform: rotate(45deg);
+		}
+		.dt:nth-child(2) {
+			left: calc(50% - 3px);
+			top: 2px;
+			transform: rotate(45deg);
+		}
+		.dt:nth-child(3) {
+			left: -50%;
+			opacity: 0;
+		}
+		.dt:nth-child(4) {
+			left: 100%;
+			opacity: 0;
+		}
+		.dt:nth-child(5) {
+			left: 1.25px;
+			top: 11px;
+			transform: rotate(45deg);
+		}
+		.dt:nth-child(6) {
+			left: calc(50% - 2px);
+			top: 11px;
+			transform: rotate(45deg);
+		}
+	}
 `;
 
 const ToggleButton = styled.div`
