@@ -1,9 +1,31 @@
+@keyframes move_right_to_left {
+   from {
+      transform: translateX(-20px);
+   }
+   to {
+      transform: translateX(0px);
+   }
+}
 
-@keyframes move_right_to_left{
-    from{
-        transform: translateX(-20px);
-    }
-    to{
-        transform: translateX(0px);
-    }
+@keyframes bounce-in {
+   0% {
+      transform: scale(0);
+   }
+   50% {
+      transform: scale(1.25);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+@keyframes bounce-out {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.25);
+   }
+   100% {
+      transform: scale(0);
+   }
 }

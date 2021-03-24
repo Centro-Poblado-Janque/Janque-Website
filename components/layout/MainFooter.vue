@@ -1,5 +1,5 @@
 <template>
-   <footer id="main-footer" class="Footer" role="footer">
+   <footer id="main-footer" class="Footer">
       <Container>
          <Grid :Rows="2" RowGap="1rem" data-class="grid-system">
             <ViewBox class="footer_info">
@@ -30,7 +30,7 @@ import FollowIcons from '../utils/FollowIcons.vue'
 import FooterLogoOne from '../utils/svg/footer-logo-one.vue'
 import FooterLogoTwo from '../utils/svg/footer-logo-two.vue'
 export default {
-   name: 'AppFooter',
+   name: 'MainFooter',
    components: {
       Grid,
       FooterLogoOne,

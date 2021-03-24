@@ -7,6 +7,7 @@
     --sz-scroll-size            : 10px;
     --grid-gap                  : 2rem;
     --gap                       : var(--grid-gap);
+    --base-font-size            : 16px;
 
 //==========######  FONTS : CUSTOM =============|
 
@@ -69,7 +70,7 @@
     --dt-nav                    : #9ea8a8;
     --dt-nav-alpha              : #959797;
 
-    --bg-scroll-thumb           : #1b272f;
+    --bg-scroll-thumb           : #929292;
     --brand-color               : rgb(40, 131, 119);
     --nav-color                 : #b15b0b;
 
@@ -79,15 +80,6 @@
 :root[data-theme="dark"]{
     --bg-color-primary          : #11191c;
     --bg-color-second           : #141e22;
-
-    --smoke-100                 : var(--v-smoke-100);
-    --smoke-150                 : var(--v-smoke-150);
-    --smoke-200                 : var(--v-grey-600);
-    --smoke-250                 : var(--v-smoke-250);
-    --smoke-300                 : var(--v-grey-300);
-    --smoke-350                 : var(--v-smoke-350);
-    --smoke-150                 : var(--v-smoke-150);
-
     --light-primary             : #101d21;
     --bg-input-primary          : #212f33;
     --dark-primary              : #efefef;
@@ -109,6 +101,7 @@
 
 
     --grey-200                  : #9aabb1;
+    --bg-scroll-thumb           : #3d5363;
     --dt-nav                    : var(--blue-depth);
     --dt-nav-alpha              : var(--blue-depth-200);
     --nav-border                : #2c3538ce;
@@ -123,3 +116,26 @@ $device_pixel_radio: 2;
 $phone_breakpoints: 400px;
 $tablet_breakpoints: 890px;
 $desktop_breakpoints: 1200px;
+
+
+@media screen and (min-width: $desktop_breakpoints) {
+    ::-webkit-scrollbar{
+        height: 10px;
+        width: 10px;
+        background-color: var(--bg-color-primary);
+        &-thumb{
+            background-color: var(--bg-scroll-thumb);
+            border-radius: 5px;
+            transition: all .5s ease-in-out;
+            border: 2px solid var(--bg-color-primary);
+            &:hover{
+                background-color: #3d5363;
+            }
+        }
+        &-button{
+            background-color: transparent;
+            height: 10px;
+            width: 10px;
+        }
+    }
+}

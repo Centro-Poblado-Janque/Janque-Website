@@ -2,7 +2,7 @@
     <MainContent class="page blog-page">
         <header class="blog-head">
             <Container>
-                <h1 class="title">Welcome to Blog Center of This Page</h1>
+                <p class="title">Blog de Janque</p>
             </Container>
         </header>
 
@@ -11,7 +11,7 @@
                 
                 <ul class="blog-card-container">
                     <li v-for="article of articles" :key="article.slug" class="blog-card">
-                        <BlogViews
+                        <PostCards
                             :slug="article.slug"
                             :img="article.img"
                             :alt="article.slug"
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import BlogViews from '../../components/blog/BlogViews.vue'
+import PostCards from '../../components/blog/PostCards.vue'
 import Caption from './../../components/styled/Caption.vue'
 
 export default {
@@ -36,7 +36,7 @@ export default {
     }),
     components: {
         Caption,
-        BlogViews
+        PostCards
     },
     async asyncData({ $content, params }) {
         const articles = await $content('articles', params.slug)
@@ -51,16 +51,17 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~/assets/styles/mixin';
 .blog-page{
     padding-bottom: 2rem;
 }
 .blog-head {
-    background-image: url('~assets/img/principal.png');
+    background-image: radial-gradient(circle at 33% 41%, rgba(250, 250, 250,0.03) 0%, rgba(250, 250, 250,0.03) 50%,rgba(37, 37, 37,0.03) 50%, rgba(37, 37, 37,0.03) 100%),radial-gradient(circle at 76% 49%, rgba(28, 28, 28,0.03) 0%, rgba(28, 28, 28,0.03) 50%,rgba(187, 187, 187,0.03) 50%, rgba(187, 187, 187,0.03) 100%),radial-gradient(circle at 41% 99%, rgba(247, 247, 247,0.03) 0%, rgba(247, 247, 247,0.03) 50%,rgba(120, 120, 120,0.03) 50%, rgba(120, 120, 120,0.03) 100%),radial-gradient(circle at 66% 27%, rgba(17, 17, 17,0.03) 0%, rgba(17, 17, 17,0.03) 50%,rgba(156, 156, 156,0.03) 50%, rgba(156, 156, 156,0.03) 100%),linear-gradient(0deg, rgb(18, 81, 88),rgb(39, 101, 99)) ,url('~assets/img/janque-day.png');
+    @include normalize_img;
     min-height: 80vh;
     padding-top: 80px;
     position: relative;
     transition: all 0.1s ease-in-out;
-    /*  animation: change_banner 14s infinite linear;  */
 }
 .title{
     display: flex;
@@ -80,17 +81,11 @@ export default {
 }
 .blog-card-container{
     display: grid;
-    padding: .5rem;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(5, minmax(450px, 500px));
-    grid-gap: var(--gap);
-    @media screen and(min-width: 800px) {
-        grid-template-columns: repeat(2, calc(50% - var(--gap)*2/2));
-        grid-template-rows: repeat(2, auto);
-    }
+    grid-auto-rows: 400px;
+    grid-gap: var(--grid-gap);
     @media screen and(min-width: 800px) {
         grid-template-columns: repeat(3, calc(33.3333% - var(--gap)*2/3));
-        grid-template-rows: repeat(2, 450px);
     }
 }
 .blog-card{

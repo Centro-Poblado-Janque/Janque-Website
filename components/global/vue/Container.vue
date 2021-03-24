@@ -16,6 +16,24 @@ export default {
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and(min-width: $desktop_breakpoints) {
+        width: 80%;
+    }
+    @media screen and(min-width: $tablet_breakpoints) {
+        width: 90%;
+    }
+}
+</style>
+<style lang="scss">
+@import '~/assets/styles/mixin';
+.container_s, .container, .Container{
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
     @media screen and(min-width: $desktop_breakpoints) {
         width: 80%;
     }

@@ -1,13 +1,20 @@
 <template name="template home__page">
    <MainContent class="page:home" data-page="home">
       <header class="home-head">
-         <Container> </Container>
+         <div class="home-header">
+            <p>Janque</p>
+         </div>
       </header>
+      <div class="demo">
+
+      </div>
    </MainContent>
 </template>
 
 <script>
-export default {}
+export default {
+
+}
 </script>
 
 <style lang="scss">
@@ -22,34 +29,17 @@ export default {}
    &::after {
       content: '';
       display: block;
-      background-image: url('./../assets/img/error_bg.jpg');
+      background-image: url('~/assets/img/principal.png');
       transition: all 0.1s ease-in-out;
       z-index: -1;
-      animation: change_banner 14s infinite linear;
-      filter: brightness(0.45);
+      filter: brightness(0.5);
       @include normalize_img; @include absolute_position;
    }
 }
-@keyframes change_banner {
-   0% {
-      background-image: url('./../assets/img/banner_1.png');
-   }
-   32% {
-      background-image: url('./../assets/img/banner_1.png');
-   }
+.home-header{
+   position: absolute;
+   top: 40%;
+   height: 20px;
 
-   33% {
-      background-image: url('./../assets/img/banner_2.jpg');
-   }
-   65% {
-      background-image: url('./../assets/img/banner_2.jpg');
-   }
-
-   66% {
-      background-image: url('./../assets/img/banner_3.png');
-   }
-   100% {
-      background-image: url('./../assets/img/banner_3.png');
-   }
 }
 </style>

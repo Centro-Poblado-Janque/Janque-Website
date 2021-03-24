@@ -1,29 +1,26 @@
-<template>
+<template data-component="layout">
    <nav class="MenuContainer" @click="$emit('close')" role="navigation">
-      <Container class="Container--override">
-         <SimpleGrid Columns="2fr 8fr" RowGap="0" ColumnGap="0">
-            <ViewBox class="logo_contain">
-               <Logo />
-            </ViewBox>
-            <ViewBox class="Menu ly-flex">
-               <SearchModel class="Menu--search"/>
-               <NextLink to="/" data-action="home" css="Menu--item" :icon="faHome" content="Inicio" />
-               <NextLink to="/costumbres" data-action="customs" css="Menu--item" :icon="faSlidersH" content="Costumbres" />
-               <NextLink to="/historia" data-action="history" css="Menu--item" :icon="faLandmark" content="Historia" />
-               <NuxtLink to="/about" data-action="about" class="Menu--item">
-                  <BrandIconSvg class="size svg-inline--fa fa-w-16" />
-                  <span>Sobre Janque</span>
-               </NuxtLink>
-               <NextLink to="/blog" data-action="blog" css="Menu--item" :icon="faBlog" content="Blog" />
-            </ViewBox>
-         </SimpleGrid>
-      </Container>
+      <SimpleGrid Columns="2fr 6fr" RowGap="0" ColumnGap="0" class="Container">
+         <ViewBox class="logo_contain">
+            <Logo />
+         </ViewBox>
+         <ViewBox class="Menu ly-flex">
+            <SearchModel class="Menu--search" />
+            <NextLink to="/" data-action="home" css="Menu--item" :icon="faHome" content="Inicio" />
+            <NextLink to="/costumbres" data-action="customs" css="Menu--item" :icon="faSlidersH" content="Costumbres" />
+            <NextLink to="/historia" data-action="history" css="Menu--item" :icon="faLandmark" content="Historia" />
+            <NuxtLink to="/about" data-action="about" class="Menu--item">
+               <BrandIconSvg class="size svg-inline--fa fa-w-16" />
+               <span>Sobre Janque</span>
+            </NuxtLink>
+            <NextLink to="/blog" data-action="blog" css="Menu--item" :icon="faBlog" content="Blog" />
+         </ViewBox>
+      </SimpleGrid>
    </nav>
 </template>
 
 <script>
 import Logo from '../utils/Logo.vue'
-import '~/assets/styles/index.scss';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faHome, faLandmark, faBlog, faBreadSlice, faSlidersH } from '@fortawesome/free-solid-svg-icons'
 import BrandIconSvg from '../utils/brand-icon.svg.vue'
@@ -89,10 +86,9 @@ export default {
       font-family: var(--viga-font);
       position: relative;
       color: var(--nav-color);
-      @media screen and(min-width: $desktop_breakpoints){
+      @media screen and(min-width: $desktop_breakpoints) {
          background-color: transparent;
          text-transform: capitalize;
-         border: none;
          position: relative;
          font-size: 1.1rem;
          transform: translateX(0);
@@ -100,6 +96,9 @@ export default {
          font-family: var(--noto-font);
          text-align: left;
          color: var(--dark-primary);
+      }
+      :hover{
+         transform: translateY(-5px);
       }
    }
    .nav_search {
@@ -124,7 +123,7 @@ export default {
       }
    }
 }
-[aria-current="page"]{
+[aria-current='page'] {
    position: relative;
    background-color: transparent !important;
    @media screen and (min-width: $desktop_breakpoints) {
@@ -148,7 +147,7 @@ export default {
       display: block;
       width: 100%;
       height: 100%;
-      padding: .2rem;
+      padding: 0.2rem;
    }
 }
 @media screen and (min-width: $desktop_breakpoints) {
