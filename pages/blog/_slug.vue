@@ -41,7 +41,7 @@
                 <div class="redirect_links">
                     <NuxtLink to="/"><FontAwesomeIcon :icon="faHome" /></NuxtLink>
                     <NuxtLink class="after" :to="`./../blog`">Blog</NuxtLink> 
-                    <NuxtLink class="after" :to="article.slug">{{ article.title }}</NuxtLink>
+                    <NuxtLink class="after" :to="'/' +article.slug">{{ article.title }}</NuxtLink>
                 </div>
                 <PostArticle>
                     <template>
@@ -81,28 +81,31 @@ import PostArticle from '../../components/blog/PostArticle.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-export default {
-    components: { 
-        PostArticle,
-        FontAwesomeIcon
+import { defineComponent, useMeta, ref, useAsync, useContext } from '@nuxtjs/composition-api'
+export default defineComponent({
+    components:{
+        FontAwesomeIcon, PostArticle
     },
-    head () {
-        return{
-            title: this.article.title,
-            script: [
-                { src: 'http://localhost:3000/disqus.js' },
-            ],
-        }
-    },
-    async asyncData({ $content, params }) {
-        const article = await $content('articles', params.slug).fetch();
-        const id = article.toc;
-        return { article, id }
-    },
-    data: () => ({
-        faHome, faTwitter
-    })
-}
+    head: {},
+    setup() {
+        let article = ref([]);
+        let id = ref([]);
+        const { params, $content } = useContext()
+        useAsync( async () => {
+                const data = await $content('articles', params.slug).fetch();
+                article.value = data;
+                console.log(data)
+            }
+        )
+
+        console.log(article, id)
+
+        /* const { title, script } = useMeta()
+        title.value = article.title
+        script.value = "http://localhost:3000/disqus.js" */
+        return { article: article.value, id: id.value, faHome, faTwitter} 
+    } 
+})
 </script>
 <style lang="scss">
 .post-main{
