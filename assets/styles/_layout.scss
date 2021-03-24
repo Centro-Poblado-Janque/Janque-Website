@@ -1,50 +1,86 @@
+/* ====================================================================================== */
+/*                                  GENERAL STYLES                                        */
+/* ====================================================================================== */
 
-#main-app-wrapper{
-    min-width: 100%;
+#main-app-wrapper {
+   min-width: 100%;
 }
 
-
-.ly_grid{
-    display: grid;
-    grid-template-columns: 100%;
-    column-gap: var(--gap);
-    width: calc(100% - 2rem);
-    margin-left: 1rem;
-    color: var(--blog-color-txt-content);
-    margin-right: 1rem;
+.ly_grid {
+   display: grid;
+   grid-template-columns: 100%;
+   column-gap: var(--gap);
+   width: calc(100% - 2rem);
+   margin-left: 1rem;
+   color: var(--blog-color-txt-content);
+   margin-right: 1rem;
 }
-.ly_grid_10{
-    @media screen and (min-width: 1024px){
-        grid-template-columns: repeat(10,calc(10% - var(--gap)*9/10)); 
-    }
-}
-
-.ly-flex{
-    display: flex;
-    flex-wrap: wrap;
+.ly_grid_10 {
+   @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(10, calc(10% - var(--gap) * 9 / 10));
+   }
 }
 
-
-
-
-
-.lg_fixed, .position_right_top{
-    position: fixed;
-    z-index: 10;
+.ly-flex {
+   display: flex;
+   flex-wrap: wrap;
 }
 
-.position_right_top{
-    top: 0;
-    right: 0;
+.lg_fixed,
+.position_right_top {
+   position: fixed;
+   z-index: 10;
 }
 
+.position_right_top {
+   top: 0;
+   right: 0;
+}
 
+.center_by_hg_60 {
+   height: 64px;
+   width: 64px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+}
 
+/* ====================================================================================== */
+/*                                  TRANSITION PAGES                                      */
+/* ====================================================================================== */
 
-.center_by_hg_60{
-    height: 64px;
-    width: 64px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.page-enter-active,
+.page-leave-active {
+   transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+   opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+   transition: opacity 0.5s;
+}
+.layout-enter,
+.layout-leave-to {
+   opacity: 0;
+}
+
+.slide-bottom-enter-active,
+.slide-bottom-leave-active {
+   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+.slide-bottom-enter,
+.slide-bottom-leave-to {
+   opacity: 0;
+   transform: translate3d(0, 15px, 0);
+}
+.bounce-enter-active {
+   transform-origin: top;
+   animation: bounce-in 0.8s;
+}
+.bounce-leave-active {
+   transform-origin: top;
+   animation: bounce-out 0.5s;
 }

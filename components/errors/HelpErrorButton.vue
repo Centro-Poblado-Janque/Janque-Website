@@ -14,18 +14,18 @@ export default {
 
 <style lang="scss" module>
 .redirect_btn{
-    border: none;
-    outline: none;
-    background-color: var(--bg-error);
+    border: 2px solid #b43e0f;
+    background: none;
     border-radius: 2px;
-    padding: 1.25rem;
-    transition: all .5s ease-in-out;
+    padding: 1rem;
+    transition: all .25s ease-in-out;
     text-align: center;
     &:hover{
         transform: scale(1.05);
+        background-color: #b43e0f;
     }
     a{
-        color: var(--light-primary);
+        color: silver;
         font-weight: 600;
         font-size: 1rem;
     }

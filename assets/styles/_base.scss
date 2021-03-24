@@ -1,73 +1,49 @@
-@media screen and (min-width: $desktop_breakpoints) {
-    ::-webkit-scrollbar{
-        height: 10px;
-        width: 10px;
-        background-color: transparent;
-        &-thumb{
-            background-color:  #274952;
-            border-radius: 5px;
-            transition: all .5s ease-in-out;
-            border: 2px solid var(--light-first);
-            outline: 2px solid var(--light-first);
-            &:hover{
-                background-color: #274952;
-            }
-        }
-        &-button{
-            background-color: transparent;
-            height: 10px;
-            width: 10px;
-        }
-    }
-}
 html {
-    background-color: var(--bg-color-primary);
-    scroll-behavior: smooth;
+   background-color: var(--bg-color-primary);
+   scroll-behavior: smooth;
+   font-size: var(--base-font-size);
 }
-*{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    &::after, &::before{
-        box-sizing: inherit;
-        -webkit-box-sizing: inherit;
-        -o-box-sizing: inherit;
-        -moz-box-sizing: inherit;
-    }
+* {
+   margin: 0;
+   padding: 0;
+}
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -o-box-sizing: border-box;
+   -moz-box-sizing: border-box;
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    font-family: var(--global-font), var(--optional-font);
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+   -webkit-font-smoothing: antialiased;
+   font-family: var(--global-font), var(--optional-font);
+   text-rendering: optimizeLegibility;
+   overflow-x: hidden;
 }
 main {
-    width: calc(100vw - var(--sz-scroll-size));
+   width: calc(100vw - var(--sz-scroll-size));
 }
 a {
-    text-decoration: none;
-    outline: none;
-    transition: color 0.2s;
+   outline: none;
+   transition: all 0.2s;
 }
 li {
-    list-style: none;
+   list-style: none;
 }
 img {
-    height: auto;
-    max-width: 100%;
+   height: auto;
+   max-width: 100%;
 }
 button {
-    outline: none;
-    border: none;
-    display: inline-block;
+   outline: none;
+   border: none;
+   display: inline-block;
 }
 input {
-    outline: none;
-    border: none;
+   outline: none;
+   border: none;
 }
 h1,
 h2,
@@ -75,8 +51,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: normal;
+   font-weight: normal;
 }
 [role~='button'] {
-    cursor: pointer;
+   cursor: pointer;
 }

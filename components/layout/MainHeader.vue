@@ -1,14 +1,11 @@
 <template>
    <header class="Header main-header" ref="header" v-scroll="changeNavState" role="banner">
       <ThemeButton />
-
       <ViewBox class="movil-nav" ref="toggle">
          <ToggleButton @open="OpenMenu" ref="toggleBtn" />
          <LogoJanque />
       </ViewBox>
-
       <Menu ref="nav" @close="HideMenu" />
-
       <ViewBox class="DrawerOut--001">
          <div class="menu-background top" />
          <div class="menu-background bottom" />

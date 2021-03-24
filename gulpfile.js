@@ -1,9 +1,17 @@
 const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
 
-const reduceImage = () => ( gulp
+const tinypng = require('gulp-tinypng-extended');
+
+const TINY_APPI_KEY = '2knqHkyChxT8L6NGywWfd37mcSC3hBCf'
+
+const reduceImage = () => ( 
+    gulp
     .src('./static/blog-img/*')
-    .pipe(imagemin())
+    .pipe(tinypng({
+            key: TINY_APPI_KEY,
+            sigFile: 'images/.tinypng-sigs',
+            log: true
+    }))
     .pipe(gulp.dest('./static/blog_img'))
 );
 

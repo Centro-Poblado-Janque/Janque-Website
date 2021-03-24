@@ -70,28 +70,6 @@ export default {
     background-color: #25454d;
     padding: 1rem;
 }
-/* .dot{
-    display: inline-block;
-    border-radius: 50px;
-    background-color: var(--grey-dark);
-    width: 64px;
-    position: relative;
-    border: 2px solid #47646c;
-    height: 34px;
-    cursor: pointer;
-    &::after {
-        content: "";
-        width: 25px;
-        transition: all 0.5s;
-        height: 24px;
-        display: block;
-        border-radius: 50px;
-        background-color: #47646c;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-    }
-} */
 .fixedLeft{
     transform: rotate(-45deg);
     position: absolute;
