@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/styles/mixin';
+@import '~/assets/scss/customs/mixin';
 .MenuContainer {
    height: calc(100vh - 64px);
    height: -webkit-calc(100vh - 64px);

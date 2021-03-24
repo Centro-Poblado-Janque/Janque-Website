@@ -1,22 +1,28 @@
 <template>
-   <footer id="main-footer" class="Footer">
+   <footer id="main-footer" class="m-footer">
       <Container>
          <Grid :Rows="2" RowGap="1rem" data-class="grid-system">
-            <ViewBox class="footer_info">
-               <FooterLogoOne />
-               <ul class="address--declarations">
-                  <li itemprop="address">Centro Poblado de Janque</li>
-                  <li itemprop="address">Incahuasi - Lambayeque</li>
-                  <li itemprop="address">Lambayeque - Peru</li>
-               </ul>
+            <ViewBox>
+               <h3 class="a-title is-small">Sobre el sitio</h3>
+               <div class="footer_info">
+                  <FooterLogoOne />
+                  <ul class="address--declarations">
+                     <li itemprop="address">Centro Poblado de Janque</li>
+                     <li itemprop="address">Incahuasi - Lambayeque</li>
+                     <li itemprop="address">Lambayeque - Peru</li>
+                  </ul>
+               </div>
             </ViewBox>
-            <ViewBox class="footer_info">
-               <FooterLogoTwo />
-               <ul class="address--declarations">
-                  <li itemprop="address">Centro Poblado de Janque</li>
-                  <li itemprop="address">Incahuasi - Lambayeque</li>
-                  <li itemprop="address">Lambayeque - Peru</li>
-               </ul>
+            <ViewBox>
+               <h3 class="a-title is-small">Cultura</h3>
+               <div class="footer_info">
+                  <FooterLogoTwo />
+                  <ul class="address--declarations">
+                     <li itemprop="address">Hacienda Janque</li>
+                     <li itemprop="address">Cultura Mochica</li>
+                     <li itemprop="address">Misterios</li>
+                  </ul>
+               </div>
             </ViewBox>
          </Grid>
          <FollowIcons />
@@ -41,16 +47,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/styles/mixin';
-.Footer {
-   background-color: var(--bg-color-second);
-   padding: 2rem 0;
-   font-weight: 400;
-   font-size: .9rem;
-   color: var(--txt-color-primary);
-   align-self: flex-end;
-   width: 100%;
-}
+@import '~/assets/scss/customs/mixin';
+
 .footer_info {
    padding: 0.5rem;
    display: flex;

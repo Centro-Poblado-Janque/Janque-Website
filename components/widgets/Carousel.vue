@@ -1,0 +1,35 @@
+<template>
+  <section class="m-carousel is-full-size" role="carousel">
+      <input v-for="(el, index ) in imgs" class="null"
+         :key="index" :checked="index == 0 ? '' : false"
+         :id="'slide-'+ (index + 1)"
+         type="radio" name="slides"
+      />
+      <ViewBox class="m-carousel__slides">
+        <div v-for="img, index in imgs" class="slide" :key="index">
+           <img :src="img" alt="carousel-img">
+        </div>
+      </ViewBox>
+      <ViewBox class="m-carousel__dots">
+         <label v-for="(el, index ) in imgs" 
+            :key="index" class="a-dot" 
+            :id="'dot-' + (index + 1)"
+            :for="'slide-'+ (index + 1)"
+         />
+      </ViewBox>
+  </section>
+</template>
+
+<script>
+export default {
+   name: 'Carousel',
+   data () {
+      return {
+         imgs: [
+            require('./../../assets/img/principal.png'), 
+            require('./../../assets/img/banner_2.jpg')
+         ]
+      }
+   }
+}
+</script>

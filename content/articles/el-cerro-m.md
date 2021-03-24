@@ -7,7 +7,7 @@ time: 4
 date: 03 de septiembre del 2020
 author: Alex Segundo
 twitter: '@asegundo'
-avatar: blog-img/alex-avatar.png
+avatar: avatar-alex.jpg
 ---
 
 ## El Cerro Lungan

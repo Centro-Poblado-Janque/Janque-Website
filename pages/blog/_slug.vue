@@ -1,16 +1,16 @@
 <template> 
-    <MainContent class="post-main">
+    <MainContent class="post-main p-page">
         <header class="post-head">
-            <img :src="'./blog-img/' + article.img" :alt="article.slug" class="img-background">
+            <img :src="'/' + article.img" :alt="article.slug" class="img-background" />
             <Container class="container-reset">
                 <div class="post-metadates">
-                    <h1 class="article-title">{{ article.title }}</h1>
+                    <h1 class="a-title">{{ article.title }}</h1>
                     <span class="read-time">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.009 512.009" class="svg-icon s-mr-05 fill">
                             <path d="M272.392,249.22l-0.009-132.207c0-9.052-7.339-16.383-16.383-16.383s-16.383,7.331-16.383,16.383L239.626,256c0,4.349,1.731,8.511,4.801,11.59l85.765,85.765c3.204,3.195,7.393,4.792,11.59,4.792c4.189,0,8.378-1.589,11.573-4.792c6.399-6.399,6.399-16.764,0-23.172L272.392,249.22z"></path>
                             <path d="M512.009,256.009c0-0.079-0.011-0.155-0.012-0.234C511.87,114.712,397.083,0.009,256,0.009c-141.161,0-256,114.839-256,256S114.839,512,256,512c141.083,0,255.87-114.695,255.997-255.757C511.998,256.164,512.009,256.088,512.009,256.009z M272.383,478.64v-25.471c0-9.052-7.339-16.383-16.383-16.383s-16.383,7.331-16.383,16.383v25.471c-110.061-8.023-198.227-96.196-206.248-206.257h25.471c9.052,0,16.383-7.322,16.383-16.374c0-9.052-7.331-16.383-16.383-16.383H33.368c8.018-110.065,96.185-198.235,206.249-206.257v25.471c0,9.043,7.339,16.383,16.383,16.383c9.052,0,16.383-7.339,16.383-16.383V33.369c110.068,8.022,198.227,96.195,206.249,206.257h-25.462c-9.052,0-16.392,7.322-16.392,16.374c0,9.052,7.339,16.383,16.392,16.383h25.462C470.615,382.448,382.454,470.619,272.383,478.64z"></path>
                         </svg>
-                        Lectura de {{ article.time  }} minutos
+                        {{ article.time  }} minutos
                     </span>
                     <span class="current-time">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 31" class="svg-icon s-mr-05 fill">
@@ -31,6 +31,7 @@
                             <rect x="29.5" y="28.5" width="2" height="29" rx="1" transform="rotate(90 29.5 28.5)"></rect>
                             <rect x="29.5" y="3.5" width="2" height="29" rx="1" transform="rotate(90 29.5 3.5)"></rect>
                         </svg>
+                        <FontAwesomeIcon :icon="faCalendar"/>
                         {{ article.date  }}
                     </span>
                 </div>
@@ -41,7 +42,7 @@
                 <div class="redirect_links">
                     <NuxtLink to="/"><FontAwesomeIcon :icon="faHome" /></NuxtLink>
                     <NuxtLink class="after" :to="`./../blog`">Blog</NuxtLink> 
-                    <NuxtLink class="after" :to="'/' +article.slug">{{ article.title }}</NuxtLink>
+                    <NuxtLink class="after" :to="'/blog/' +article.slug">{{ article.title }}</NuxtLink>
                 </div>
                 <PostArticle>
                     <template>
@@ -49,7 +50,7 @@
                     </template>
 
                     <template #autor-content>
-                        <img class="avatar-model" :src="'./../avatar-img/' + article.avatar" :alt="article.alt">
+                        <img class="avatar-model" :src="'./../avatar-img/' + article.avatar" :alt="article.alt" />
                         <span class="author-dates">
                             <p class="blog-author">{{ article.author }}</p>
                             <a class="blog-contact" :href="'https://twitter.com/' + article.twitter" rel="noopeper" target="_blank">
@@ -79,33 +80,29 @@
 <script>
 import PostArticle from '../../components/blog/PostArticle.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { defineComponent, useMeta, ref, useAsync, useContext } from '@nuxtjs/composition-api'
-export default defineComponent({
-    components:{
-        FontAwesomeIcon, PostArticle
+export default {
+    components: { 
+        PostArticle,
+        FontAwesomeIcon
     },
-    head: {},
-    setup() {
-        let article = ref([]);
-        let id = ref([]);
-        const { params, $content } = useContext()
-        useAsync( async () => {
-                const data = await $content('articles', params.slug).fetch();
-                article.value = data;
-                console.log(data)
-            }
-        )
-
-        console.log(article, id)
-
-        /* const { title, script } = useMeta()
-        title.value = article.title
-        script.value = "http://localhost:3000/disqus.js" */
-        return { article: article.value, id: id.value, faHome, faTwitter} 
-    } 
-})
+    head () {
+        return {
+            title: this.article.title,
+            script: [
+                { src: 'http://localhost:3000/disqus.js' },
+            ],
+        }
+    },
+    async asyncData({ $content, params }) {
+        const article = await $content('articles', params.slug).fetch();
+        return { article, id: article.toc }
+    },
+    data: () => ({
+        faHome, faTwitter, faCalendar
+    })
+}
 </script>
 <style lang="scss">
 .post-main{
@@ -122,7 +119,7 @@ export default defineComponent({
         left: 0;
         bottom: 0;
         object-fit: cover;
-        filter: brightness(0.5);
+        filter: brightness(0.5) blur(1.5px);
         width: 100%;
         height: 100%;
     }
@@ -164,7 +161,7 @@ export default defineComponent({
         margin-right: 4px;
     }
     .read-time{
-
+        display: block;
     }
     .current-time{
         padding-left: 10px;

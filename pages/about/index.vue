@@ -1,8 +1,8 @@
 <template>
-    <MainContent class="page about-page">
+    <MainContent class="p-page about-page">
         <SocialMediaSEO 
             title="Sobre Nosotros - Centro Poblado Janque"
-            description="Hablemos un poco de nosotros"
+            description="Hablemos un poco de Janque"
             url="about"
         />
         <header class="about-head">
@@ -33,7 +33,7 @@ import MapsLocation from '@/components/utils/GoogleMaps.vue'
 import Caption from '@/components/styled/Caption.vue'
 export default {
     transition: 'slide-bottom',
-    name: 'Home',
+    name: 'About',
     components: { 
         Caption,
         MapsLocation,
@@ -43,9 +43,6 @@ export default {
 </script>
 
 <style lang="scss">
-.about-page{
-    color: var(--text-body);
-}
 .about-head{
     background: linear-gradient(29deg, #061e1c 0%, #443d1b 53%, #371a25 100%);
     min-height: 80vh;

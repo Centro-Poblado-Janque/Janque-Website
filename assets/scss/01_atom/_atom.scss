@@ -1,0 +1,66 @@
+/* ====================================================================================== */
+/*                                       BUTTONS                                          */
+/* ====================================================================================== */
+
+.a-Button {
+   display: inline-block;
+   padding: 0.5rem;
+   border: 1px solid;
+   &--primary {
+      border-color: cyan;
+   }
+   &--info {
+      border-color: teal;
+   }
+}
+
+.a-Image {
+   display: inline-block;
+   height: inherit;
+   object-fit: cover;
+   object-position: 50% 50%;
+   &.is-full-size {
+      height: 100%;
+   }
+}
+
+.a-title {
+   font-size: 2.7rem;
+   font-weight: 500;
+   color: var(--text-accent);
+   font-family: var(--viga-font);
+   &.is-center {
+      text-align: center;
+   }
+   &.is-small {
+      font-size: 1.1rem;
+      margin: 5px 0;
+   }
+}
+.a-dot {
+   border: medium solid grey;
+   border-radius: 50%;
+   display: inline-block;
+   width: 1.2rem;
+   height: 1.2rem;
+   cursor: pointer;
+}
+
+@for $i from 0 through 2 {
+   #slide-#{$i + 1}:checked ~ .m-carousel__slides {
+      transform: translateY(#{-$i/2 * 100%});
+   }
+}
+
+#slide-1:checked ~ .m-carousel__dots label#dot-1,
+#slide-2:checked ~ .m-carousel__dots label#dot-2,
+#slide-3:checked ~ .m-carousel__dots label#dot-3,
+#slide-4:checked ~ .m-carousel__dots label#dot-4 {
+   background-color: grey;
+}
+
+//    Utils
+
+.null {
+   display: none;
+}

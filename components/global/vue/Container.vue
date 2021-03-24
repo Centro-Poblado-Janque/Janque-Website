@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '~/assets/styles/mixin';
+@import '~/assets/scss/customs/mixin';
 .container_s, .container, .Container{
     max-width: var(--max-width);
     width: 100%;
@@ -27,7 +27,7 @@ export default {
 }
 </style>
 <style lang="scss">
-@import '~/assets/styles/mixin';
+@import '~/assets/scss/customs/mixin';
 .container_s, .container, .Container{
     max-width: var(--max-width);
     width: 100%;

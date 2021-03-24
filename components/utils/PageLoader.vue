@@ -39,7 +39,7 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--light-first);
+    background-color: var(--bg-color-primary);
     z-index: 1200;
 }
 // -----------------------------------------------------
