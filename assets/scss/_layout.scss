@@ -10,10 +10,8 @@
    display: grid;
    grid-template-columns: 100%;
    column-gap: var(--gap);
-   width: calc(100% - 2rem);
-   margin-left: 1rem;
+   width: 100%;
    color: var(--blog-color-txt-content);
-   margin-right: 1rem;
 }
 .ly_grid_10 {
    @media screen and (min-width: 1024px) {

@@ -1,5 +1,10 @@
 <template name="template__page-history">
-    <MainContent class="page history-page">
+    <MainContent class="p-page history-page">
+        <SocialMediaSEO 
+            title="Conoce nuestra historia | Centro Poblado Janque"
+            description="No hay una mejor manera de conocer un lugar, sino sabiendo su historia. El poblado de Janque sus raices tienen mucho que decir"
+            url="historia"
+        />
         <header class="history-head">
             <Container>
                 <Caption title="Nuestra Historia" />
@@ -32,9 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
-.history-page{
-    color: var(--text-body);
-}
 .history-head{
     min-height: 80vh;
     padding-top: 80px;

@@ -2,7 +2,7 @@
     <NuxtLink :to="to" :class="css + ' ' + $style.NextLink">
         <slot>
             <FontAwesomeIcon :icon="icon" class="size"/>
-            <span>{{ content }}</span>
+            <span :class="$style.link">{{ content }}</span>
         </slot>
     </NuxtLink>
 </template>
@@ -28,5 +28,8 @@ export default {
 <style lang="scss" module>
 .NextLink{
     display: inline-block;
+}
+.link{
+    color: inherit
 }
 </style>

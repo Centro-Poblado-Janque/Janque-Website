@@ -9,10 +9,10 @@
                 <slot name="autor-content"></slot>
 
             </article>
-            <div class="others-blogs card-template top-blue pg-3">
+            <aside class="others-blogs card-template top-blue pg-3">
                 <slot name="items-view"></slot>
 
-            </div>
+            </aside>
         </section>
     </div>
 </template>

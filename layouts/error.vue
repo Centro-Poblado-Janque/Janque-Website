@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '~/assets/styles/mixin';
+@import '~/assets/scss/customs/mixin';
 .pageNotFound{
     min-height: 100vh;
     position: relative;

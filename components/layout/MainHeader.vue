@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/styles/mixin';
+@import '~/assets/scss/customs/mixin';
 .movil-nav {
    min-height: 64px;
    height: 64px;

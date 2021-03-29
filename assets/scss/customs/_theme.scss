@@ -24,6 +24,10 @@
     --bg-color-second           : var(--v-smoke-600);
 
 
+    --text-color-primary        :#414645;
+    --text-accent               : var(--v-orange-dark);
+
+
     --smoke-100                 : var(--v-smoke-100);
     --smoke-150                 : var(--v-smoke-150);
     --smoke-200                 : var(--v-smoke-200);
@@ -80,6 +84,15 @@
 :root[data-theme="dark"]{
     --bg-color-primary          : #11191c;
     --bg-color-second           : #141e22;
+<<<<<<< HEAD:assets/styles/_theme.scss
+=======
+
+    --text-color-primary        :#889491;
+    --text-accent               : var(--v-orange-primary);
+
+
+
+>>>>>>> dev:assets/scss/customs/_theme.scss
     --light-primary             : #101d21;
     --bg-input-primary          : #212f33;
     --dark-primary              : #efefef;
@@ -134,8 +147,13 @@ $desktop_breakpoints: 1200px;
         }
         &-button{
             background-color: transparent;
+<<<<<<< HEAD:assets/styles/_theme.scss
             height: 10px;
             width: 10px;
+=======
+            height: 5px;
+            width: 5px;
+>>>>>>> dev:assets/scss/customs/_theme.scss
         }
     }
 }

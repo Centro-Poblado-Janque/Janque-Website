@@ -26,6 +26,25 @@
    }
 }
 
+@mixin full-size {
+   width: 100%;
+   height: 100%;
+}
+
+@mixin radius($type) {
+   border-radius: 3px;
+   border: thin $type var(--card-border-bg);
+}
+
+$grid-breakpoints: (
+   xs: 0,
+   sm: 576px,
+   md: 768px,
+   lg: 992px,
+   xl: 1200px,
+   xxl: 1400px,
+);
+
 $device_pixel_radio: 2;
 $phone_breakpoints: 400px;
 $tablet_breakpoints: 890px;

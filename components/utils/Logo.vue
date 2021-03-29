@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '~/assets/styles/mixin';
+@import '~/assets/scss/customs/mixin';
 [aria-current="page"]{
     position: relative;
     @media screen and (min-width: $desktop_breakpoints) {

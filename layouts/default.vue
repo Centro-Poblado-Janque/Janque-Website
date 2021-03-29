@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~/assets/styles/mixin';
+@import '~/assets/scss/customs/mixin';
 #__layout{
     display: flex;
     min-height: 100vh;

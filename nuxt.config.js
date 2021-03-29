@@ -5,8 +5,9 @@ import MetaConfig from './meta.config';
 export default {
     head: MetaConfig,
     modules: ['@nuxt/content'],
+    buildModules: ['@nuxtjs/composition-api'],
     plugins: ['~/assets/vue/directives.client.js', '~/components/global'],
-    css:['~/assets/styles/index.scss'],
+    css: ['~/assets/scss/index.scss'],
     srcDir: './',
     loadingIndicator: {
         name: 'fading-circle',
@@ -54,7 +55,7 @@ export default {
         postcss: [
             require('autoprefixer')({
                 browsers: ['> 2%']
-        })
+            })
         ]
     }
 }
