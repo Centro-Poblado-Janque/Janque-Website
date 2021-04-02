@@ -1,13 +1,11 @@
 <template>
-   <header v-scroll="handleScroll" :class="`Header ${ activeMenu && 'drawer-out' }`">
+   <header v-scroll="handleScroll" :class="`Header ${activeMenu && 'drawer-out'}`">
       <ThemeButton />
       <ViewBox class="movil-nav" ref="toggle">
          <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
          <LogoJanque />
       </ViewBox>
-      <Menu @close="HideMenu" 
-         :class="[activeMenu && 'is_active', activeScroll && 'bg_dark']"
-      />
+      <Menu @close="HideMenu" :class="[activeMenu && 'is_active', activeScroll && 'bg_dark']" />
       <ViewBox class="DrawerOut--001">
          <div class="menu-background top" />
          <div class="menu-background bottom" />
@@ -16,7 +14,6 @@
 </template>
 
 <script>
-
 import LogoJanque from '../utils/LogoJanque.vue'
 import ThemeButton from '../utils/theme-buttom.vue'
 import ToggleButton from '../utils/ToggleButton.vue'
@@ -32,9 +29,7 @@ export default {
    },
    methods: {
       handleScroll() {
-         window.pageYOffset > 2 
-            ? this.activeScroll = true
-            : this.activeScroll = false
+         window.pageYOffset > 2 ? (this.activeScroll = true) : (this.activeScroll = false)
       },
       OpenMenu() {
          this.activeMenu = !this.activeMenu
@@ -43,12 +38,12 @@ export default {
          this.activeMenu = false
       },
    },
-   data () {
+   data() {
       return {
          activeMenu: false,
-         activeScroll: false
+         activeScroll: false,
       }
-   } 
+   },
 }
 </script>
 
@@ -128,7 +123,7 @@ export default {
          transition-delay: 0.6s;
       }
    }
-   .Menu--search{
+   .Menu--search {
       opacity: 1;
       transform: translateX(0px);
       transition: transform 0.35s, opacity 0.5s ease-in;

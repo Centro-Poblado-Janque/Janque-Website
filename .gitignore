@@ -4,6 +4,7 @@ node_modules/
 # Logs
 npm-debug.log
 yarn-error.log
+*.log
 
 # Coverage
 coverage

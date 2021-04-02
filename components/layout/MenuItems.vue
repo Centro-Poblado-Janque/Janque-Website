@@ -6,22 +6,28 @@
          </ViewBox>
          <ViewBox class="Menu ly-flex">
             <SearchModel class="Menu--search" />
-            <NextLink @click.native="$emit('close')" to="/" data-action="home" 
-               css="Menu--item" :icon="faHome" content="Inicio" 
+            <NextLink @click.native="$emit('close')" to="/" data-action="home" css="Menu--item" :icon="faHome" content="Inicio" />
+            <NextLink
+               @click.native="$emit('close')"
+               to="/costumbres"
+               data-action="customs"
+               css="Menu--item"
+               :icon="faSlidersH"
+               content="Costumbres"
             />
-            <NextLink @click.native="$emit('close')" to="/costumbres" data-action="customs" 
-               css="Menu--item" :icon="faSlidersH" content="Costumbres" 
-            />
-            <NextLink @click.native="$emit('close')" to="/historia" data-action="history" 
-               css="Menu--item" :icon="faLandmark" content="Historia" 
+            <NextLink
+               @click.native="$emit('close')"
+               to="/historia"
+               data-action="history"
+               css="Menu--item"
+               :icon="faLandmark"
+               content="Historia"
             />
             <NuxtLink @click.native="$emit('close')" to="/about" data-action="about" class="Menu--item">
                <BrandIconSvg class="size svg-inline--fa fa-w-16" />
                <span>Sobre Janque</span>
             </NuxtLink>
-            <NextLink @click.native="$emit('close')" to="/blog" data-action="blog" 
-               css="Menu--item" :icon="faBlog" content="Blog" 
-            />
+            <NextLink @click.native="$emit('close')" to="/blog" data-action="blog" css="Menu--item" :icon="faBlog" content="Blog" />
          </ViewBox>
       </SimpleGrid>
    </nav>
@@ -105,7 +111,7 @@ export default {
          text-align: left;
          color: var(--dark-primary);
       }
-      :hover{
+      :hover {
          transform: translateY(-5px);
       }
    }

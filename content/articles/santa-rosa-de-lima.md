@@ -1,7 +1,7 @@
 ---
 title: Santa Rosa de Lima y la iglesia Janqueña.
 description: Santa Rosa es la patrona de Janque
-img: blog-img/santa_rosa_post.jpg
+img: santa_rosa_post.jpg
 alt: my first blog post
 time: 4
 date: 03 de septiembre del 2020

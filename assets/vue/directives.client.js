@@ -1,5 +1,4 @@
 import Vue from 'vue';
-const { resolve } = require('path')
 
 Vue.directive('scroll', {
     inserted: function(el, binding) {
@@ -10,12 +9,4 @@ Vue.directive('scroll', {
         }
         window.addEventListener('scroll', f)
     },
-})
-
-Vue.directive('css', {
-    bind: (el, binding, vnode) => {
-        if(binding.arg == 'module'){
-            console.log(el.$style)
-        }
-    }
 })

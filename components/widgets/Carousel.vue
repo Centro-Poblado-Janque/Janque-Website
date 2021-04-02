@@ -21,15 +21,15 @@
 </template>
 
 <script>
-export default {
-   name: 'Carousel',
-   data () {
-      return {
-         imgs: [
-            require('./../../assets/img/principal.png'), 
-            require('./../../assets/img/banner_2.jpg')
-         ]
-      }
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+export default defineComponent({
+   setup(){
+      const imgs = [
+         require('./../../assets/img/history-head.jpg'), 
+         require('./../../assets/img/banner_1.png')
+      ];
+
+      return { imgs }
    }
-}
+})
 </script>

@@ -1,7 +1,7 @@
 ---
 title: La misteriosa colina llamada "Cerro Lungan".
 description: Descubre el misterio de la colina mas alta de Janque
-img: blog-img/lungan.jpg
+img: lungan.jpg
 alt: cerro lungan
 time: 8
 date: 20 de enero del 2021

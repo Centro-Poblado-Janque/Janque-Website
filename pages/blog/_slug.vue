@@ -6,7 +6,7 @@
             :url="'blog/' + article.slug"
         />
         <header class="post-head">
-            <img :src="'/' + article.img" :alt="article.slug" class="img-background" />
+            <img :src="'./../resources/img/' + article.img" :alt="article.slug" class="img-background" />
             <Container class="container-reset">
                 <div class="post-metadates">
                     <h1 class="a-title">{{ article.title }}</h1>
@@ -160,9 +160,6 @@ export default {
         height: .9rem;
         fill: var(--dark-light-100);
         margin-right: 4px;
-    }
-    .read-time{
-        display: block;
     }
     .current-time{
         padding-left: 10px;

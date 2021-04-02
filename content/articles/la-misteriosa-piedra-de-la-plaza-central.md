@@ -1,7 +1,7 @@
 ---
 title: La misteriosa piedra de la plaza central
 description: La piedra de la plaza central tiene una historia
-img: blog-img/home_img.png
+img: home_img.png
 alt: my first blog post
 time: 6
 date: 20 de agosto del 2020

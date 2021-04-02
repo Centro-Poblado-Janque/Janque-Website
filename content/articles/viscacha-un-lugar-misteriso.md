@@ -1,7 +1,7 @@
 ---
 title: Viscacha, no te arriesges a visitarla.
 description: Viscacha es el lugar donde abunda el misterio...
-img: blog-img/hack.jpg
+img: hack.jpg
 alt: my first blog post
 time: 10
 date: 05 de diciembre del 2020
