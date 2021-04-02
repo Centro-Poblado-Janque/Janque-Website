@@ -46,7 +46,7 @@ export default {
 }
 .pg-4{
     padding: 1rem;
-    margin-top: var(--gap);
+    margin-top: var(--grid-gap);
     @media screen and (min-width: 1024px){
         padding: 2rem;
         margin: 0;  
@@ -54,7 +54,7 @@ export default {
 }
 .pg-3{
     padding: 1rem;
-    margin-top: calc(var(--gap) / 2 );
+    margin-top: calc(var(--grid-gap) / 2 );
     @media screen and (min-width: 1024px){
         padding: 1.5rem; 
         margin: 0;  
@@ -73,7 +73,7 @@ export default {
     }
 }
 .others-blogs{
-    margin-top: calc(var(--gap) / 2 );
+    margin-top: calc(var(--grid-gap) / 2 );
     position: sticky;
     top: calc(4rem + 32px);
 }

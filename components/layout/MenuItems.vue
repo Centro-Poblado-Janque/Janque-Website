@@ -1,19 +1,27 @@
 <template data-component="layout">
-   <nav class="MenuContainer" @click="$emit('close')" role="navigation">
+   <nav class="MenuContainer" role="navigation">
       <SimpleGrid Columns="2fr 6fr" RowGap="0" ColumnGap="0" class="Container">
          <ViewBox class="logo_contain">
             <Logo />
          </ViewBox>
          <ViewBox class="Menu ly-flex">
             <SearchModel class="Menu--search" />
-            <NextLink to="/" data-action="home" css="Menu--item" :icon="faHome" content="Inicio" />
-            <NextLink to="/costumbres" data-action="customs" css="Menu--item" :icon="faSlidersH" content="Costumbres" />
-            <NextLink to="/historia" data-action="history" css="Menu--item" :icon="faLandmark" content="Historia" />
-            <NuxtLink to="/about" data-action="about" class="Menu--item">
+            <NextLink @click.native="$emit('close')" to="/" data-action="home" 
+               css="Menu--item" :icon="faHome" content="Inicio" 
+            />
+            <NextLink @click.native="$emit('close')" to="/costumbres" data-action="customs" 
+               css="Menu--item" :icon="faSlidersH" content="Costumbres" 
+            />
+            <NextLink @click.native="$emit('close')" to="/historia" data-action="history" 
+               css="Menu--item" :icon="faLandmark" content="Historia" 
+            />
+            <NuxtLink @click.native="$emit('close')" to="/about" data-action="about" class="Menu--item">
                <BrandIconSvg class="size svg-inline--fa fa-w-16" />
                <span>Sobre Janque</span>
             </NuxtLink>
-            <NextLink to="/blog" data-action="blog" css="Menu--item" :icon="faBlog" content="Blog" />
+            <NextLink @click.native="$emit('close')" to="/blog" data-action="blog" 
+               css="Menu--item" :icon="faBlog" content="Blog" 
+            />
          </ViewBox>
       </SimpleGrid>
    </nav>
@@ -144,6 +152,7 @@ export default {
 .logo_contain {
    display: none;
    @media screen and (min-width: $desktop_breakpoints) {
+      color: inherit;
       display: block;
       width: 100%;
       height: 100%;

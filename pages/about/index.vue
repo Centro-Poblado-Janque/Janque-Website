@@ -13,11 +13,11 @@
         <section class="about_content">
             <Grid :Rows="10">
                 <ViewBox class="lg_grid_7">
-                    <ViewText>Hablemos un poco de janque y nos sentamos a tomsar un poco de aguardiente</ViewText>
+                    <p>Hablemos un poco de janque y nos sentamos a tomsar un poco de aguardiente</p>
                 </ViewBox>
-                <div class="lg_grid_3">
+                <ViewBox class="lg_grid_3">
                     <p>Distrito de Incahuasi</p>
-                </div>
+                </ViewBox>
             </Grid>
         </section>
         <ViewBox class="name">
@@ -45,7 +45,7 @@ export default {
 <style lang="scss">
 .about-head{
     background: linear-gradient(29deg, #061e1c 0%, #443d1b 53%, #371a25 100%);
-    min-height: 80vh;
+    min-height: 100vh;
     padding-top: 80px;
     position: relative;
     transition: all .1s ease-in-out;

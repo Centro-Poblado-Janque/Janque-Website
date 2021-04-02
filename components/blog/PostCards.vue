@@ -85,9 +85,6 @@ export default {
         height: .85rem;
         fill: var(--blue-depth-200);
     }
-    .read-time{
-
-    }
     .current-time{
         padding-left: 10px;
     }

@@ -1,5 +1,10 @@
 <template> 
     <MainContent class="post-main p-page">
+        <SocialMediaSEO 
+            :title="article.title"
+            :description="article.description"
+            :url="'blog/' + article.slug"
+        />
         <header class="post-head">
             <img :src="'/' + article.img" :alt="article.slug" class="img-background" />
             <Container class="container-reset">
@@ -89,9 +94,6 @@ export default {
     head () {
         return {
             title: this.article.title,
-            script: [
-                { src: 'http://localhost:3000/disqus.js' },
-            ],
         }
     },
     async asyncData({ $content, params }) {

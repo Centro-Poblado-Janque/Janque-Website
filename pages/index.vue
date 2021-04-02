@@ -1,6 +1,6 @@
 <template name="template home__page">
    <MainContent class="p-page" data-page="home">
-      <Carousel></Carousel>ev
+      <Carousel></Carousel>
       <div class="demo">
 
       </div>

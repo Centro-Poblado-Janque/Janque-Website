@@ -1,11 +1,11 @@
 <template>
-    <div class="page-loader" v-if="!isloaded">
-        <div class="cube">J</div>
-        <div class="cube">A</div>
-        <div class="cube">N</div>
-        <div class="cube">Q</div>
-        <div class="cube">U</div>
-        <div class="cube">E</div>
+    <div class="page-loader-md5" v-if="!isloaded">
+        <div class="cube-md5">J</div>
+        <div class="cube-md5">A</div>
+        <div class="cube-md5">N</div>
+        <div class="cube-md5">Q</div>
+        <div class="cube-md5">U</div>
+        <div class="cube-md5">E</div>
     </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
         }
         setTimeout(() => {
             this.isloaded = true
-        }, 3000);
+        }, 6000);
     },
 }
 </script>
@@ -30,7 +30,7 @@ export default {
 <style lang="scss">
 $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
 // -----------------------------------------------------
-.page-loader {
+.page-loader-md5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
     z-index: 1200;
 }
 // -----------------------------------------------------
-.cube {
+.cube-md5 {
     width: 40px;
     height: 40px;
     display: inline-flex;

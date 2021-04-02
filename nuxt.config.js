@@ -54,7 +54,7 @@ export default {
         },
         postcss: [
             require('autoprefixer')({
-                browsers: ['> 2%']
+                browsers: ['> 1%']
             })
         ]
     }

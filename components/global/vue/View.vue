@@ -6,6 +6,6 @@
 
 <script>
 export default {
-    name: 'ViewUI'
+    name: 'ViewBox'
 }
 </script>

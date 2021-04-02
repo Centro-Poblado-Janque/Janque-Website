@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="to" :class="css + ' ' + $style.NextLink">
+    <NuxtLink :to="to" :class="[css, $style.NextLink]">
         <slot>
             <FontAwesomeIcon :icon="icon" class="size"/>
             <span :class="$style.link">{{ content }}</span>

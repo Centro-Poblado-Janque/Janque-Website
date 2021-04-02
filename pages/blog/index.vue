@@ -86,7 +86,7 @@ export default {
     grid-auto-rows: 400px;
     grid-gap: var(--grid-gap);
     @media screen and(min-width: 800px) {
-        grid-template-columns: repeat(3, calc(33.3333% - var(--gap)*2/3));
+        grid-template-columns: repeat(2, calc(50% - var(--grid-gap)*1/2));
     }
 }
 .blog-card{

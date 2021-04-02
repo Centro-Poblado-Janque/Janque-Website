@@ -1,4 +1,4 @@
-Proprietary software license
+## Proprietary software license
 
 Copyright (c) 2021 All rights reserved - Alex Segundo
 

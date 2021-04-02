@@ -1,11 +1,13 @@
 <template>
-   <header class="Header main-header" ref="header" v-scroll="changeNavState" role="banner">
+   <header v-scroll="handleScroll" :class="`Header ${ activeMenu && 'drawer-out' }`">
       <ThemeButton />
       <ViewBox class="movil-nav" ref="toggle">
-         <ToggleButton @open="OpenMenu" ref="toggleBtn" />
+         <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
          <LogoJanque />
       </ViewBox>
-      <Menu ref="nav" @close="HideMenu" />
+      <Menu @close="HideMenu" 
+         :class="[activeMenu && 'is_active', activeScroll && 'bg_dark']"
+      />
       <ViewBox class="DrawerOut--001">
          <div class="menu-background top" />
          <div class="menu-background bottom" />
@@ -29,35 +31,24 @@ export default {
       ThemeButton,
    },
    methods: {
-      changeNavState() {
-         window.pageYOffset > 2 ? this.$refs.nav.$el.classList.add('bg_dark') : this.$refs.nav.$el.classList.remove('bg_dark')
+      handleScroll() {
+         window.pageYOffset > 2 
+            ? this.activeScroll = true
+            : this.activeScroll = false
       },
       OpenMenu() {
-         this.active = true
-         this.$refs.nav.$el.classList.toggle('is_active')
-         this.$refs.header.classList.toggle('drawer-out')
-         this.$refs.toggleBtn.$el.classList.toggle('is_active')
+         this.activeMenu = !this.activeMenu
       },
       HideMenu() {
-         const ref = this.$refs.nav.$el
-         ref.querySelectorAll('[data-action]').forEach(element => {
-            element.onclick = () => {
-               this.$refs.nav.$el.classList.remove('is_active')
-               this.$refs.toggleBtn.$el.classList.remove('is_active')
-               this.$refs.header.classList.remove('drawer-out')
-            }
-         })
-         /* this.active = false;
-      this.$refs.nav.$el.classList.remove('is_active')
-      this.$refs.toggleBtn.$el.classList.remove('is_active')
-      this.$refs.header.classList.remove('drawer-out') */
+         this.activeMenu = false
       },
    },
-   data() {
+   data () {
       return {
-         active: '',
+         activeMenu: false,
+         activeScroll: false
       }
-   },
+   } 
 }
 </script>
 
@@ -79,7 +70,7 @@ export default {
       display: none;
    }
 }
-.main-header {
+.Header {
    width: 100%;
    position: fixed;
    top: 0;

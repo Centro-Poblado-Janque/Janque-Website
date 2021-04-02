@@ -25,7 +25,7 @@ export default {
       { name: 'robots', content: 'index, follow' },
       { hid: 'description', name: 'description', content: description },
       { name: 'mobile-wep-app-capable', content: 'yes' },
-      { name: 'keywords', content: 'Yanque Janque Janque.com Centro Poblado de Janque Incahuasi-Janque' },
+      { name: 'keywords', content: 'Yanque, Janque, Janque.com, Centro Poblado de Janque, Incahuasi-Janque' },
 
       //---->>> Twitter Support <<<------>
       { name: 'twitter:title', hid: 'tw-title', content: 'Centro Poblado Janque' },

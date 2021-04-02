@@ -23,6 +23,6 @@ build-app/
 
 
 #config
-
+.env
 prepros.config 
  

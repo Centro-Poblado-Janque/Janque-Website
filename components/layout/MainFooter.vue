@@ -7,9 +7,9 @@
                <div class="footer_info">
                   <FooterLogoOne />
                   <ul class="address--declarations">
-                     <li itemprop="address">Centro Poblado de Janque</li>
-                     <li itemprop="address">Incahuasi - Lambayeque</li>
-                     <li itemprop="address">Lambayeque - Peru</li>
+                     <li>Centro Poblado de Janque</li>
+                     <li>Incahuasi - Lambayeque</li>
+                     <li>Lambayeque - Peru</li>
                   </ul>
                </div>
             </ViewBox>
@@ -18,9 +18,9 @@
                <div class="footer_info">
                   <FooterLogoTwo />
                   <ul class="address--declarations">
-                     <li itemprop="address">Hacienda Janque</li>
-                     <li itemprop="address">Cultura Mochica</li>
-                     <li itemprop="address">Misterios</li>
+                     <li>Hacienda Janque</li>
+                     <li>Cultura Mochica</li>
+                     <li>Misterios</li>
                   </ul>
                </div>
             </ViewBox>
