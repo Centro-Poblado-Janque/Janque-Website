@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -26,9 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: install libraries
-      run: npm install
+      run: yarn install
       working-directory: ${{env.working-directory}}
     - name: install firebase
-      run: npm i firebase-tools -g  
+      run: yarn global add firebase-tools  
     - name: deploy
       run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
