@@ -28,6 +28,8 @@ jobs:
     - name: install libraries
       run: yarn install
       working-directory: ${{env.working-directory}}
+    - name: build-app
+      run: yarn run generate
     - name: install firebase
       run: npm i firebase-tools -g
     - name: deploy
