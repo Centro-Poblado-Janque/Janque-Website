@@ -29,6 +29,6 @@ jobs:
       run: yarn install
       working-directory: ${{env.working-directory}}
     - name: install firebase
-      run: yarn global add firebase-tools  
+      run: yarn add global firebase-tools
     - name: deploy
       run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
