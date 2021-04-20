@@ -1,11 +1,11 @@
 <template>
-    <main id="main-app-wrapper" class="t-main-content">
-        <slot></slot>
-    </main>
+   <main id="main-layout:app" class="t-main-content">
+      <slot></slot>
+   </main>
 </template>
 
 <script>
 export default {
-    name: 'MainContent',
+   name: 'MainContent',
 }
 </script>

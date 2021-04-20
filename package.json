@@ -21,7 +21,6 @@
     "@nuxtjs/composition-api": "^0.22.1",
     "core-js": "^3.8.1",
     "nuxt": "^2.14.12",
-    "vue-fragment": "^1.5.1",
     "vue-styled-components": "^1.6.0"
   },
   "devDependencies": {

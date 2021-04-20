@@ -1,84 +1,36 @@
-/* ====================================================================================== */
-/*                                  GENERAL STYLES                                        */
-/* ====================================================================================== */
+// ====================================================================================== //
+//                                  MDULAR STYLES                                         //
+// ====================================================================================== //
 
-#main-app-wrapper {
-   min-width: 100%;
+#main--layout\:app {
+   min-width: 100vw;
 }
 
-.ly_grid {
+.md-grid {
    display: grid;
    grid-template-columns: 100%;
-   column-gap: var(--gap);
+   column-gap: var(--grid-gap);
    width: 100%;
-   color: var(--blog-color-txt-content);
-}
-.ly_grid_10 {
-   @media screen and (min-width: 1024px) {
-      grid-template-columns: repeat(10, calc(10% - var(--gap) * 9 / 10));
+   &.auto-row-400 {
+      grid-auto-rows: 400px;
+   }
+   &.with-full-gap {
+      row-gap: var(--grid-gap);
    }
 }
 
-.ly-flex {
+@media screen and(min-width: 1200px) {
+   @for $i from 1 through 14 {
+      .md-grid-#{$i} {
+         grid-template-columns: repeat(#{$i}, calc(#{100 / $i}% - var(--grid-gap) * #{$i - 1}/#{$i}));
+      }
+      .lg-grid-#{$i} {
+         grid-column-end: span #{$i};
+      }
+   }
+}
+
+.md-flex {
    display: flex;
-   flex-wrap: wrap;
-}
-
-.lg_fixed,
-.position_right_top {
-   position: fixed;
-   z-index: 10;
-}
-
-.position_right_top {
-   top: 0;
-   right: 0;
-}
-
-.center_by_hg_60 {
-   height: 64px;
-   width: 64px;
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-}
-
-/* ====================================================================================== */
-/*                                  TRANSITION PAGES                                      */
-/* ====================================================================================== */
-
-.page-enter-active,
-.page-leave-active {
-   transition: opacity 0.5s;
-}
-.page-enter,
-.page-leave-to {
-   opacity: 0;
-}
-
-.layout-enter-active,
-.layout-leave-active {
-   transition: opacity 0.5s;
-}
-.layout-enter,
-.layout-leave-to {
-   opacity: 0;
-}
-
-.slide-bottom-enter-active,
-.slide-bottom-leave-active {
-   transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
-}
-.slide-bottom-enter,
-.slide-bottom-leave-to {
-   opacity: 0;
-   transform: translate3d(0, 15px, 0);
-}
-.bounce-enter-active {
-   transform-origin: top;
-   animation: bounce-in 0.8s;
-}
-.bounce-leave-active {
-   transform-origin: top;
-   animation: bounce-out 0.5s;
+   flex-wrap: nowrap;
 }

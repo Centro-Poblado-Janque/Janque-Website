@@ -2,18 +2,25 @@
    <nav class="MenuContainer" role="navigation">
       <SimpleGrid Columns="2fr 6fr" RowGap="0" ColumnGap="0" class="Container">
          <ViewBox class="logo_contain">
-            <Logo />
+            <BrandLogotipe />
          </ViewBox>
-         <ViewBox class="Menu ly-flex">
+         <ul class="Menu md-flex">
             <SearchModel class="Menu--search" />
-            <NextLink @click.native="$emit('close')" to="/" data-action="home" css="Menu--item" :icon="faHome" content="Inicio" />
             <NextLink
                @click.native="$emit('close')"
-               to="/costumbres"
-               data-action="customs"
+               to="/"
+               data-action="home"
                css="Menu--item"
-               :icon="faSlidersH"
-               content="Costumbres"
+               :icon="faHome"
+               content="Inicio"
+            />
+            <NextLink
+               @click.native="$emit('close')"
+               to="/noticias"
+               data-action="news"
+               css="Menu--item"
+               :icon="faNewspaper"
+               content="Noticias"
             />
             <NextLink
                @click.native="$emit('close')"
@@ -23,30 +30,40 @@
                :icon="faLandmark"
                content="Historia"
             />
-            <NuxtLink @click.native="$emit('close')" to="/about" data-action="about" class="Menu--item">
-               <BrandIconSvg class="size svg-inline--fa fa-w-16" />
-               <span>Sobre Janque</span>
-            </NuxtLink>
-            <NextLink @click.native="$emit('close')" to="/blog" data-action="blog" css="Menu--item" :icon="faBlog" content="Blog" />
-         </ViewBox>
+            <NextLink
+               @click.native="$emit('close')"
+               to="/sobre-nosotros"
+               data-action="about"
+               css="Menu--item"
+               :icon="faBrand"
+               content="Sobre Janque"
+            />
+            <NextLink
+               @click.native="$emit('close')"
+               to="/blog"
+               data-action="blog"
+               css="Menu--item"
+               :icon="faBlog"
+               content="Blog"
+            />
+         </ul>
       </SimpleGrid>
    </nav>
 </template>
 
 <script>
-import Logo from '../utils/Logo.vue'
+import BrandLogotipe from '../utils/Logo.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faHome, faLandmark, faBlog, faBreadSlice, faSlidersH } from '@fortawesome/free-solid-svg-icons'
-import BrandIconSvg from '../utils/brand-icon.svg.vue'
+import { faHome, faLandmark, faBlog, faBreadSlice, faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { faBrand } from '../utils/icons/faBrand'
 import { SimpleGrid } from '../container/Grid'
 import SearchModel from '../widgets/SearchModel.vue'
 
 export default {
    name: 'Menu',
    components: {
-      Logo,
+      BrandLogotipe,
       FontAwesomeIcon,
-      BrandIconSvg,
       SimpleGrid,
       SearchModel,
    },
@@ -55,7 +72,8 @@ export default {
       faBreadSlice,
       faBlog,
       faLandmark,
-      faSlidersH,
+      faNewspaper,
+      faBrand,
    }),
 }
 </script>
@@ -64,7 +82,6 @@ export default {
 @import '~/assets/scss/customs/mixin';
 .MenuContainer {
    height: calc(100vh - 64px);
-   height: -webkit-calc(100vh - 64px);
    width: 100%;
    position: relative;
    pointer-events: none;
@@ -99,7 +116,6 @@ export default {
       opacity: 0;
       font-family: var(--viga-font);
       position: relative;
-      color: var(--nav-color);
       @media screen and(min-width: $desktop_breakpoints) {
          background-color: transparent;
          text-transform: capitalize;
@@ -137,24 +153,10 @@ export default {
       }
    }
 }
-[aria-current='page'] {
-   position: relative;
-   background-color: transparent !important;
-   @media screen and (min-width: $desktop_breakpoints) {
-      &::after {
-         position: absolute;
-         content: '';
-         padding: 0.5rem;
-         width: 90%;
-         margin: 17px auto;
-         left: 20px;
-         bottom: 0;
-         height: 30px;
-         border-radius: 3px;
-         background-color: var(--dark-active-link);
-      }
-   }
+.nuxt-link-exact-active {
+   color: #0dc99a;
 }
+
 .logo_contain {
    display: none;
    @media screen and (min-width: $desktop_breakpoints) {
@@ -163,13 +165,14 @@ export default {
       width: 100%;
       height: 100%;
       padding: 0.2rem;
+      transition: all 0.5s ease;
    }
 }
 @media screen and (min-width: $desktop_breakpoints) {
    .bg_dark {
       background-color: var(--bg-color-second);
       height: 64px;
-      border-bottom: 1px solid var(--grey-border);
+      border-bottom: 1px solid var(--dt-grey);
       .logo_contain {
          height: 100%;
          width: 80%;

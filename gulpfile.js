@@ -5,9 +5,9 @@ require('dotenv').config()
 
 const { TINY_API_KEY } = process.env
 
-const reduceImage = () => (
+const compressStaticFiles = () => (
     gulp
-        .src('./static/img/blog-img/*')
+        .src('./static/resources/img/*')
         .pipe(tinypng({
             key: TINY_API_KEY,
             sigFile: 'images/.tinypng-sigs',
@@ -16,10 +16,23 @@ const reduceImage = () => (
         .pipe(gulp.dest('./static/resources/img'))
 );
 
-gulp.task('reduceImage', reduceImage);
+const compressAssetsFiles = () => (
+    gulp
+        .src('./assets/img/*')
+        .pipe(tinypng({
+            key: TINY_API_KEY,
+            sigFile: 'images/.tinypng-sigs',
+            log: true
+        }))
+        .pipe(gulp.dest('./assets/img'))
+)
+
+gulp.task('compressStaticFiles', compressStaticFiles);
+gulp.task('compressAssetsFiles', compressAssetsFiles);
 
 gulp.task('watch', () => {
-    gulp.watch('./static/img/blog-img/*', reduceImage)
+    gulp.watch('./static/img/blog-img/*', compressStaticFiles)
+    gulp.watch('./assets/img/*', compressAssetsFiles);
 })
 
-gulp.task('default', gulp.series('reduceImage', 'watch'))
+gulp.task('default', gulp.series('compressStaticFiles', 'compressAssetsFiles',  'watch'))

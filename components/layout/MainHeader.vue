@@ -20,7 +20,7 @@ import ToggleButton from '../utils/ToggleButton.vue'
 import Menu from './MenuItems.vue'
 
 export default {
-   name: 'AppNavigation',
+   name: 'MainHeader',
    components: {
       Menu,
       ToggleButton,
@@ -54,7 +54,7 @@ export default {
    height: 64px;
    z-index: 11;
    background-color: var(--bg-color-second);
-   border-bottom: 1px solid var(--smoke-300);
+   border-bottom: 1px solid var(--dt-grey);
    @media screen and(min-width: $desktop_breakpoints) {
       display: none;
    }

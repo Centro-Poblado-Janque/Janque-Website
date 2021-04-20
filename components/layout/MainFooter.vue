@@ -5,7 +5,7 @@
             <ViewBox>
                <h3 class="a-title is-small">Sobre el sitio</h3>
                <div class="footer_info">
-                  <FooterLogoOne />
+                  <span>Logo</span>
                   <ul class="address--declarations">
                      <li>Centro Poblado de Janque</li>
                      <li>Incahuasi - Lambayeque</li>
@@ -16,7 +16,7 @@
             <ViewBox>
                <h3 class="a-title is-small">Cultura</h3>
                <div class="footer_info">
-                  <FooterLogoTwo />
+                  <span>logo</span>
                   <ul class="address--declarations">
                      <li>Hacienda Janque</li>
                      <li>Cultura Mochica</li>
@@ -33,14 +33,10 @@
 <script>
 import { Grid } from '../container/Grid'
 import FollowIcons from '../utils/FollowIcons.vue'
-import FooterLogoOne from '../utils/svg/footer-logo-one.vue'
-import FooterLogoTwo from '../utils/svg/footer-logo-two.vue'
 export default {
    name: 'MainFooter',
    components: {
       Grid,
-      FooterLogoOne,
-      FooterLogoTwo,
       FollowIcons,
    },
 }

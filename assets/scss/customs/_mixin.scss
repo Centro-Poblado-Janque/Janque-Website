@@ -14,6 +14,11 @@
    bottom: 0;
    right: 0;
 }
+
+@mixin absolute_center {
+   position: absolute;
+   top: 40%;
+}
 @mixin line_bottom($color) {
    &::after {
       content: '';

@@ -51,3 +51,8 @@
       top: 50%;
    }
 }
+
+.m-welcome-index {
+   @include absolute_center;
+   width: 100%;
+}
