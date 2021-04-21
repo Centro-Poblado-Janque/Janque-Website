@@ -1,11 +1,13 @@
 <template>
-   <header v-scroll="handleScroll" :class="`Header ${activeMenu && 'drawer-out'}`">
+   <header v-scroll="handleScroll" :class="['Header', activeMenu && 'drawer-out']">
       <ThemeButton />
-      <ViewBox class="movil-nav" ref="toggle">
-         <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
-         <LogoJanque />
-      </ViewBox>
-      <Menu @close="HideMenu" :class="[activeMenu && 'is_active', activeScroll && 'bg_dark']" />
+      <nav :class="[activeMenu && 'is_active', activeScroll && 'active-scroll']" class="MenuContainer">
+         <div class="container md-grid nav-contain">
+            <BrandLogotype />
+            <Menu @close="HideMenu" />
+         </div>
+      </nav>
+      <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
       <ViewBox class="DrawerOut--001">
          <div class="menu-background top" />
          <div class="menu-background bottom" />
@@ -14,17 +16,17 @@
 </template>
 
 <script>
-import LogoJanque from '../utils/LogoJanque.vue'
-import ThemeButton from '../utils/theme-buttom.vue'
-import ToggleButton from '../utils/ToggleButton.vue'
-import Menu from './MenuItems.vue'
+import ThemeButton from '@/components/utils/theme-buttom.vue'
+import ToggleButton from '@/components/utils/ToggleButton.vue'
+import BrandLogotype from '@/components/utils/BrandLogotype.vue'
+import Menu from '@/components/molecules/Menu/Menu.vue'
 
 export default {
    name: 'MainHeader',
    components: {
       Menu,
+      BrandLogotype,
       ToggleButton,
-      LogoJanque,
       ThemeButton,
    },
    methods: {
@@ -49,14 +51,37 @@ export default {
 
 <style lang="scss">
 @import '~/assets/scss/customs/mixin';
-.movil-nav {
-   min-height: 64px;
-   height: 64px;
-   z-index: 11;
-   background-color: var(--bg-color-second);
-   border-bottom: 1px solid var(--dt-grey);
+.nav-contain {
    @media screen and(min-width: $desktop_breakpoints) {
-      display: none;
+      grid-template-columns: 3fr 6fr;
+      grid-template-rows: 100%;
+   }
+   grid-template-rows: 64px 1fr;
+   height: inherit;
+}
+.MenuContainer {
+   height: calc(100vh - 64px);
+   width: 100%;
+   position: absolute;
+   top: 0;
+   pointer-events: none;
+   z-index: 3;
+   color: teal;
+   transition: all 0.25s ease-in-out;
+   @media screen and(min-width: $desktop_breakpoints) {
+      top: 0;
+      height: 100px;
+      pointer-events: auto;
+      transform: translateX(0);
+   }
+   &.is_active {
+      transform: translateX(0);
+      pointer-events: auto;
+   }
+   &.active-scroll {
+      background-color: var(--bg-color-second);
+      height: 64px;
+      border-bottom: 1px solid var(--dt-grey);
    }
 }
 
@@ -72,6 +97,7 @@ export default {
    right: 0;
    height: 64px;
    z-index: 999;
+   transition: all 0.25s ease-in-out;
    left: 0;
 }
 
@@ -93,6 +119,13 @@ export default {
    }
 }
 .drawer-out {
+   .MenuContainer {
+      @media only screen and(max-width: $desktop_breakpoints) {
+         background-color: var(--bg-color-second);
+         height: 64px;
+         border-bottom: 1px solid var(--dt-grey);
+      }
+   }
    .menu-background {
       transition: all 0.5s cubic-bezier(0.83, 0.65, 0.47, 1);
       visibility: visible;

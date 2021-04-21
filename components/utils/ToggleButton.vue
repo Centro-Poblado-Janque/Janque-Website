@@ -55,6 +55,9 @@ const ButtonContainer = styled.div`
          transform: rotate(45deg);
       }
    }
+   @media only screen and (min-width: 1200px) {
+      display: none;
+   }
 `
 
 const ToggleButton = styled.div`

@@ -62,13 +62,11 @@
 </template>
 
 <script>
-import PostArticle from '../../components/blog/PostArticle.vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faHome, faClock, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 export default {
    components: {
-      PostArticle,
       FontAwesomeIcon,
    },
    head() {

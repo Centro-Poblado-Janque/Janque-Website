@@ -48,7 +48,7 @@ export default {
         loaders: {
             cssModules: {
                 modules: {
-                    localIdentName: 'md--[local]-[hash:base32:6]',
+                    localIdentName: 'md--[local]-[hash:base64:4]',
                 },
             },
         },

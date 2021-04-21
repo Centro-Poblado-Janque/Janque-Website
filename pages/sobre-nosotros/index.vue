@@ -8,30 +8,19 @@
       <header class="about-head">
          <Container> </Container>
       </header>
-      <section class="about_content">
-         <Grid :Rows="10">
-            <ViewBox class="lg_grid_7">
-               <p>Hablemos un poco de janque y nos sentamos a tomsar un poco de aguardiente</p>
-            </ViewBox>
-            <ViewBox class="lg_grid_3">
-               <p>Distrito de Incahuasi</p>
-            </ViewBox>
-         </Grid>
-      </section>
+      <section class="about_content"></section>
       <ViewBox class="name"> </ViewBox>
       <MapsLocation />
    </MainContent>
 </template>
 
 <script>
-import { Grid } from '@/components/container/Grid'
 import MapsLocation from '@/components/utils/GoogleMaps.vue'
 export default {
    transition: 'slide-bottom',
    name: 'About',
    components: {
       MapsLocation,
-      Grid,
    },
 }
 </script>

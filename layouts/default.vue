@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import VFooter from '../components/layout/MainFooter.vue'
-import VHeader from '../components/layout/MainHeader.vue'
+import VFooter from '@/components/organisms/Footer/Footer.vue'
+import VHeader from '@/components/organisms/Header/Header.vue'
 import PageLoader from '../components/utils/PageLoader.vue'
 export default {
    name: 'MainLayout',

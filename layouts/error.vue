@@ -15,9 +15,6 @@
 </template>
 
 <script>
-import ErrorCaption from '../components/errors/ErrorCaption.vue'
-import ErrorLogo from '../components/errors/ErrorLogo.vue'
-import HelpErrorButton from '../components/errors/HelpErrorButton.vue'
 import error_icon from './../static/error_favicon.svg'
 
 export default {
@@ -40,11 +37,6 @@ export default {
 
    mounted() {
       this.error_title = 'Error 404 - Not Found'
-   },
-   components: {
-      ErrorLogo,
-      ErrorCaption,
-      HelpErrorButton,
    },
 }
 </script>

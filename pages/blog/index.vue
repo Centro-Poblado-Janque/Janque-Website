@@ -14,7 +14,7 @@
          <Container class="container-reset">
             <ul class="md-grid md-grid-3 auto-row-400 with-full-gap">
                <li v-for="article of articles" :key="article.slug" class="m-card with-gradient">
-                  <PostCards
+                  <div
                      :slug="article.slug"
                      :img="article.img"
                      :alt="article.slug"
@@ -30,12 +30,10 @@
 </template>
 
 <script>
-import PostCards from '../../components/blog/PostCards.vue'
 import ShapesBg from '@/components/utils/ShapesBackground.vue'
 
 export default {
    components: {
-      PostCards,
       ShapesBg,
    },
    async asyncData({ $content, params }) {
