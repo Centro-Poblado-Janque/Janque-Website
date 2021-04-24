@@ -2,13 +2,13 @@
    <header v-scroll="handleScroll" :class="['Header', activeMenu && 'drawer-out']">
       <ThemeButton />
       <nav :class="[activeMenu && 'is_active', activeScroll && 'active-scroll']" class="MenuContainer">
-         <div class="container md-grid nav-contain">
+         <div class="container md-grid nav-grid-wrapper">
             <BrandLogotype />
             <Menu @close="HideMenu" />
          </div>
       </nav>
       <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
-      <ViewBox class="DrawerOut--001">
+      <ViewBox class="no-desktop">
          <div class="menu-background top" />
          <div class="menu-background bottom" />
       </ViewBox>
@@ -51,7 +51,7 @@ export default {
 
 <style lang="scss">
 @import '~/assets/scss/customs/mixin';
-.nav-contain {
+.nav-grid-wrapper {
    @media screen and(min-width: $desktop_breakpoints) {
       grid-template-columns: 3fr 6fr;
       grid-template-rows: 100%;
@@ -82,12 +82,6 @@ export default {
       background-color: var(--bg-color-second);
       height: 64px;
       border-bottom: 1px solid var(--dt-grey);
-   }
-}
-
-.DrawerOut--001 {
-   @media screen and(min-width: $desktop_breakpoints) {
-      display: none;
    }
 }
 .Header {

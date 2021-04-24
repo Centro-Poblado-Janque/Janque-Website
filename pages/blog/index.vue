@@ -6,35 +6,35 @@
          url="blog"
       />
 
-      <header class="blog-head dark-gradient-bg">
-         <ShapesBg />
-      </header>
-
-      <section class="blog-center px-2">
-         <Container class="container-reset">
-            <ul class="md-grid md-grid-3 auto-row-400 with-full-gap">
-               <li v-for="article of articles" :key="article.slug" class="m-card with-gradient">
-                  <div
-                     :slug="article.slug"
-                     :img="article.img"
-                     :alt="article.slug"
-                     :title="article.title"
-                     :time="article.time"
-                     :date="article.date"
-                  />
-               </li>
-            </ul>
-         </Container>
-      </section>
+      <BlogIndex>
+         <template #header>
+            <ShapesBg />
+         </template>
+         <template>
+            <Container class="container-reset">
+               <ul class="md-grid md-grid-3 auto-row-400 with-full-gap">
+                  <li v-for="article of articles" :key="article.slug" class="m-card with-gradient">
+                     <div
+                        :slug="article.slug"
+                        :img="article.img"
+                        :alt="article.slug"
+                        :title="article.title"
+                        :time="article.time"
+                        :date="article.date"
+                     />
+                  </li>
+               </ul>
+            </Container>
+         </template>
+      </BlogIndex>
    </MainContent>
 </template>
 
 <script>
-import ShapesBg from '@/components/utils/ShapesBackground.vue'
-
 export default {
    components: {
-      ShapesBg,
+      ShapesBg: () => import('@/components/utils/ShapesBackground.vue'),
+      BlogIndex: () => import('@/components/templates/BlogPage/BlogIndex.vue'),
    },
    async asyncData({ $content, params }) {
       const articles = await $content('articles', params.slug)
@@ -48,12 +48,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '~/assets/scss/customs/mixin';
-.blog-head {
-   min-height: 60vh;
-   padding-top: 80px;
-   position: relative;
-   transition: all 0.1s ease-in-out;
-}
-</style>
+<style lang="scss"></style>

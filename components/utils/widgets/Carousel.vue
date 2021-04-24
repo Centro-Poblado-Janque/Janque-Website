@@ -30,7 +30,7 @@
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 export default defineComponent({
    setup() {
-      const imgs = [require('./../../assets/img/index.jpg'), require('./../../assets/img/index-home.jpg')]
+      const imgs = [require('~/assets/img/index.jpg'), require('~/assets/img/index-home.jpg')]
 
       return { imgs }
    },

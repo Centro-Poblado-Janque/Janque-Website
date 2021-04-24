@@ -43,3 +43,9 @@
          rgb(50, 31, 1) 100.002%
       );
 }
+
+.no-desktop {
+   @media screen and(min-width: $desktop_breakpoints) {
+      display: none;
+   }
+}

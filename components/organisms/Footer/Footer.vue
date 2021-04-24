@@ -24,16 +24,19 @@
             </div>
          </ViewBox>
          <FollowIcons />
+         <Button text="SAVE" type="dt-secondary" />
       </Container>
    </footer>
 </template>
 
 <script>
 import FollowIcons from '@/components/utils/FollowIcons.vue'
+import Button from '@/components/atoms/Button/Button.vue'
 export default {
    name: 'MainFooter',
    components: {
       FollowIcons,
+      Button,
    },
 }
 </script>
