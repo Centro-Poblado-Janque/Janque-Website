@@ -1,7 +1,37 @@
-<template> </template>
+<template>
+	<h1 v-if="isPrincipal" class="a-title-p">{{ text }}</h1>
+	<h2 v-else-if="isLink" class="a-title">
+		<NuxtLink :to="path">{{ text }}</NuxtLink>
+	</h2>
+	<h2 v-else class="a-title">{{ text }}</h2>
+</template>
 
 <script>
-export default {}
+export default {
+	props: {
+		isPrincipal: {
+			type: Boolean,
+			default: false,
+		},
+		isLink: {
+			type: Boolean,
+			default: false,
+		},
+		path: Object,
+		text: {
+			type: String,
+			default: 'Type title',
+		},
+	},
+}
 </script>
 
-<style></style>
+<style lang="scss">
+.a-title-p {
+	font-size: 3rem;
+}
+.a-title {
+	font-size: 1.25rem;
+	padding: 0.5rem;
+}
+</style>

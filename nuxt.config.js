@@ -1,6 +1,5 @@
-
-import { resolve } from "path";
-import MetaConfig from './meta.config';
+import { resolve } from 'path'
+import MetaConfig from './meta.config'
 
 export default {
     head: MetaConfig,
@@ -21,7 +20,7 @@ export default {
     },
     alias: {
         'blog-img': resolve(__dirname, './assets/img/blog-img'),
-        'blog-autor': resolve(__dirname, './assets/img/avatar')
+        'blog-autor': resolve(__dirname, './assets/img/avatar'),
     },
     target: 'static',
     generate: {
@@ -54,8 +53,8 @@ export default {
         },
         postcss: [
             require('autoprefixer')({
-                browsers: ['> 1%']
-            })
-        ]
-    }
+                browsers: ['> 1%'],
+            }),
+        ],
+    },
 }

@@ -1,15 +1,15 @@
 <template>
-   <div>
-      <NuxtContent :document="article" />
-   </div>
+	<div>
+		<NuxtContent :document="notices" />
+	</div>
 </template>
 
 <script>
 export default {
-   async asyncData({ $content, params }) {
-      const article = await $content('notices', params.slug).fetch()
-      return { article, id: article.toc }
-   },
+	async asyncData({ $content, params }) {
+		const notices = await $content('notices', params.slug).fetch()
+		return { notices, id: notices.toc }
+	},
 }
 </script>
 

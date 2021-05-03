@@ -1,0 +1,21 @@
+
+root = true 
+
+[*]
+charset = utf-8
+
+[*.{vue, html}]
+
+indent_style = tab
+indent_size = 3
+tab_width = 3
+
+[*.{js, json, jsx}]
+
+indent_size = 4
+tab_width = 4
+
+[*.{scss, css}]
+
+indent_size = 4
+tab_width = 4
