@@ -1,5 +1,5 @@
 <template>
-	<footer class="m-about--author">
+	<footer class="m-about--author md-flex flex--center">
 		<Img :src="src" alt="no alt" class="md-sz-20 md-rd" />
 		<Time :time="`lectura de ${time} minutos`" />
 		<Date :date="date" />
@@ -20,3 +20,10 @@ export default {
 	},
 }
 </script>
+
+<style lang="scss">
+.m-about--author {
+	padding: 0.25rem;
+	border-top: thin solid #dfe9ec;
+}
+</style>

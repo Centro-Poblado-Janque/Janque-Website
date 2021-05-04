@@ -30,8 +30,13 @@ export default {
 .a-title-p {
 	font-size: 3rem;
 }
+.a-title a {
+	font-size: 2rem;
+	font-weight: 300;
+	font-family: var(--open-sans-font);
+	color: white;
+}
 .a-title {
-	font-size: 1.25rem;
-	padding: 0.5rem;
+	margin: 0;
 }
 </style>

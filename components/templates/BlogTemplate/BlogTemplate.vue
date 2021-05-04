@@ -1,21 +1,21 @@
 <template>
-	<div class="blog-section">
+	<section class="blog-section">
 		<header class="blog-head dark-gradient-bg">
 			<slot name="header"> </slot>
 		</header>
 
-		<div class="blog-main">
-			<div class="container md-grid md-grid-3 with-full-gap">
+		<ViewBox class="blog-main">
+			<div class="container md-grid md-grid-3 with-full-gap auto-row-400">
 				<slot> </slot>
 			</div>
-		</div>
+		</ViewBox>
 
 		<aside class="blog-footer">
 			<div class="container md-grid">
 				<slot name="footer"> </slot>
 			</div>
 		</aside>
-	</div>
+	</section>
 </template>
 
 <script>

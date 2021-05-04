@@ -1,7 +1,7 @@
 ---
-title: La institución educativa renueva su imagen.
+title: La Institucion Educativa Renueva Su Imagen
 description: La institucion publica de enseñanza en Janque ha cambiado su imagen y con ella su infraestructura.
-img: lungan.jpg
+img: home_img.png
 alt: lluvia en Janque
 time: 8
 date: 20 de enero del 2021

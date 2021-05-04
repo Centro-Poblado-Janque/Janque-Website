@@ -3,38 +3,49 @@
 // ====================================================================================== //
 
 #main--layout\:app {
-   min-width: 100vw;
+    min-width: 100vw;
 }
 
 .md-grid {
-   display: grid;
-   grid-template-columns: 100%;
-   column-gap: var(--grid-gap);
-   width: 100%;
-   &.auto-row-400 {
-      grid-auto-rows: 400px;
-   }
-   &.with-full-gap {
-      row-gap: var(--grid-gap);
-   }
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: var(--grid-gap);
+    width: 100%;
+    &.auto-row-400 {
+        grid-auto-rows: 300px;
+    }
+    &.auto-row-500 {
+        grid-auto-rows: 400px;
+    }
+    &.with-full-gap {
+        row-gap: var(--grid-gap);
+    }
+    @media screen and(min-width: 1200px) {
+        &.auto-row-400 {
+            grid-auto-rows: 400px;
+        }
+        &.auto-row-500 {
+            grid-auto-rows: 500px;
+        }
+    }
 }
 
 @media screen and(min-width: 1200px) {
-   @for $i from 1 through 14 {
-      .md-grid-#{$i} {
-         grid-template-columns: repeat(#{$i}, calc(#{100 / $i}% - var(--grid-gap) * #{$i - 1}/#{$i}));
-      }
-      .lg-grid-#{$i} {
-         grid-column-end: span #{$i};
-      }
-   }
+    @for $i from 1 through 14 {
+        .md-grid-#{$i} {
+            grid-template-columns: repeat(#{$i}, calc(#{100 / $i}% - var(--grid-gap) * #{$i - 1}/#{$i}));
+        }
+        .lg-grid-#{$i} {
+            grid-column-end: span #{$i};
+        }
+    }
 }
 
 .md-flex {
-   display: flex;
-   flex-wrap: nowrap;
-   &.flex--center {
-      justify-content: space-around;
-      align-items: center;
-   }
+    display: flex;
+    flex-wrap: nowrap;
+    &.flex--center {
+        justify-content: space-around;
+        align-items: center;
+    }
 }

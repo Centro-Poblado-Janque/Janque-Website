@@ -1,7 +1,7 @@
 <template>
 	<div class="m-content">
-		<p>{{ content }}</p>
-		<Title :text="title" :isLink="true" :path="{ name: 'blog-slug', params: { slug: path } }" />
+		<Title :text="title" :isLink="true" :path="{ name: urlname, params: { slug: path } }" />
+		<p class="m-text">{{ content }}</p>
 	</div>
 </template>
 
@@ -15,12 +15,17 @@ export default {
 		title: String,
 		content: String,
 		path: String,
+		urlname: String,
 	},
 }
 </script>
 
 <style lang="scss">
 .m-content {
-	display: block;
+	padding: 1rem;
+}
+.m-text {
+	height: 80px;
+	color: wheat;
 }
 </style>

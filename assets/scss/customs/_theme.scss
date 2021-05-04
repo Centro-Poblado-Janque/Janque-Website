@@ -16,6 +16,7 @@
     --noto-font                 : 'Noto Sans JP', 'Roboto', sans-serif;
     --viga-font                 : 'Viga','Noto Sans JP', 'Roboto', sans-serif;
     --open-sans-font            : 'Open Sans', 'Roboto', sans-serif;
+    --roboto-font               : 'Roboto' sans-serif;
     --nunito-sans-font          : 'Nunito', 'Open Sans', 'Roboto', sans-serif;
 
 //=========#######  COLOR NOT CHANGE THEME =============|
@@ -25,7 +26,7 @@
 
 }
 :root[data-theme="light"]{
-    --bg-color-primary          : #{$-v-smoke-500};
+    --bg-color-primary          : #{$-v-smoke-700};
     --bg-color-second           : #{$-v-smoke-600};
     --bg-color-acent            : #{$-v-smoke-300};
     --text-accent               : #{$-v-orange-dark};

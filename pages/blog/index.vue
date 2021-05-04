@@ -18,7 +18,7 @@
 					:image="articles.img"
 					:title="articles.title"
 					:alt="articles.slug"
-					:path="articles.slug"
+					:path="{ slug: articles.slug, page: 'blog-slug' }"
 					:post="{ avatar: articles.avatar, time: articles.time, date: articles.date }"
 				/>
 			</template>

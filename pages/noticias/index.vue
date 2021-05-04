@@ -11,13 +11,14 @@
 			</template>
 			<template>
 				<PostCard
+					type="notice"
 					v-for="articles of notices"
 					:key="articles.slug"
 					:content="articles.description"
 					:image="articles.img"
 					:title="articles.title"
 					:alt="articles.slug"
-					:path="articles.slug"
+					:path="{ slug: articles.slug, page: 'noticias-slug' }"
 					:post="{ avatar: articles.avatar, time: articles.time, date: articles.date }"
 				/>
 			</template>
