@@ -19,22 +19,3 @@ export default {
    },
 }
 </script>
-
-<style lang="scss">
-.btn {
-   display: inline-block;
-   padding: 0.5rem 0.75rem;
-   border-radius: 3px;
-   background-color: transparent;
-   font-weight: 600;
-   &.dt-secondary {
-      border: 2px solid lightblue;
-   }
-   &.primary {
-      background-color: lightseagreen;
-   }
-   &.secondary {
-      background-color: magenta;
-   }
-}
-</style>

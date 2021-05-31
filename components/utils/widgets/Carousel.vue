@@ -1,5 +1,5 @@
 <template>
-   <section class="m-carousel is-full-size" role="carousel">
+   <section class="m-carousel" role="carousel">
       <input
          v-for="(el, index) in imgs"
          class="null"

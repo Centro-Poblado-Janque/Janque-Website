@@ -1,6 +1,10 @@
 <template>
    <MainContent class="post-main p-page">
-      <SocialMediaSEO :title="article.title" :description="article.description" :url="'blog/' + article.slug" />
+      <SocialMediaSEO
+         :title="article.title"
+         :description="article.description"
+         :url="'blog/' + article.slug"
+      />
       <header class="post-head">
          <img :src="'./../resources/img/' + article.img" :alt="article.slug" class="img-background" />
          <Container class="container-reset">

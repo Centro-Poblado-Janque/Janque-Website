@@ -1,21 +1,20 @@
 <template>
-	<section class="about-section">
-		<header class="about-head">
-			<slot name="header"> </slot>
-		</header>
+   <section class="about-section">
+      <header class="about-head">
+         <div class="container md-grid md-grid-10 with-full-gap">
+            <slot name="header"> </slot>
+         </div>
+      </header>
 
-		<ViewBox class="about-main">
-			<div class="container md-grid md-grid-3 with-full-gap">
-				<slot> </slot>
-			</div>
-		</ViewBox>
-
-		<aside class="about-footer">
-			<div class="container">
-				<slot name="footer"> </slot>
-			</div>
-		</aside>
-	</section>
+      <section class="about-main container md-grid md-grid-10 with-full-gap">
+         <div class="lg-grid-7">
+            <slot name="grid-7"> </slot>
+         </div>
+         <div class="lg-grid-3">
+            <slot name="grid-3"></slot>
+         </div>
+      </section>
+   </section>
 </template>
 
 <script>
@@ -25,18 +24,14 @@ export default {}
 <style lang="scss">
 @import '~/assets/scss/customs/mixin';
 .about {
-	&-head {
-		min-height: 60vh;
-		padding-top: 80px;
-		position: relative;
-		transition: all 0.1s ease-in-out;
-	}
-	&-main {
-		margin-top: 3rem;
-		margin-bottom: 3rem;
-	}
-	&-footer {
-		width: 100%;
-	}
+   &-head {
+      min-height: 100vh;
+      padding-top: 80px;
+      position: relative;
+   }
+   &-main {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+   }
 }
 </style>

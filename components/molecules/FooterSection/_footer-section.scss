@@ -1,0 +1,27 @@
+.footer--section {
+    padding: 0.5rem;
+    display: flex;
+    ul {
+        position: relative;
+        padding-left: 0.5em;
+        font-size: 0.9rem;
+        list-style: none;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: currentColor;
+            opacity: 0.5;
+            left: 0;
+        }
+    }
+}
+.f-title {
+    font-family: var(--viga-font);
+    font-weight: 500;
+    font-size: 1rem;
+}
+.f-icon {
+    margin-right: 0.35rem;
+}

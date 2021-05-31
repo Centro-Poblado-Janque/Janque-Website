@@ -1,6 +1,6 @@
 {
-  "name": "janque-nuxt-website",
-  "version": "1.0.0",
+  "name": "cp-janque-website",
+  "version": "0.1.0",
   "description": "this projects is an website of c.p. janque",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/composition-api": "^0.22.1",
+    "aos": "^2.3.4",
     "core-js": "^3.8.1",
     "nuxt": "^2.14.12",
     "vue-styled-components": "^1.6.0"
@@ -27,8 +28,6 @@
     "autoprefixer": "^9.8.6",
     "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-tinypng": "^1.0.2",
     "gulp-tinypng-extended": "^3.0.2",
     "sass": "^1.32.0",
     "sass-loader": "^10.1.0"

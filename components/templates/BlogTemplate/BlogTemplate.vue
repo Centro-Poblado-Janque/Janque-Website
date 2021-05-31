@@ -1,20 +1,20 @@
 <template>
 	<section class="blog-section">
-		<header class="blog-head dark-gradient-bg">
-			<slot name="header"> </slot>
-		</header>
+	   <header class="blog-head dark-gradient-bg">
+         <slot name="header"> </slot>
+	   </header>
 
-		<ViewBox class="blog-main">
-			<div class="container md-grid md-grid-3 with-full-gap auto-row-400">
-				<slot> </slot>
-			</div>
-		</ViewBox>
+	   <ViewBox class="blog-main">
+	      <div class="container md-grid md-grid-3 f-gap auto-row-400 xl-md-grid-2">
+	         <slot> </slot>
+	      </div>
+	   </ViewBox>
 
-		<aside class="blog-footer">
-			<div class="container md-grid">
-				<slot name="footer"> </slot>
-			</div>
-		</aside>
+	   <aside class="blog-footer">
+	      <div class="container md-grid">
+	         <slot name="footer"> </slot>
+	      </div>
+	   </aside>
 	</section>
 </template>
 
@@ -26,17 +26,17 @@ export default {}
 @import '~/assets/scss/customs/mixin';
 .blog {
 	&-head {
-		min-height: 60vh;
-		padding-top: 80px;
-		position: relative;
-		transition: all 0.1s ease-in-out;
+	   min-height: 60vh;
+	   padding-top: 80px;
+	   position: relative;
+	   transition: all 0.1s ease-in-out;
 	}
 	&-main {
-		margin-top: 3rem;
-		margin-bottom: 3rem;
+	   margin-top: 3rem;
+	   margin-bottom: 3rem;
 	}
 	&-footer {
-		width: 100%;
+	   width: 100%;
 	}
 }
 </style>

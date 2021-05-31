@@ -65,26 +65,6 @@ export default {
       faBrand,
    }),
 }
-</script>
 
-<style lang="scss">
-@import '~/assets/scss/customs/mixin';
-.Menu {
-   width: 100%;
-   height: 100%;
-   flex-direction: column;
-   @media screen and(min-width: $desktop_breakpoints) {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-   }
-}
-.logo_contain {
-   color: inherit;
-   display: block;
-   width: 80%;
-   height: 100%;
-   padding: 0.2rem;
-   transition: all 0.5s ease;
-}
-</style>
+import './_menu.scss'
+</script>

@@ -11,6 +11,8 @@
 import VFooter from '@/components/organisms/Footer/Footer.vue'
 import VHeader from '@/components/organisms/Header/Header.vue'
 import PageLoader from '../components/utils/PageLoader.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default {
    name: 'MainLayout',
    components: {
@@ -29,6 +31,10 @@ export default {
       },
    },
    mounted() {
+      AOS.init({
+         easing: 'ease-out-back',
+         duration: 1000,
+      })
       this.setDiscusThread()
    },
 }

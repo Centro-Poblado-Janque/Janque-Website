@@ -1,15 +1,7 @@
 @import './customs/';
 
-@import './00_base/';
-
-@import './01_atom/';
-
-@import './02_molecule/';
-
-@import './03_organism/';
-
-@import './04_template/';
-
-@import './05_pages/';
+@import './base/';
 
 @import './layout';
+
+@import './../../components/atoms/index.scss';

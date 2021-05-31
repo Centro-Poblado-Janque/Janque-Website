@@ -1,19 +1,12 @@
 <template>
-	<img :src="src" :alt="alt" :class="$style.image" />
+   <img :src="src" :alt="alt" class="atom-image" />
 </template>
 
 <script>
 export default {
-	props: {
-		src: String,
-		alt: String,
-	},
+   props: {
+      src: String,
+      alt: String,
+   },
 }
 </script>
-
-<style lang="scss" module>
-.image {
-	object-fit: cover;
-	object-position: 50% 50%;
-}
-</style>

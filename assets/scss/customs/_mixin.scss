@@ -1,53 +1,53 @@
-// =====  MIXINGS  =======//
+// =====  MIXINGS  ======= //
 
 @mixin normalize_img {
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-attachment: fixed;
-   background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 @mixin absolute_position {
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 @mixin absolute_center {
-   position: absolute;
-   top: 40%;
+    position: absolute;
+    top: 40%;
 }
 @mixin line_bottom($color) {
-   &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      display: block;
-      width: 15%;
-      height: 2px;
-      background-color: $color;
-   }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 15%;
+        height: 2px;
+        background-color: $color;
+    }
 }
 
 @mixin full-size {
-   width: 100%;
-   height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 @mixin radius($type) {
-   border-radius: 3px;
-   border: thin $type var(--card-border-bg);
+    border-radius: 3px;
+    border: thin $type var(--card-border-bg);
 }
 
-$grid-breakpoints: (
-   xs: 0,
-   sm: 576px,
-   md: 768px,
-   lg: 992px,
-   xl: 1200px,
-   xxl: 1400px,
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
 );
 
 $device_pixel_radio: 2;

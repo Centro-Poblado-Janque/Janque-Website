@@ -1,6 +1,6 @@
 <template>
    <div>
-      <Copyright>Copyright 2020 - {{ date }} © | Janque - Todos los derechos reservados</Copyright>
+      <Copyright>Copyright 2020 - {{ date }} © | Centro Poblado Janque</Copyright>
       <IconContainer>
          <BrandLink href="#">
             <BrandIcon :icon="faFacebook" />

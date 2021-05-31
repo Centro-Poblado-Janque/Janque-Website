@@ -1,0 +1,8 @@
+@import '~/assets/scss/customs/mixin';
+
+.m-footer {
+    background-color: var(--bg-color-second);
+    padding: 2rem 0;
+    color: var(--base-color);
+    width: 100%;
+}

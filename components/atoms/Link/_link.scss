@@ -1,0 +1,16 @@
+.link {
+    display: inline-block;
+    color: var(--nav-color);
+    padding: 0.25rem;
+    &__icon {
+        color: var(--nav-icon-color);
+        margin-right: 0.5rem;
+    }
+    &__content {
+        color: inherit;
+        font-weight: normal;
+        @media screen and(min-width: 1000px) {
+            font-weight: 600;
+        }
+    }
+}
