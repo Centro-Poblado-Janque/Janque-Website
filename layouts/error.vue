@@ -2,13 +2,8 @@
    <div :class="$style.pageNotFound">
       <Container>
          <div :class="$style.override">
-            <span :class="$style.error_img_contain">
-               <ErrorLogo />
-            </span>
-            <div :class="$style.error_help">
-               <ErrorCaption />
-               <HelpErrorButton />
-            </div>
+            <span :class="$style.error_img_contain"> </span>
+            <div :class="$style.error_help"></div>
          </div>
       </Container>
    </div>

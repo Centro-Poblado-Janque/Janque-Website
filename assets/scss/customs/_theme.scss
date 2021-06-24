@@ -23,6 +23,7 @@
 
     --nav-color                 : #{$-v-orange-primary};
     --nav-icon-color            : #{$-v-night-300};
+    --theme-dot                 : #{$-v-orange-dark};
 
 }
 :root[data-theme="light"]{
@@ -42,6 +43,8 @@
 
     --bg-scroll-thumb           : #{$-v-smoke-400};
     --toggle-btn                : #{$-v-night-400};
+
+    --switch-bg                 : #{$-v-night-primary};
 }
 :root[data-theme="dark"]{
     --bg-color-primary          : #{$-v-grey-dark};
@@ -55,7 +58,11 @@
     --base-color                : #b8c9c9;
 
     --bg-scroll-thumb           : #{$-v-grey-700};
-    --toggle-btn                : #{$-v-smoke-400};
+    --toggle-btn                : #{$-v-smoke-100};
+
+
+
+    --switch-bg                 : #{$-v-grey-850};
 }
 
 

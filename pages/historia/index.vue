@@ -5,9 +5,7 @@
          description="No hay una mejor manera de conocer un lugar, sino sabiendo su historia. El poblado de Janque sus raices tienen mucho que decir"
          url="historia"
       />
-      <HistoryTemplate>
-         º
-      </HistoryTemplate>
+      <HistoryTemplate> </HistoryTemplate>
    </MainContent>
 </template>
 

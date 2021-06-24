@@ -1,5 +1,8 @@
 <template data-component="Menu">
    <ul class="Menu md-flex">
+      <Item className="li-search">
+         <SearchModel class="Menu--search" />
+      </Item>
       <Item :forLink="true" className="Menu--item" @click.native="$emit('close')">
          <NextLink
             path="/"
@@ -55,6 +58,9 @@ import { faHome, faLandmark, faBlog, faBreadSlice, faNewspaper } from '@fortawes
 import { faBrand } from '@/components/utils/icons/faBrand'
 
 export default {
+   components: {
+      SearchModel: () => import('@/components/utils/widgets/SearchModel.vue'),
+   },
    name: 'Menu',
    data: () => ({
       faHome,

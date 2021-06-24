@@ -23,7 +23,9 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '~/assets/scss/customs/mixin';
 .nav_search {
+   margin-top: 1.5rem;
    background-color: var(--bg-color-acent);
    padding: 0.5rem;
    border-radius: 3px;
@@ -35,6 +37,20 @@ export default {
       background-color: transparent;
       width: 100%;
       height: 100%;
+      color: #4f5050;
    }
+   @media screen and(min-width: $desktop_breakpoints) {
+      order: 4;
+      margin: 0;
+      background-color: none;
+      .nav-input-search {
+         width: 0;
+         height: 0;
+      }
+   }
+}
+.Menu--search {
+   opacity: 0;
+   transform: translateX(-100px);
 }
 </style>

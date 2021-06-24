@@ -4,7 +4,7 @@
          title="janque location"
          frameborder="0"
          class="map-canvas"
-         src="https://www.google.com/maps/embed/v1/place?q=cp+janque+incahuasi&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+         src="https://maps.google.com/maps?amp;hl=en&amp;q=CP%20JANQUE+(Centro%20Poblado%20Janque)&amp;t=k&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
       >
       </iframe>
    </div>

@@ -9,7 +9,6 @@
 import './_content.scss'
 export default {
    components: {
-      Title: () => import('@/components/atoms/Title/Title.vue'),
       Link: () => import('@/components/atoms/Link/Link.vue'),
    },
    props: {

@@ -41,6 +41,12 @@
     border: thin $type var(--card-border-bg);
 }
 
+@mixin cross-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 $breakpoints: (
     xs: 0,
     sm: 576px,

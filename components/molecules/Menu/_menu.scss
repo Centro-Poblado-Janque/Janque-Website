@@ -3,13 +3,22 @@
 .Menu {
     width: 100%;
     height: 100%;
+    padding: 0 0.8rem;
     flex-direction: column;
     @media screen and(min-width: $desktop_breakpoints) {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        padding: 0;
     }
 }
+.li-search {
+    display: list-item;
+    @media screen and(min-width: $desktop_breakpoints) {
+        display: none;
+    }
+}
+
 .logo_contain {
     color: inherit;
     display: block;
