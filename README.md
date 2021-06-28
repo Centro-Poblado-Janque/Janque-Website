@@ -1,10 +1,6 @@
----
+<img style="padding-bottom: 2rem;" src="https://cp-janque.com/logo.svg"/>
 
-<img style="padding-bottom: 2rem" src="https://cp-janque.com/logo.svg"/>
-
----
-
-# Janque Town Center
+# Janque Town Center (Incahuasi)
 
 > Visit **[cp-janque.com](https://cp-janque.com)** for view this Website
 
