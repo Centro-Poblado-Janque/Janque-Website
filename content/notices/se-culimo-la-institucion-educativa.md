@@ -6,6 +6,11 @@ alt: lluvia en Janque
 time: 8
 date: 20 de enero del 2021
 author: Silvestre Acuña Nuñez
+facebook: 'silvestre.acunanunez'
 ---
 
-## Lluvias fuertes en Janque
+## I. E. Nº 10083 "Indoamerica" renueva su imagen.
+
+No hace mas de tres años que la institucion educativa de Janque contaba con tan solo 4 aulas para la educacion secundaria. Cosa que se ha venido corrigiendo desde ese entonces
+
+## Amplia 4 ambientes mas

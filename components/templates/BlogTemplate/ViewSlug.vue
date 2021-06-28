@@ -1,16 +1,17 @@
 <template>
-   <section class="blog-section">
-      <header class="blog-head dark-gradient-bg">
+   <section class="post-view-section">
+      <header class="post-view-head p-relative">
          <slot name="header"> </slot>
       </header>
 
-      <ViewBox class="blog-main">
-         <div class="container md-grid md-grid-3 f-gap auto-row-400 xl-md-grid-2">
+      <ViewBox class="post-view-main">
+         <slot name="links"></slot>
+         <div class="container md-grid md-grid-10 f-gap">
             <slot> </slot>
          </div>
       </ViewBox>
 
-      <aside class="blog-footer">
+      <aside class="post-view-footer">
          <div class="container md-grid">
             <slot name="footer"> </slot>
          </div>
@@ -24,11 +25,10 @@ export default {}
 
 <style lang="scss">
 @import '~/assets/scss/customs/mixin';
-.blog {
+.post-view {
    &-head {
-      min-height: 60vh;
-      padding-top: 80px;
-      position: relative;
+      height: 60vh;
+      background-color: #343333;
       transition: all 0.1s ease-in-out;
    }
    &-main {

@@ -5,7 +5,7 @@ const host = 'https://cp-janque.com'
 export default {
     htmlAttrs: {
         lang: 'es',
-        'data-theme': 'light',
+        'data-theme': 'dark',
     },
     title: 'Centro Poblado Janque',
     link: [

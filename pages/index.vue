@@ -2,7 +2,7 @@
    <MainContent class="p-page" data-page="home">
       <HomeTemplate>
          <template #header>
-            <Carousel></Carousel>
+            <Carousel class="full"></Carousel>
          </template>
       </HomeTemplate>
    </MainContent>

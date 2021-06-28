@@ -1,7 +1,7 @@
 @import '~/assets/scss/customs/mixin';
 
 .nav-grid-wrapper {
-    @media screen and(min-width: $desktop_breakpoints) {
+    @media screen and(min-width: $xl) {
         grid-template-columns: 3fr 6fr;
         grid-template-rows: 100%;
     }
@@ -17,7 +17,7 @@
     z-index: 3;
     color: teal;
     transition: all 0.25s ease-in-out;
-    @media screen and(min-width: $desktop_breakpoints) {
+    @media screen and(min-width: $xl) {
         top: 0;
         height: 100px;
         pointer-events: auto;
@@ -63,7 +63,7 @@
 }
 .drawer-out {
     .MenuContainer {
-        @media only screen and(max-width: $desktop_breakpoints) {
+        @media only screen and(max-width: $xl) {
             background-color: var(--bg-color-second);
             height: 64px;
             border-bottom: 1px solid var(--dt-grey);

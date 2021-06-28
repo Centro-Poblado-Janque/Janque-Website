@@ -22,7 +22,7 @@ export default {
       return {
          faSun,
          faMoon,
-         checked: false,
+         checked: true,
          getTheme: '',
       }
    },
@@ -68,8 +68,8 @@ export default {
 }
 .after {
    position: absolute;
-   top: 32%;
-   left: 51%;
+   top: 31%;
+   left: 52%;
    border-radius: 25px;
    height: 24px;
    width: 24px;
@@ -85,7 +85,7 @@ export default {
       margin-left: 28px;
    }
    &:checked ~ .after {
-      left: 20%;
+      left: 21%;
    }
 }
 .dot {

@@ -6,9 +6,11 @@
          url="about"
       />
       <AboutUsTemplate>
-         <template name="header"> </template>
+         <template #header>
+            <img src="~/assets/img/blog_background.jpg" alt="" />
+         </template>
          <template #grid-7>
-            <h2>Location of Janque Center Town</h2>
+            <h2>Ubicacion de Janque</h2>
             <MapsLocation />
          </template>
       </AboutUsTemplate>

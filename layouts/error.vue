@@ -131,13 +131,13 @@ export default {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   @media screen and (min-width: $desktop_breakpoints) {
+   @media screen and (min-width: $xl) {
       flex-direction: row;
    }
 }
 .error_help {
    text-align: center;
-   @media screen and (min-width: $desktop_breakpoints) {
+   @media screen and (min-width: $xl) {
       padding-left: 2rem;
    }
 }
@@ -148,7 +148,7 @@ export default {
       width: 100%;
       height: auto;
    }
-   @media screen and (min-width: $desktop_breakpoints) {
+   @media screen and (min-width: $xl) {
       svg {
          width: 90%;
       }

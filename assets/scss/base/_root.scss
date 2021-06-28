@@ -16,6 +16,7 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
+    color: var(--base-color);
     font-family: var(--global-font), var(--optional-font);
     text-rendering: optimizeLegibility;
     overflow-x: hidden;

@@ -39,7 +39,7 @@ export default {
       height: 100%;
       color: #4f5050;
    }
-   @media screen and(min-width: $desktop_breakpoints) {
+   @media screen and(min-width: $xl) {
       order: 4;
       margin: 0;
       background-color: none;

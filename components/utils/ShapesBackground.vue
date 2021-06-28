@@ -1,6 +1,10 @@
 <template>
    <div :class="$style.static_bg">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" :class="$style.shapes">
+      <svg
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         :class="$style.shapes"
+      >
          <svg
             width="100%"
             height="100%"

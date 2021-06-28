@@ -10,9 +10,13 @@ twitter: '@asegundo442'
 avatar: avatar-alex.jpg
 ---
 
+<!--<img style="height: 600px; width: 100%; object-fit: cover" src="./../resources/img/Santa-Rosa-de-Lima.jpg" alt="other"/> -->
+
+![santa rosa de lima](./../resources/img/Santa-Rosa-de-Lima.jpg)
+
 ## ¿Quien es Santa Rosa de Lima?
 
-Isabel Flores de Oliva nació el 30 de abril de 1586 en Lima,2​ la capital del entonces Virreinato del Perú. Fue hija de Gaspar Flores, arcabucero natural de Baños de Montemayor3​4​ y de María de Oliva y Herrera, hilandera y costurera indígena, natural de Húanuco.5​6​ Además fue la cuarta hija de doce hermanos de los cuales solo se conoce a nueve: Gaspar, Hernando, Bernandina, Francisco, Juana, Antonio, Andrés, Jacinta y Francisco Matia.
+_**Isabel Flores de Oliva** nació el 30 de abril de 1586 en Lima,2​ la capital del entonces Virreinato del Perú. Fue hija de Gaspar Flores, arcabucero natural de Baños de Montemayor3​4​ y de María de Oliva y Herrera, hilandera y costurera indígena, natural de Húanuco.5​6​ Además fue la cuarta hija de doce hermanos de los cuales solo se conoce a nueve: Gaspar, Hernando, Bernandina, Francisco, Juana, Antonio, Andrés, Jacinta y Francisco Matia._
 
 Fue bautizada, según partida, el 25 de mayo de 1586, en la Parroquia de San Sebastián, en su ciudad natal por el sacerdote Antonio Polanco, siendo sus padrinos Hernando de Baldés y María Osorio.
 
@@ -21,8 +25,6 @@ En 1545, Gaspar salió de España, después de pasar por Puerto Rico y Panamá, 
 José Manuel Bermúdez, uno de sus biógrafos, contribuyó a extender la opinión de que el nacimiento de Rosa ocurrió el día 30 de abril, pero en los registros del proceso ordinario se encuentra que la madre de Rosa y otras personas —entre ellas fray Pedro de Loaiza, confesor de Rosa y su primer biógrafo— declararon como fecha de su nacimiento el día 20 de abril.
 
 A temprana edad - emulando a la terciaria dominica santa Catalina de Siena - empezó a ayunar tres veces por semana y a realizar severas penitencias en secreto. Su compañero de juegos fue su hermano Hernando, quien siempre la apoyó y ayudó. A los doce años se mudó con su familia hacia Quives, un pueblo a 60 kilómetros de Lima, ubicado en el valle del río Chillón. Es aquí donde recibió la confirmación de manos del futuro santo católico Toribio de Mogrovejo, su padrino fue el sacerdote del pueblo Francisco González. Es en Quives donde, al parecer, empezó con sus mortificaciones contrayendo un reuma muy fuerte, con consecuencias dolorosas para su recuperación, que ella ocultaba a su madre.
-
-![image](./../blog_img/descarga.jpg)
 
 ## Patrona de Janque
 

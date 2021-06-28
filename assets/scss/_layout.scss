@@ -21,7 +21,7 @@
     &.f-gap {
         row-gap: var(--grid-gap);
     }
-    @media screen and(min-width: map-get($map: $breakpoints, $key: xl)) {
+    @media screen and(min-width: $xl) {
         &.auto-row-400 {
             grid-auto-rows: 400px;
         }
@@ -31,7 +31,7 @@
     }
 }
 
-@media screen and(min-width: map-get($map: $breakpoints, $key: xxl)) {
+@media screen and(min-width: $xl) {
     @for $i from 1 through 14 {
         .md-grid-#{$i} {
             grid-template-columns: repeat(#{$i}, calc(#{100 / $i}% - var(--grid-gap) * #{$i - 1}/#{$i}));
@@ -41,15 +41,6 @@
         }
     }
 }
-
-$lg: map-get(
-    $map: $breakpoints,
-    $key: lg,
-);
-$xxl: map-get(
-    $map: $breakpoints,
-    $key: xxl,
-);
 
 @media screen and (min-width: $lg) and (max-width: $xxl) {
     .xl-md-grid-2 {

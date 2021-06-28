@@ -5,36 +5,45 @@
          :description="article.description"
          :url="'blog/' + article.slug"
       />
-      <header class="post-head">
-         <img :src="'./../resources/img/' + article.img" :alt="article.slug" class="img-background" />
-         <Container class="container-reset">
-            <div class="post-metadates">
-               <h1 class="a-title is-light">{{ article.title }}</h1>
-               <span class="read-time">
-                  <FontAwesomeIcon :icon="faClock" />
-                  {{ article.time }} minutos
-               </span>
-               <span class="current-time">
-                  <FontAwesomeIcon :icon="faCalendar" />
-                  {{ article.date }}
-               </span>
-            </div>
-         </Container>
-      </header>
-      <section class="blog-post">
-         <Container>
-            <div class="redirect_links">
+      <ViewSlug>
+         <template #header>
+            <img
+               :src="'http://localhost:3000/resources/img/' + article.img"
+               :alt="article.slug"
+               class="img-background"
+            />
+            <Container class="container-reset">
+               <div class="post-metadates">
+                  <h1 class="a-title is-light">{{ article.title }}</h1>
+                  <span class="read-time">
+                     <FontAwesomeIcon :icon="faClock" />
+                     {{ article.time }} minutos
+                  </span>
+                  <span class="current-time">
+                     <FontAwesomeIcon :icon="faCalendar" />
+                     {{ article.date }}
+                  </span>
+               </div>
+            </Container>
+         </template>
+         <template #links>
+            <div class="redirect_links container">
                <NuxtLink to="/"><FontAwesomeIcon :icon="faHome"/></NuxtLink>
                <NuxtLink class="after" :to="`./../blog`">Blog</NuxtLink>
                <NuxtLink class="after" :to="'/blog/' + article.slug">{{ article.title }}</NuxtLink>
             </div>
-            <PostArticle>
-               <template>
-                  <NuxtContent :document="article" />
-               </template>
-
-               <template #autor-content>
-                  <img class="avatar-model" :src="'./../avatar-img/' + article.avatar" :alt="article.alt" />
+         </template>
+         <template>
+            <section class="blog-post lg-grid-7">
+               <CardContent :article="article" :document="true" />
+            </section>
+            <section class="lg-grid-3">
+               <CardContent class="_s-author md-flex">
+                  <img
+                     class="avatar-model"
+                     :src="'http://localhost:3000/resources/img/' + article.avatar"
+                     :alt="article.alt"
+                  />
                   <span class="author-dates">
                      <p class="blog-author">{{ article.author }}</p>
                      <a
@@ -47,9 +56,8 @@
                         {{ article.twitter }}
                      </a>
                   </span>
-               </template>
-
-               <template #items-view>
+               </CardContent>
+               <CardContent class="position-sticky">
                   <ul>
                      <li v-for="ids of id" :key="ids.id">
                         <a :href="`#${ids.id}`" class="content_item">
@@ -57,11 +65,11 @@
                         </a>
                      </li>
                   </ul>
-               </template>
-            </PostArticle>
-            <div id="disqus_thread" class="disqus-comment"></div>
-         </Container>
-      </section>
+               </CardContent>
+            </section>
+            <div id="disqus_thread" class="disqus-comment lg-grid-10 pd-especial discus"></div>
+         </template>
+      </ViewSlug>
    </MainContent>
 </template>
 
@@ -71,11 +79,14 @@ import { faHome, faClock, faCalendar } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 export default {
    components: {
+      ViewSlug: () => import('@/components/templates/BlogTemplate/ViewSlug.vue'),
+      CardContent: () => import('@/components/molecules/CardContent/CardContent.vue'),
       FontAwesomeIcon,
    },
    head() {
       return {
          title: this.article.title,
+         script: [{ src: './../disqus.js' }],
       }
    },
    async asyncData({ $content, params }) {
@@ -94,21 +105,16 @@ export default {
 .post-main {
    width: 100%;
 }
-.post-head {
-   position: relative;
+.img-background {
+   position: absolute;
    top: 0;
-   height: 80vh;
-   .img-background {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      object-fit: cover;
-      filter: brightness(0.5) blur(1.5px);
-      width: 100%;
-      height: 100%;
-   }
+   right: 0;
+   left: 0;
+   bottom: 0;
+   object-fit: cover;
+   filter: brightness(0.5);
+   width: 100%;
+   height: 100%;
 }
 .redirect_links {
    position: relative;
@@ -151,15 +157,14 @@ export default {
    }
 }
 .blog-post {
-   padding-top: 3rem;
-   margin-bottom: 3rem;
    font-family: var(--open-sans-font);
    h2 {
+      line-height: 1.7rem;
       font-family: var(--nunito-font);
       font-size: 1.5rem;
       padding: 15px 5px;
       font-weight: bold;
-      color: var(--blog-title-color);
+      color: #299b86;
       position: relative;
       &:nth-child(1) {
          padding-top: 0;
@@ -172,11 +177,8 @@ export default {
       padding-bottom: 1.5rem;
    }
    @media screen and (min-width: 1024px) {
-      p {
-         font-size: 1.1rem;
-      }
       h2 {
-         font-size: 2rem;
+         font-size: 1.8rem;
       }
    }
 }
@@ -190,7 +192,12 @@ export default {
 }
 .author-dates {
    text-align: center;
-   line-height: 1;
+   line-height: 1.5rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
    font-family: var(--noto-font);
    p {
       padding: 0;
@@ -202,7 +209,7 @@ export default {
    }
    .blog-contact {
       font-size: 0.85rem;
-      color: var(--dark-light-200);
+      color: #17808b;
       i {
          padding-right: 4px;
          color: var(--blue-depth-200);
@@ -225,7 +232,11 @@ export default {
    color: var(--blue-depth-200);
 }
 .disqus-comment {
-   padding-top: 4rem;
-   padding: 1rem;
+   // background-color: rgba(58, 58, 58, 0.056);
+   border-radius: 3px;
+   border: 1px solid #8c858144;
+}
+._s-author {
+   margin-bottom: 1.5rem;
 }
 </style>

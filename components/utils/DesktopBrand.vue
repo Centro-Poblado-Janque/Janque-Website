@@ -33,7 +33,7 @@ export default {
 @import '~/assets/scss/customs/mixin';
 [aria-current='page'] {
    position: relative;
-   @media screen and (min-width: $desktop_breakpoints) {
+   @media screen and (min-width: $xl) {
       &::after {
          display: none !important;
       }

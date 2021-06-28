@@ -1,0 +1,27 @@
+@import '~/assets/scss/customs/mixin';
+
+.position-sticky {
+    position: sticky !important;
+    top: 68px;
+}
+
+.m-card-content {
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid #8c858144;
+    background-color: var(--bg-color-primary);
+}
+.pd-especial {
+    @media screen and(min-width: $md) {
+        padding: 2rem;
+    }
+    padding: 0.9rem;
+    &.discus {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+}
+.line {
+    padding-top: 0.9rem;
+    @include top__decoration(teal);
+}

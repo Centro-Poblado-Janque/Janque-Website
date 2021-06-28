@@ -8,6 +8,9 @@ export default {
     plugins: ['~/assets/vue/directives.client.js', '~/components/global'],
     css: ['~/assets/scss/index.scss'],
     srcDir: './',
+    env: {
+        baseURL: process.env.NODE_ENV == 'production' ? process.env.BASE_URL : 'http://localhost:3000',
+    },
     loadingIndicator: {
         name: 'fading-circle',
         color: 'teal',
