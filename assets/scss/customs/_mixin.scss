@@ -1,10 +1,7 @@
 // =====  MIXINGS  ======= //
 
-@mixin normalize_img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+@mixin img--full-center($image) {
+    background: fixed center/80% url($image) fixed;
 }
 
 @mixin absolute_position {

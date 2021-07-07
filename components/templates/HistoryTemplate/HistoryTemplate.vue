@@ -1,21 +1,21 @@
 <template>
    <section class="history-section">
-	   <header class="history-head">
-	      <slot name="header"> </slot>
-	   </header>
-      
-	   <div class="history-main">
-	      <div class="container md-grid md-grid-3 with-full-gap">
-	         <slot> </slot>
-	      </div>
-	   </div>
-     
-	   <aside class="history-footer">
-	      <div class="container md-grid">
-	         <slot name="footer"> </slot>
-	      </div>
-	   </aside>
-	</section>
+      <header style="background: var(--bg-color-acent); height: 400px" class="history-head">
+         <div class="cross-center">History of Janque</div>
+         <slot name="header"> </slot>
+      </header>
+
+      <div class="container">
+         <div style="border: 2px solid teal; height: 400px" class="cross-center">Towns of Janque</div>
+         <slot> </slot>
+      </div>
+
+      <aside class="history-footer">
+         <div class="container md-grid">
+            <slot name="footer"> </slot>
+         </div>
+      </aside>
+   </section>
 </template>
 
 <script>
@@ -27,12 +27,8 @@ export default {
 <style lang="scss">
 @import '~/assets/scss/customs/mixin';
 .history {
-	&-section {
-	   display: block;
-	}
-
-	&-head {
-	   min-height: 100vh;
-	}
+   &-section {
+      display: block;
+   }
 }
 </style>
