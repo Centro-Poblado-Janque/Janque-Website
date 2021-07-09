@@ -55,4 +55,24 @@
         justify-content: space-around;
         align-items: center;
     }
+    &.dir {
+        &\:column {
+            flex-direction: column;
+        }
+        &\:row {
+            flex-direction: row;
+        }
+    }
+    .flow {
+        @for $i from 2 through 6 {
+            &\:#{$i} {
+                flex-grow: #{$i};
+            }
+        }
+    }
+    .shrink {
+        &\:10\% {
+            flex-shrink: 2;
+        }
+    }
 }

@@ -1,7 +1,7 @@
 <template>
    <div class="m-content">
-      <Title :text="title" :isLink="true" :path="{ name: urlname, params: { slug: path } }" />
       <p class="m-text">{{ content }}</p>
+      <Title :text="title" :isLink="true" :path="{ name: urlname, params: { slug: path } }" />
    </div>
 </template>
 

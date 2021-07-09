@@ -1,6 +1,6 @@
 .o-blog--post {
-    position: relative;
-    border-radius: 2px;
+    border: 1px solid var(--dt-grey);
+    background-color: var(--bg-color-second);
 }
 .o-notice--post {
     position: relative;

@@ -238,5 +238,6 @@ export default {
 }
 ._s-author {
    margin-bottom: 1.5rem;
+   justify-content: center;
 }
 </style>

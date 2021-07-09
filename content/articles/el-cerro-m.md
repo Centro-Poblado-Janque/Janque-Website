@@ -1,5 +1,5 @@
 ---
-title: M es la forma de esta colina
+title: Una colina rara con la forma de la letra M
 description: Sepa porque la colina tiene una forma de M
 img: test_2.png
 alt: my first blog post

@@ -82,3 +82,17 @@
 .p-sticky-top-i {
     position: sticky !important;
 }
+
+.bg-teal {
+    color: #d1931f;
+}
+
+//    MODULES SETTINGS
+
+.md-radius {
+    @for $i from 2 through 6 {
+        &\:#{$i} {
+            border-radius: #{$i}px;
+        }
+    }
+}
