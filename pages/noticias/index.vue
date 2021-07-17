@@ -7,7 +7,7 @@
       />
       <NewsTemplate>
          <template #header>
-            <h2>This is Header</h2>
+            <Swiper> </Swiper>
          </template>
          <template>
             <PostCard
@@ -24,7 +24,7 @@
          </template>
          <template #footer>
             <p>Footer</p>
-         </template>
+         </template> 
       </NewsTemplate>
    </MainContent>
 </template>
@@ -34,6 +34,7 @@ export default {
    components: {
       NewsTemplate: () => import('@/components/templates/NewsTemplate/NewsTemplate.vue'),
       PostCard: () => import('@/components/organisms/Post/PostCard.vue'),
+      Swiper: () => import('@/components/utils/Swiper.vue'),
    },
    async asyncData({ $content, params }) {
       const notices = await $content('notices', params.slug)

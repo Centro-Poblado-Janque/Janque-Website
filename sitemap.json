@@ -1,0 +1,48 @@
+{
+	"match_uri": "https://cp-janque.com",
+	"map": [
+		{
+			"id": 1,
+			"page": "home",
+			"sub-page": {
+				"target": "/"
+			}
+		},
+		{
+			"id": 2,
+			"page": "news",
+			"sub-page": {
+				"page": "news-articles",
+				"target": "/news/[slug]"
+			}
+		},
+		{
+			"id": 3,
+			"page": "history",
+			"sub-page": {
+				"articles": {
+					"page": "history-articles",
+					"target": "/history/[slug]"
+				},
+				"peoples": {
+					"page": "people-articles",
+					"target": "/history/peoples/[slug]"
+				}
+			}
+		},
+		{
+			"id": 4,
+			"page": "about",
+			"sub-page": {
+				"target": "/"
+			}
+		},
+		{
+			"id": 5,
+			"page": "blog",
+			"sub-page": {
+				"target": "/blog/[slug]"
+			}
+		}
+	]
+}

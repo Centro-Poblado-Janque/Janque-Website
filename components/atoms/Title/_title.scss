@@ -7,6 +7,9 @@
     line-height: 2rem;
     font-family: var(--open-sans-font);
     color: var(--tex-acent);
+    &:hover {
+        opacity: 0.5;
+    }
 }
 .a-title {
     margin: 0;
