@@ -18,3 +18,8 @@ tab_width = 4
 
 indent_size = 4
 tab_width = 4
+
+[sitemap.json]
+tab_width = 4
+indent_size = 4
+indent_style = tab

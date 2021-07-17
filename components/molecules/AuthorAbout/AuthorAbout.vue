@@ -1,8 +1,8 @@
 <template>
-   <footer class="m-about--author md-flex flex--center">
+   <footer class="m-about--author md-flex flex--center shrink:10%">
       <Img :src="src" alt="no alt" class="md-sz-20 md-rd" />
-      <Time :time="`lectura de ${time} minutos`" />
-      <Date :date="date" />
+      <Time :time="`${time} minutos`" />
+      <Date :date="date" :with_icon="true" />
    </footer>
 </template>
 
