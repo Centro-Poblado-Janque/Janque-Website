@@ -1,9 +1,6 @@
 <template data-component="Menu">
-   <ul class="Menu md-flex">
-      <Item className="li-search">
-         <SearchModel class="Menu--search" />
-      </Item>
-      <Item :forLink="true" className="Menu--item" @click.native="$emit('close')">
+   <ul class="md-flex dir:column fl-space">
+      <Item :forLink="true" @click.native="$emit('close')">
          <NextLink
             path="/"
             content="Inicio"
@@ -13,7 +10,7 @@
             :icon="faHome"
          />
       </Item>
-      <Item :forLink="true" className="Menu--item" @click.native="$emit('close')">
+      <Item :forLink="true" @click.native="$emit('close')">
          <NextLink
             path="/noticias"
             content="Noticias"
@@ -22,7 +19,7 @@
             :icon="faNewspaper"
          />
       </Item>
-      <Item :forLink="true" className="Menu--item" @click.native="$emit('close')">
+      <Item :forLink="true" @click.native="$emit('close')">
          <NextLink
             path="/historia"
             content="Historia"
@@ -31,7 +28,7 @@
             :icon="faLandmark"
          />
       </Item>
-      <Item :forLink="true" className="Menu--item" @click.native="$emit('close')">
+      <Item :forLink="true" @click.native="$emit('close')">
          <NextLink
             path="/sobre-nosotros"
             content="Sobre Janque"
@@ -40,7 +37,7 @@
             :icon="faBrand"
          />
       </Item>
-      <Item :forLink="true" className="Menu--item" @click.native="$emit('close')">
+      <Item :forLink="true" @click.native="$emit('close')">
          <NextLink
             path="/blog"
             content="Blog"

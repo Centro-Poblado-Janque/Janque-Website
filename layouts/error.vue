@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .pageNotFound {
    min-height: 100vh;
    position: relative;
@@ -125,6 +125,9 @@ export default {
          transparent 100%
       ),
       linear-gradient(79deg, rgb(16, 23, 23), rgb(16, 23, 23));
+   & ~ footer {
+      display: none;
+   }
 }
 .override {
    display: flex;

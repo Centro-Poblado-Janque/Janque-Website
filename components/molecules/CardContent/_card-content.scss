@@ -1,4 +1,4 @@
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 
 .position-sticky {
     position: sticky !important;
@@ -22,5 +22,4 @@
 }
 .line {
     padding-top: 0.9rem;
-    @include top__decoration(teal);
 }

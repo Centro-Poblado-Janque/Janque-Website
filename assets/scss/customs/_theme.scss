@@ -4,11 +4,14 @@
 
 //==========#########  SIZES : CUSTOM ===============|
 
-    --max-width                 : 1400px;
-    --max-width-xl              : 1140px;
+    --max-width-xxl             : 1600px;
+    --max-width-xl              : 1400px;
+    --max-width-lg              : 1140px;
     --sz--scroll-size           : 0;
     --grid-gap                  : 2rem;
     --base-font-size            : 16px;
+    --mobile-nav-size           : #{rem(58)};
+    --desktop-nav-size          : 92px;
 
 //==========#########  FONTS : CUSTOM ================|
 
@@ -22,58 +25,23 @@
 
 //=========#######  COLOR NOT CHANGE THEME =============|
 
-    --nav-color                 : #{$-v-orange-primary};
-    --nav-icon-color            : #{$-v-night-300};
-    --theme-dot                 : #{$-v-orange-dark};
-
 }
 :root[data-theme="light"]{
-    --bg-color-primary          : #{$-v-smoke-700};
-    --bg-color-second           : #{$-v-smoke-600};
-    --bg-color-acent            : #{$-v-smoke-300};
-    --text-accent               : #{$-v-orange-dark};
-
-    --bg-drawer                 : #{$-v-smoke-500};
-
-    --base-color                : #334242;
-
-    //---- BORDERS 
-
-    --dt-grey                   : #{$-v-smoke-350};
-
-
-    --bg-scroll-thumb           : #{$-v-smoke-400};
-    --toggle-btn                : #{$-v-night-400};
-
-    --switch-bg                 : #{$-v-night-primary};
+    --bg-light                  : #{$-v-smoke-light};
+    --bg-light-100              : #{$-v-smoke-dark};
+    --bg-grey                   : #{$-v-night-primary};
+    --bg-primary                : #EB6200;
+    --bg-second                 : #007FA0;
+    --other-color               : #24504c;
 }
 :root[data-theme="dark"]{
-    --bg-color-primary          : #{$-v-grey-dark};
-    --bg-color-second           : #{$-v-grey-primary};
-    --bg-color-acent            : #{$-v-grey-300};
-
-    --bg-drawer                 : #{$-v-grey-dark};
-
-    --dt-grey                   : #{$-v-grey-800};
-
-    --base-color                : #b8c9c9;
-
-    --bg-scroll-thumb           : #{$-v-grey-700};
-    --toggle-btn                : #{$-v-smoke-100};
-
-
-
-    --switch-bg                 : #{$-v-grey-850};
+    --bg-light-100              : #{$-v-night-200};
+    --bg-light                  : #{$-v-night-primary};
 }
 
 
-$device_pixel_radio: 2;
-$phone_breakpoints: 400px;
-$tablet_breakpoints: 890px;
-$desktop_breakpoints: 1200px;
 
-
-@media screen and (min-width: $desktop_breakpoints) {
+@include media-responsive($xl){
     ::-webkit-scrollbar{
         --sz--scroll-size: 10px !important;
         height: var(--sz--scroll-size);
@@ -93,5 +61,8 @@ $desktop_breakpoints: 1200px;
             height: 5px;
             width: 5px;
         }
+    }
+    :root{
+        --mobile-nav-size           : #{rem(64)};
     }
 }

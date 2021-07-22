@@ -23,7 +23,7 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .nav_search {
    margin-top: 1.5rem;
    background-color: var(--bg-color-acent);

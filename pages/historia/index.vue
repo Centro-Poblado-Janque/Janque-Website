@@ -11,7 +11,7 @@
 
 <script>
 export default {
-   transition: 'slide-top',
+   transition: 'slide-bottom',
    components: {
       HistoryTemplate: () => import('@/components/templates/HistoryTemplate/HistoryTemplate.vue'),
    },

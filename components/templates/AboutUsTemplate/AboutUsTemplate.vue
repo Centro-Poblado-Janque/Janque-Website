@@ -22,7 +22,7 @@ export default {}
 </script>
 
 <style lang="scss">
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .about {
    &-head {
       min-height: 100vh;

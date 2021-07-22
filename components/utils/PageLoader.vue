@@ -14,15 +14,30 @@ export default {
    data: () => ({
       isloaded: false,
    }),
-   mounted() {
-      document.onreadystatechange = () => {
-         if (document.readyState == 'complete') {
-            this.isloaded = true
+   methods: {
+      executeInit() {
+         document.onreadystatechange = () => {
+            if (document.readyState == 'complete') {
+               this.isloaded = true
+            }
          }
-      }
+         window.addEventListener('DOMContentLoaded', () => {
+            this.isloaded = true
+         })
+         window.addEventListener('load', () => {
+            this.isloaded = true
+         })
+      },
+   },
+   mounted() {
       setTimeout(() => {
+         this.executeInit()
          this.isloaded = true
-      }, 6000)
+      }, 500)
+   },
+   beforeDestroy() {
+      window.removeEventListener('load')
+      window.removeEventListener('DOMContentLoaded')
    },
 }
 </script>
@@ -39,8 +54,9 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
    left: 0;
    width: 100vw;
    height: 100vh;
-   background-color: var(--bg-color-primary);
+   background-color: var(--bg-second);
    z-index: 1200;
+   transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 // -----------------------------------------------------
 .cube-md5 {

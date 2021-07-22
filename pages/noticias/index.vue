@@ -7,7 +7,7 @@
       />
       <NewsTemplate>
          <template #header>
-            <Swiper> </Swiper>
+            <div class="news-header md-radius:6">Hola Mundo</div>
          </template>
          <template>
             <PostCard
@@ -24,13 +24,14 @@
          </template>
          <template #footer>
             <p>Footer</p>
-         </template> 
+         </template>
       </NewsTemplate>
    </MainContent>
 </template>
 
 <script>
 export default {
+   transition: 'slide-bottom',
    components: {
       NewsTemplate: () => import('@/components/templates/NewsTemplate/NewsTemplate.vue'),
       PostCard: () => import('@/components/organisms/Post/PostCard.vue'),

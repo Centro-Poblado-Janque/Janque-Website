@@ -23,7 +23,7 @@ export default {}
 </script>
 
 <style lang="scss">
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .home {
    &-section {
       display: block;

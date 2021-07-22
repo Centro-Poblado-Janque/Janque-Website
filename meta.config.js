@@ -16,7 +16,7 @@ export default {
         { rel: 'publiher', href: "<a href='https://alexsegundo.com/about'></a>" },
         {
             href:
-                'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Nunito:ital,wght@0,200;0,300;0,400;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Roboto:wght@100;300;400&display=swap',
+                'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Roboto:wght@100;300;400&display=swap',
             rel: 'stylesheet',
         },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },

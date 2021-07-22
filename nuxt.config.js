@@ -29,6 +29,9 @@ export default {
     generate: {
         fallback: '404.html',
     },
+    server: {
+        host: '0.0.0.0',
+    },
     content: {
         liveEdit: false,
     },

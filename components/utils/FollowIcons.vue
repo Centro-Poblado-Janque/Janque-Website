@@ -2,16 +2,16 @@
    <div>
       <Copyright>Copyright 2020 - {{ date }} © | Centro Poblado Janque</Copyright>
       <IconContainer>
-         <BrandLink href="#">
+         <BrandLink href="#" class="md-flex">
             <BrandIcon :icon="faFacebook" />
          </BrandLink>
-         <BrandLink href="#">
+         <BrandLink href="#" class="md-flex">
             <BrandIcon :icon="faInstagram" />
          </BrandLink>
-         <BrandLink href="#">
+         <BrandLink href="#" class="md-flex">
             <BrandIcon :icon="faYoutube" />
          </BrandLink>
-         <BrandLink href="#">
+         <BrandLink href="#" class="md-flex">
             <BrandIcon :icon="faLinkedin" />
          </BrandLink>
       </IconContainer>
@@ -28,11 +28,17 @@ const BrandIcon = styled(FontAwesomeIcon)`
 `
 
 const BrandLink = styled.a`
-   padding: 0.5rem;
-   display: inline-block;
-   text-align: center;
+   width: 40px;
+   height: 40px;
    margin: 0 15px;
-   color: var(--blue-depth);
+   border-radius: 50%;
+   background-color: #f0852d;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   &:hover {
+      color: var(--bg-primary);
+   }
 `
 
 const IconContainer = styled.div`
@@ -41,7 +47,7 @@ const IconContainer = styled.div`
    justify-content: center;
    width: 100%;
    @media (min-width: 1200px) {
-      width: 20%;
+      width: 30%;
       justify-content: space-around;
    }
 `

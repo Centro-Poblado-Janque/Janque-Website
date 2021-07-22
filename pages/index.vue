@@ -10,6 +10,7 @@
 
 <script>
 export default {
+   transition: 'slide-bottom',
    components: {
       Carousel: () => import('@/components/utils/widgets/Carousel.vue'),
       HomeTemplate: () => import('@/components/templates/HomeTemplate/HomeTemplate.vue'),
@@ -22,9 +23,6 @@ export default {
       return {
          notices,
       }
-   },
-   mounted() {
-      console.log(this.notices)
    },
 }
 </script>

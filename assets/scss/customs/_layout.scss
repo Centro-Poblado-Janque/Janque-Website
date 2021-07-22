@@ -5,29 +5,25 @@
 #main--layout\:app {
     min-width: 100vw;
 }
+.container {
+    max-width: var(--max-width-xl);
+    margin: 0 auto;
+    padding: 0 1rem;
+    @include media-responsive($lg) {
+        padding: 0 1.5rem;
+    }
+    @include media-responsive($xl) {
+        padding: 0 2rem;
+    }
+}
 
 .md-grid {
     display: grid;
     grid-template-columns: 100%;
     column-gap: var(--grid-gap);
     width: 100%;
-    &.auto-row-400 {
-        grid-auto-rows: 300px;
-    }
-    &.auto-row-500 {
-        grid-auto-rows: 400px;
-    }
-    &.with-full-gap,
-    &.f-gap {
+    &.gap {
         row-gap: var(--grid-gap);
-    }
-    @media screen and(min-width: $xl) {
-        &.auto-row-400 {
-            grid-auto-rows: 400px;
-        }
-        &.auto-row-500 {
-            grid-auto-rows: 500px;
-        }
     }
 }
 
@@ -42,17 +38,11 @@
     }
 }
 
-@media screen and (min-width: $lg) and (max-width: $xxl) {
-    .xl-md-grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .md-flex {
     display: flex;
     flex-wrap: nowrap;
-    &.flex--center {
-        justify-content: space-around;
+    &.fl-center {
+        justify-content: space-between;
         align-items: center;
     }
     &.dir {
@@ -74,5 +64,8 @@
         &\:10\% {
             flex-shrink: 2;
         }
+    }
+    &.fl-space {
+        justify-content: space-around;
     }
 }

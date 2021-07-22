@@ -10,9 +10,9 @@
             <img
                :src="'http://localhost:3000/resources/img/' + article.img"
                :alt="article.slug"
-               class="img-background"
+               class="absolute-wide img-background is-img"
             />
-            <Container class="container-reset">
+            <div class="container">
                <div class="post-metadates">
                   <h1 class="a-title is-light">{{ article.title }}</h1>
                   <span class="read-time">
@@ -24,8 +24,9 @@
                      {{ article.date }}
                   </span>
                </div>
-            </Container>
+            </div>
          </template>
+
          <template #links>
             <div class="redirect_links container">
                <NuxtLink to="/"><FontAwesomeIcon :icon="faHome"/></NuxtLink>
@@ -33,6 +34,7 @@
                <NuxtLink class="after" :to="'/blog/' + article.slug">{{ article.title }}</NuxtLink>
             </div>
          </template>
+
          <template>
             <section class="blog-post lg-grid-7">
                <CardContent :article="article" :document="true" />
@@ -106,19 +108,10 @@ export default {
    width: 100%;
 }
 .img-background {
-   position: absolute;
-   top: 0;
-   right: 0;
-   left: 0;
-   bottom: 0;
-   object-fit: cover;
    filter: brightness(0.5);
-   width: 100%;
-   height: 100%;
 }
 .redirect_links {
    position: relative;
-   padding: 0.5rem;
    margin-bottom: 1rem;
    a {
       color: var(--grey-200);
@@ -135,7 +128,7 @@ export default {
    }
 }
 .post-metadates {
-   color: var(--dark-light-100);
+   color: whitesmoke;
    position: absolute;
    padding: 0.5rem;
    bottom: 10%;
@@ -164,7 +157,7 @@ export default {
       font-size: 1.5rem;
       padding: 15px 5px;
       font-weight: bold;
-      color: #299b86;
+      color: #f0852d;
       position: relative;
       &:nth-child(1) {
          padding-top: 0;

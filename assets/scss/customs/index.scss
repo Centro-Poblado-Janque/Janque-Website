@@ -1,7 +1,13 @@
+// =============================================================
+//     @sass IMPORT CUSTOM FILES (C) 2021
+// =============================================================
+
+@import './settings';
+
 @import './theme';
 
 @import './animations';
 
-@import './mixin';
-
 @import './utlities';
+
+@import './layout';

@@ -4,12 +4,12 @@
          <slot name="header"> </slot>
       </header>
 
-      <ViewBox class="post-view-main">
+      <div class="post-view-main">
          <slot name="links"></slot>
-         <div class="container md-grid md-grid-10 f-gap">
+         <div class="container md-grid md-grid-10 gap">
             <slot> </slot>
          </div>
-      </ViewBox>
+      </div>
 
       <aside class="post-view-footer">
          <div class="container md-grid">
@@ -24,7 +24,7 @@ export default {}
 </script>
 
 <style lang="scss">
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .post-view {
    &-head {
       height: 60vh;

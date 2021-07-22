@@ -22,6 +22,7 @@
     "aos": "^2.3.4",
     "core-js": "^3.8.1",
     "nuxt": "^2.14.12",
+    "swiper": "^6.7.5",
     "vue-styled-components": "^1.6.0"
   },
   "devDependencies": {

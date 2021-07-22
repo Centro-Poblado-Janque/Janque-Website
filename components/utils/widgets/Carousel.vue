@@ -1,10 +1,10 @@
 <template>
    <section class="m-swiper p-relative" ref="swiper">
-      <ViewBox class="slides" ref="slides">
+      <div class="slides" ref="slides">
          <div v-for="(img, index) in imgs" class="slide" :key="index">
             <img :src="img" alt="carousel-img" class="slide--img" />
          </div>
-      </ViewBox>
+      </div>
       <FontAwesomeIcon @click="nextSlide" role="button" class="chevron up" :icon="faChevronUp" />
       <FontAwesomeIcon @click="prevSlide" role="button" class="chevron down" :icon="faChevronDown" />
    </section>
@@ -35,7 +35,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .m-swiper {
    margin: 0;
    width: 100vw;
@@ -76,6 +76,5 @@ export default defineComponent({
    height: 100vh;
    object-fit: cover;
    object-position: 75% 50%;
-   @include absolute_position;
 }
 </style>

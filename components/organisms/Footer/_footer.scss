@@ -1,8 +1,14 @@
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 
 .m-footer {
-    background-color: var(--bg-color-second);
-    padding: 2rem 0;
-    color: var(--base-color);
+    position: relative;
+    background-color: #f3f3f3;
+    padding: 1rem 0 2rem 0;
+    color: #353a3a;
     width: 100%;
+    //box-shadow: 4px 0 12px rgba(160, 152, 145, 0.281);
+}
+.footer--separator {
+    margin: 1rem 0;
+    border-bottom: 1px solid #eeb27a98;
 }

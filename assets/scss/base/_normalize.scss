@@ -1,4 +1,3 @@
-@charset "UTF-8";
 article,
 aside,
 details,
@@ -87,8 +86,8 @@ pre {
 q {
     quotes: 'â€œ' 'â€' 'â€˜' 'â€™';
 }
-q:after,
-q:before {
+q::after,
+q::before {
     content: '';
     content: none;
 }
@@ -127,7 +126,6 @@ button,
 input,
 select,
 textarea {
-    font-family: inherit;
     font-size: 100%;
     margin: 0;
     vertical-align: baseline;

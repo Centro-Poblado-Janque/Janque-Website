@@ -1,17 +1,18 @@
 <template>
-   <header v-scroll="handleScroll" :class="['Header', activeMenu && 'drawer-out']">
-      <ThemeButton />
-      <nav :class="[activeMenu && 'is_active', activeScroll && 'active-scroll']" class="MenuContainer">
-         <div class="container md-grid nav-grid-wrapper">
+   <header v-scroll="handleScroll" :class="['module--header', activeMenu && 'drawer-out']">
+      <section class="header-wide" :class="[activeScroll && 'active-scroll']">
+         <div class="header container md-flex fl-center">
+            <ThemeButton />
             <BrandLogotype />
-            <Menu @close="HideMenu" />
+            <nav class="menu-desktop">
+               <Menu />
+            </nav>
+            <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
          </div>
+      </section>
+      <nav :class="[activeMenu && 'is_active']" class="menu-mobile pt-1">
+         <Menu @close="HideMenu" />
       </nav>
-      <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
-      <ViewBox class="no-desktop">
-         <div class="menu-background top" />
-         <div class="menu-background bottom" />
-      </ViewBox>
    </header>
 </template>
 
@@ -21,7 +22,7 @@ export default {
    name: 'MainHeader',
    components: {
       Menu: () => import('@/components/molecules/Menu/Menu.vue'),
-      BrandLogotype: () => import('@/components/utils/BrandLogotype.vue'),
+      BrandLogotype: () => import('@/components/utils/MovilBrand.vue'),
       ToggleButton: () => import('@/components/utils/ToggleButton.vue'),
       ThemeButton: () => import('@/components/utils/theme-buttom.vue'),
    },
@@ -41,6 +42,9 @@ export default {
          activeMenu: false,
          activeScroll: false,
       }
+   },
+   mounted() {
+      console.log(this.$router)
    },
 }
 </script>
