@@ -53,14 +53,9 @@ export default {
         loaders: {
             cssModules: {
                 modules: {
-                    localIdentName: 'md--[local]-[hash:base64:4]',
+                    localIdentName: 'mod-[local]--[hash:base64:4]',
                 },
             },
         },
-        postcss: [
-            require('autoprefixer')({
-                browsers: ['> 1%'],
-            }),
-        ],
     },
 }

@@ -22,7 +22,7 @@
 - ### Modular Styles
 
   1. #### Sass files only
-     - **Normal** `prefix = 'md'` example `class="md-bg-primary"`
+     - **Normal** `prefix = 'mod'` example `class="mod-bg-primary"`
   2. #### Vue Components only
 
      > Normally used in the composition of `Atoms`, `Molecules`, `Organisms`
