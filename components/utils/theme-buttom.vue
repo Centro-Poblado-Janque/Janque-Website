@@ -1,13 +1,10 @@
 <template>
-   <ViewBox :class="[$style.switchContainer]">
+   <div :class="[$style.switchContainer]" class="ly-flex fl-center">
       <div :class="[$style.switch]">
          <input type="checkbox" id="theme__toggle" :class="$style.checkbox" v-model="checked" />
-         <label for="theme__toggle" :class="[$style.dot, $style.fixedLeft]">
-            <FontAwesomeIcon :icon="checked ? faSun : faMoon" :class="$style['icon']" />
-         </label>
          <label for="theme__toggle" :class="$style['after']" />
       </div>
-   </ViewBox>
+   </div>
 </template>
 
 <script>
@@ -22,7 +19,7 @@ export default {
       return {
          faSun,
          faMoon,
-         checked: true,
+         checked: false,
          getTheme: '',
       }
    },
@@ -49,32 +46,28 @@ export default {
 </script>
 
 <style lang="scss" module>
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .switchContainer {
-   position: absolute;
-   width: 90px;
-   top: 0;
-   left: 0;
-   z-index: 110;
-   height: 100%;
-   @include cross-center;
+   height: 40px;
+   width: 40px;
 }
 .switch {
-   border: thin solid #3b3b3b;
-   width: 64px;
-   background-color: var(--switch-bg);
-   border-radius: 25px;
-   padding: 6px;
+   width: 38px;
+   height: 24px;
+   border-radius: 12px;
+   border: 1px solid #f0852d;
+   background-color: #f0852d;
+   position: relative;
 }
 .after {
    position: absolute;
-   top: 31%;
-   left: 52%;
-   border-radius: 25px;
-   height: 24px;
-   width: 24px;
+   top: 3px;
+   left: 16px;
+   border-radius: 8px;
+   height: 16px;
+   width: 16px;
    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-   background-color: silver;
+   background-color: white;
 }
 .fixedLeft {
    font-size: 20px;
@@ -85,7 +78,7 @@ export default {
       margin-left: 28px;
    }
    &:checked ~ .after {
-      left: 21%;
+      left: 2px;
    }
 }
 .dot {

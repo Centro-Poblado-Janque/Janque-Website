@@ -1,6 +1,6 @@
 <template>
    <div class="a-date" v-if="with_icon == true">
-      <FontAwesomeIcon :icon="faClock" class="bg-teal" />
+      <FontAwesomeIcon :icon="faClock" />
       <time>{{ time }}</time>
    </div>
    <div class="a-date" v-else>

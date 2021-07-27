@@ -11,16 +11,16 @@
             position: absolute;
             width: 1px;
             height: 100%;
-            background-color: currentColor;
-            opacity: 0.5;
+            background-color: #eeb27a;
             left: 0;
         }
     }
 }
 .f-title {
-    font-family: var(--viga-font);
+    font-family: var(--navigation-font);
     font-weight: 500;
     font-size: 1rem;
+    color: #218a7b;
 }
 .f-icon {
     margin-right: 0.35rem;

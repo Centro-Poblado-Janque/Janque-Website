@@ -2,7 +2,7 @@
    <article class="o-card-template:blog">
       <img :src="img" :alt="alt" class="a-Image is-abs-full-size bg" />
       <section class="o-card-meta">
-         <ViewBox class="blog-metadates">
+         <div class="blog-metadates">
             <span class="read-time">
                <FontAwesomeIcon :icon="faClock" />
                {{ time }} minutos
@@ -11,7 +11,7 @@
                <FontAwesomeIcon :icon="faCalendar" />
                {{ date }}
             </span>
-         </ViewBox>
+         </div>
          <h2>{{ title }}</h2>
          <NuxtLink class="a-Button a-Button--info" :to="{ name: 'blog-slug', params: { slug: slug } }">
             Seguir Leyendo

@@ -1,16 +1,30 @@
 <template>
-   <section class="blog-section">
-      <header class="blog-head dark-gradient-bg">
-         <h2 class="container">Y si... Aún hay mucho por ver</h2>
-         <slot name="header"> </slot>
+   <section class="blog-section  page--gradient">
+      <header class="blog-head  l-section ly-grid l-section ly-grid-9 grid-center">
+         <div class="grid--col-3 ly-sticky">
+            <slot name="header-content"> </slot>
+         </div>
+         <div class="grid--col-6">
+            <slot name="header-img"> </slot>
+         </div>
       </header>
 
-      <ViewBox class="blog-main container md-grid md-grid-3 f-gap auto-row-500 xl-md-grid-2">
-         <slot> </slot>
-      </ViewBox>
+      <div class="blog-main  l-section ly-grid l-section ly-grid-8 gap">
+         <section class="grid--col-5">
+            <slot name="principal"> </slot>
+         </section>
+         <section class="grid--col-3 ly-flex dir:column">
+            <Title text="Ultimas Entradas" class="mb-1" />
+            <slot name="recent"></slot>
+         </section>
+      </div>
 
-      <aside class="blog-footer">
-         <div class="container md-grid">
+      <div class="blog-main  l-section ly-grid l-section ly-grid-3 gap ly-grid:lg-2">
+         <slot></slot>
+      </div>
+
+      <aside class="blog-footer pb-2">
+         <div class=" l-section ly-grid">
             <slot name="footer"> </slot>
          </div>
       </aside>
@@ -22,28 +36,28 @@ export default {}
 </script>
 
 <style lang="scss">
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .blog {
    &-head {
       min-height: 48vh;
       padding-top: 80px;
       position: relative;
       transition: all 0.1s ease-in-out;
-      h2 {
-         color: #e1e1e1;
-         margin-top: 10%;
-         text-shadow: 2px 3px 7px #e1e1e198;
-         //text-align: center;
-         font-size: 3.2rem;
-         font-family: var(--nunito-sans-font);
-      }
    }
    &-main {
-      margin-top: 3rem;
+      margin-top: 4rem;
       margin-bottom: 3rem;
    }
    &-footer {
       width: 100%;
    }
+}
+
+.description {
+   display: inline-block;
+   margin-top: 1rem;
+   font-size: 1.5rem;
+   line-height: 1.75rem;
+   color: #6b6a7c;
 }
 </style>

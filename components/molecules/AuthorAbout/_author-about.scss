@@ -1,8 +1,13 @@
 .m-about--author {
-    padding: 0.5rem 0.25rem;
-    border-top: 1px solid var(--dt-grey);
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--bg-light);
     color: #ceb8a6;
 }
 .p-bottom {
     width: 100%;
+}
+
+img.author-img {
+    width: 3rem;
+    height: 3rem;
 }

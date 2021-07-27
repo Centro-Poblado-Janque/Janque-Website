@@ -1,7 +1,9 @@
 <template>
    <footer id="main-footer" class="m-footer">
-      <Container>
-         <ViewBox class="md-grid md-grid-2">
+      <div class="l-section">
+         <BrandLogotype />
+         <hr class="footer--separator" />
+         <div class="ly-grid ly-grid:lg-2">
             <FooterSection
                title="Sobre el sitio"
                :icon="faGlobe"
@@ -12,9 +14,9 @@
                :icon="faBranch"
                :items="{ 1: 'Hacienda Janque', 2: 'Cultura Mochica', 3: 'Misterios' }"
             />
-         </ViewBox>
+         </div>
          <FollowIcons />
-      </Container>
+      </div>
    </footer>
 </template>
 
@@ -27,6 +29,7 @@ export default {
    components: {
       FooterSection: () => import('@/components/molecules/FooterSection/FooterSection.vue'),
       FollowIcons: () => import('@/components/utils/FollowIcons.vue'),
+      BrandLogotype: () => import('@/components/utils/MovilBrand.vue'),
    },
    data: () => ({
       faGlobe,

@@ -18,9 +18,9 @@ export default {
 <style lang="scss">
 .map-canvas {
    width: 100%;
-   min-height: 300px;
+   min-height: inherit;
 }
 #map-canvas {
-   min-height: 300px;
+   min-height: 400px;
 }
 </style>

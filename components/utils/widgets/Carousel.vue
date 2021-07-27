@@ -1,42 +1,61 @@
 <template>
-   <section class="m-swiper p-relative" ref="swiper">
-      <ViewBox class="slides" ref="slides">
-         <div v-for="(img, index) in imgs" class="slide" :key="index">
+   <section class="m-swiper ly-relative" ref="swiper">
+      <div class="slides" ref="slides">
+         <div v-for="(img, index) in imgs" :class="currentIndex" :key="index">
             <img :src="img" alt="carousel-img" class="slide--img" />
          </div>
-      </ViewBox>
-      <FontAwesomeIcon @click="nextSlide" role="button" class="chevron up" :icon="faChevronUp" />
-      <FontAwesomeIcon @click="prevSlide" role="button" class="chevron down" :icon="faChevronDown" />
+      </div>
+      <FontAwesomeIcon @click="prevSlide" role="button" class="chevron left" :icon="faChevronLeft" />
+      <FontAwesomeIcon @click="nextSlide" role="button" class="chevron right" :icon="faChevronRight" />
    </section>
 </template>
 
 <script>
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 export default defineComponent({
    components: {
       FontAwesomeIcon,
    },
    setup() {
       const imgs = [require('~/assets/img/index.jpg'), require('~/assets/img/index-home.jpg')]
-      return { imgs, faChevronUp, faChevronDown }
+
+      return { imgs, faChevronLeft, faChevronRight }
    },
    methods: {
       update() {},
       nextSlide() {
-         const el = document.querySelectorAll('.slides')[0]
-         const elements = document.querySelectorAll('slide')
+         this.count > this.imgs.length - 2 ? (this.count = 0) : this.count++
       },
-      prevSlide() {},
+      prevSlide() {
+         this.count <= 0 ? (this.count = this.imgs.length - 1) : this.count--
+      },
    },
-   mounted() {},
+   computed: {
+      currentIndex() {
+         return {
+            'slide-item active': this.count,
+         }
+      },
+   },
+   data() {
+      return {
+         count: 0,
+         elements: document.querySelectorAll('.slide--item'),
+      }
+   },
+   mounted() {
+      console.log(this.count)
+   },
 })
 </script>
 
 <style lang="scss">
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 .m-swiper {
+   --chevron-left: 1rem;
+   --chevron-right: 1rem;
    margin: 0;
    width: 100vw;
    height: 100vh;
@@ -45,19 +64,20 @@ export default defineComponent({
 .chevron {
    position: absolute;
    font-size: 1.5rem;
-   right: 1.5rem;
+   top: 45%;
+   color: rgb(179, 179, 179);
    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.up {
-   top: 40%;
+.left {
+   left: var(--chevron-left);
    &:hover {
-      top: 39%;
+      margin-left: -0.5rem;
    }
 }
-.down {
-   top: 50%;
+.right {
+   right: var(--chevron-right);
    &:hover {
-      top: 51%;
+      margin-right: -0.5rem;
    }
 }
 .slide {
@@ -71,11 +91,23 @@ export default defineComponent({
       height: 100vh;
    }
 }
+.slide--item {
+   display: none;
+   &.active {
+      display: block;
+   }
+}
 .slide--img {
    width: 100vw;
    height: 100vh;
    object-fit: cover;
    object-position: 75% 50%;
-   @include absolute_position;
+}
+
+@include media-from($md) {
+   .m-swiper {
+      --chevron-left: 2rem;
+      --chevron-right: 2.5rem;
+   }
 }
 </style>

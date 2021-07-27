@@ -1,5 +1,5 @@
 <template>
-   <li class="item-list" :class="[className, forLink && 'linkItem']">
+   <li :class="forLink ? 'link-item' : 'list-item'">
       <slot></slot>
    </li>
 </template>

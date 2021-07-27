@@ -1,14 +1,9 @@
-@import '~/assets/scss/customs/mixin';
-
-.position-sticky {
-    position: sticky !important;
-    top: 68px;
-}
+@import '~/assets/scss/customs/settings';
 
 .m-card-content {
     position: relative;
     border: 1px solid #8c858144;
-    background-color: var(--bg-color-primary);
+    background-color: var(--bg-light);
 }
 .pd-especial {
     @media screen and(min-width: $md) {
@@ -22,5 +17,11 @@
 }
 .line {
     padding-top: 0.9rem;
-    @include top__decoration(teal);
+}
+
+.nuxt-content {
+    p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
 }

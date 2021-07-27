@@ -10,75 +10,103 @@
 //==========#########  SIZES : CUSTOM ===============|
 
     --max-width                 : 1400px;
-    --max-width-xl              : 1140px;
     --sz--scroll-size           : 0;
     --grid-gap                  : 2rem;
     --base-font-size            : 16px;
+    --mobile-nav-size           : #{rem(58)};
+    --desktop-nav-size          : 92px;
+    --l-section-padding         : 1rem;
 
 //==========#########  FONTS : CUSTOM ================|
 
-    --global-font               : 'Roboto',-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --optional-font             : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --noto-font                 : 'Noto Sans JP', 'Roboto', sans-serif;
-    --viga-font                 : 'Viga','Noto Sans JP', 'Roboto', sans-serif;
-    --open-sans-font            : 'Open Sans', 'Roboto', sans-serif;
-    --roboto-font               : 'Roboto' sans-serif;
-    --nunito-sans-font          : 'Nunito', 'Open Sans', 'Roboto', sans-serif;
+    --global-font               : 'Roboto','Open Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --navigation-font           : 'Viga','Noto Sans JP', 'Roboto', sans-serif;
+    --paragraph-font            : 'Open Sans', 'Roboto', sans-serif;
+    --title-font                : 'Viga', 'Roboto' serif;
+    --title-big-font            : 'Titillium Web';
 
 //=========#######  COLOR NOT CHANGE THEME =============|
 
-    --nav-color                 : #{$-v-orange-primary};
-    --nav-icon-color            : #{$-v-night-300};
-    --theme-dot                 : #{$-v-orange-dark};
+    --main-background           : linear-gradient(203deg, rgba(208, 208, 208, 0.03) 0%, rgba(208, 208, 208, 0.03) 20%,rgba(55, 55, 55, 0.03) 20%, rgba(55, 55, 55, 0.03) 40%,rgba(81, 81, 81, 0.03) 40%, rgba(81, 81, 81, 0.03) 60%,rgba(208, 208, 208, 0.03) 60%, rgba(208, 208, 208, 0.03) 80%,rgba(191, 191, 191, 0.03) 80%, rgba(191, 191, 191, 0.03) 100%),linear-gradient(439deg, rgba(190, 190, 190, 0.02) 0%, rgba(190, 190, 190, 0.02) 14.286%,rgba(105, 105, 105, 0.02) 14.286%, rgba(105, 105, 105, 0.02) 28.572%,rgba(230, 230, 230, 0.02) 28.572%, rgba(230, 230, 230, 0.02) 42.858%,rgba(216, 216, 216, 0.02) 42.858%, rgba(216, 216, 216, 0.02) 57.144%,rgba(181, 181, 181, 0.02) 57.144%, rgba(181, 181, 181, 0.02) 71.42999999999999%,rgba(129, 129, 129, 0.02) 71.43%, rgba(129, 129, 129, 0.02) 85.71600000000001%,rgba(75, 75, 75, 0.02) 85.716%, rgba(75, 75, 75, 0.02) 100.002%),linear-gradient(180deg, rgba(212, 212, 212, 0.03) 0%, rgba(212, 212, 212, 0.03) 12.5%,rgba(223, 223, 223, 0.03) 12.5%, rgba(223, 223, 223, 0.03) 25%,rgba(11, 11, 11, 0.03) 25%, rgba(11, 11, 11, 0.03) 37.5%,rgba(86, 86, 86, 0.03) 37.5%, rgba(86, 86, 86, 0.03) 50%,rgba(106, 106, 106, 0.03) 50%, rgba(106, 106, 106, 0.03) 62.5%,rgba(220, 220, 220, 0.03) 62.5%, rgba(220, 220, 220, 0.03) 75%,rgba(91, 91, 91, 0.03) 75%, rgba(91, 91, 91, 0.03) 87.5%,rgba(216, 216, 216, 0.03) 87.5%, rgba(216, 216, 216, 0.03) 100%),linear-gradient(460deg, rgba(113, 113, 113, 0.01) 0%, rgba(113, 113, 113, 0.01) 14.286%,rgba(54, 54, 54, 0.01) 14.286%, rgba(54, 54, 54, 0.01) 28.572%,rgba(166, 166, 166, 0.01) 28.572%, rgba(166, 166, 166, 0.01) 42.858%,rgba(226, 226, 226, 0.01) 42.858%, rgba(226, 226, 226, 0.01) 57.144%,rgba(109, 109, 109, 0.01) 57.144%, rgba(109, 109, 109, 0.01) 71.42999999999999%,rgba(239, 239, 239, 0.01) 71.43%, rgba(239, 239, 239, 0.01) 85.71600000000001%,rgba(54, 54, 54, 0.01) 85.716%, rgba(54, 54, 54, 0.01) 100.002%),linear-gradient(170deg, rgba(77, 77, 77, 0.03) 0%, rgba(77, 77, 77, 0.03) 20%,rgba(235, 235, 235, 0.03) 20%, rgba(235, 235, 235, 0.03) 40%,rgba(215, 215, 215, 0.03) 40%, rgba(215, 215, 215, 0.03) 60%,rgba(181, 181, 181, 0.03) 60%, rgba(181, 181, 181, 0.03) 80%,rgba(193, 193, 193, 0.03) 80%, rgba(193, 193, 193, 0.03) 100%),linear-gradient(228deg, rgba(139, 139, 139, 0.02) 0%, rgba(139, 139, 139, 0.02) 14.286%,rgba(114, 114, 114, 0.02) 14.286%, rgba(114, 114, 114, 0.02) 28.572%,rgba(240, 240, 240, 0.02) 28.572%, rgba(240, 240, 240, 0.02) 42.858%,rgba(221, 221, 221, 0.02) 42.858%, rgba(221, 221, 221, 0.02) 57.144%,rgba(74, 74, 74, 0.02) 57.144%, rgba(74, 74, 74, 0.02) 71.42999999999999%,rgba(201, 201, 201, 0.02) 71.43%, rgba(201, 201, 201, 0.02) 85.71600000000001%,rgba(187, 187, 187, 0.02) 85.716%, rgba(187, 187, 187, 0.02) 100.002%),linear-gradient(405deg, rgba(72, 72, 72, 0.03) 0%, rgba(72, 72, 72, 0.03) 16.667%,rgba(138, 138, 138, 0.03) 16.667%, rgba(138, 138, 138, 0.03) 33.334%,rgba(54, 54, 54, 0.03) 33.334%, rgba(54, 54, 54, 0.03) 50.001000000000005%,rgba(161, 161, 161, 0.03) 50.001%, rgba(161, 161, 161, 0.03) 66.668%,rgba(17, 17, 17, 0.03) 66.668%, rgba(17, 17, 17, 0.03) 83.33500000000001%,rgba(230, 230, 230, 0.03) 83.335%, rgba(230, 230, 230, 0.03) 100.002%),linear-gradient(195deg, rgba(191, 191, 191, 0.01) 0%, rgba(191, 191, 191, 0.01) 16.667%,rgba(27, 27, 27, 0.01) 16.667%, rgba(27, 27, 27, 0.01) 33.334%,rgba(66, 66, 66, 0.01) 33.334%, rgba(66, 66, 66, 0.01) 50.001000000000005%,rgba(36, 36, 36, 0.01) 50.001%, rgba(36, 36, 36, 0.01) 66.668%,rgba(230, 230, 230, 0.01) 66.668%, rgba(230, 230, 230, 0.01) 83.33500000000001%,rgba(93, 93, 93, 0.01) 83.335%, rgba(93, 93, 93, 0.01) 100.002%),linear-gradient(238deg, #ffffff,#ffffff);
+    
+    @include media-to(290px){
+        --base-font-size        : 14px;
+    }
+
+    @include media-from($md){
+        --l-section-padding     : 2rem;
+    }
+    
+    // large device
+    @include media-from($lg){
+        --max-width             : 1140px;
+        --l-section-padding     : 3rem;
+        --mobile-nav-size       : #{rem(64)};
+    }
+
+    @include media-from($xl){
+        --max-width             : 1400px;
+    }
+
+    @include media-from($xxl + 40){
+        --l-section-padding     : 0;
+    }
+
+    --bg-primary                : #EB6200;
+    --bg-atention               : #{$-v-blue-300};
+
+    --red-acent                 : #{$-v-red-500};
+    --orange-acent              : #{$-v-orange-500};
+    --blue-acent                : #{$-v-blue-500};
+    --green-acent               : #{$-v-green-500};
+    --yellow-acent              : #{$-v-yellow-500};
+
+
+    --navigate-item-color       : #495153;
+    --nav-icon-color            : #{$-v-orange-500};
+    --nav-border-bottom         : #{$-v-smoke-300};
 
 }
 :root[data-theme="light"]{
-    --bg-color-primary          : #{$-v-smoke-700};
-    --bg-color-second           : #{$-v-smoke-600};
-    --bg-color-acent            : #{$-v-smoke-300};
-    --text-accent               : #{$-v-orange-dark};
 
-    --bg-drawer                 : #{$-v-smoke-500};
+    --base-color                : #{$-v-blue-900};
+    --base-background           : #fbfbfe;
 
-    --base-color                : #334242;
-
-    //---- BORDERS 
-
-    --dt-grey                   : #{$-v-smoke-350};
+    --bg-light                  : #{$-v-smoke-100};
+    --bg-light-100              : #{$-v-smoke-200};
+    --bg-light-accent           : #{$-v-smoke-200};
+    --bg-grey                   : #{$-v-night-100};
 
 
-    --bg-scroll-thumb           : #{$-v-smoke-400};
-    --toggle-btn                : #{$-v-night-400};
+    --bg-footer                 : #{$-v-smoke-200};
+    --color-footer              : #{$-v-blue-800};
 
-    --switch-bg                 : #{$-v-night-primary};
+    --menu-background           : #{$-v-smoke-200};
 }
 :root[data-theme="dark"]{
-    --bg-color-primary          : #{$-v-grey-dark};
-    --bg-color-second           : #{$-v-grey-primary};
-    --bg-color-acent            : #{$-v-grey-300};
+    --base-color                : #{$-v-smoke-400};
+    --base-background           : #{$-v-night-900};
 
-    --bg-drawer                 : #{$-v-grey-dark};
-
-    --dt-grey                   : #{$-v-grey-800};
-
-    --base-color                : #b8c9c9;
-
-    --bg-scroll-thumb           : #{$-v-grey-700};
-    --toggle-btn                : #{$-v-smoke-100};
+    --bg-light-100              : #{$-v-night-600};
+    --bg-light                  : #{$-v-night-800};
+    --bg-light-accent           : #{$-v-night-800};
+    --bg-darken                 : #{$-v-night-900};
 
 
 
-    --switch-bg                 : #{$-v-grey-850};
+    --bg-footer                 : #{$-v-night-800};
+    --color-footer              : #{$-v-smoke-900};
+
+    --menu-background           : #{$-v-night-800};
+
+    --navigate-item-color       : #c4beb4;
+    --nav-border-bottom         : #{$-v-night-600};
 }
 
 
-$device_pixel_radio: 2;
-$phone_breakpoints: 400px;
-$tablet_breakpoints: 890px;
-$desktop_breakpoints: 1200px;
 
 
-@media screen and (min-width: $desktop_breakpoints) {
+@include media-from($xl){
     ::-webkit-scrollbar{
         --sz--scroll-size: 10px !important;
         height: var(--sz--scroll-size);
@@ -99,4 +127,9 @@ $desktop_breakpoints: 1200px;
             width: 5px;
         }
     }
+}
+
+::selection{
+    background-color: var(--bg-darken);
+    color: var(--bg-primary)
 }

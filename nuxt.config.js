@@ -11,11 +11,7 @@ export default {
     env: {
         baseURL: process.env.NODE_ENV == 'production' ? process.env.BASE_URL : 'http://localhost:3000',
     },
-    loadingIndicator: {
-        name: 'fading-circle',
-        color: 'teal',
-        background: 'white',
-    },
+    loadingIndicator: '~/components/utils/loading.vue',
     loading: {
         color: 'teal',
         height: '2px',
@@ -28,6 +24,9 @@ export default {
     target: 'static',
     generate: {
         fallback: '404.html',
+    },
+    server: {
+        host: '0.0.0.0',
     },
     content: {
         liveEdit: false,
@@ -50,14 +49,9 @@ export default {
         loaders: {
             cssModules: {
                 modules: {
-                    localIdentName: 'md--[local]-[hash:base64:4]',
+                    localIdentName: 'mod-[local]--[hash:base64:4]',
                 },
             },
         },
-        postcss: [
-            require('autoprefixer')({
-                browsers: ['> 1%'],
-            }),
-        ],
     },
 }

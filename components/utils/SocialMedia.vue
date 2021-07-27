@@ -1,5 +1,5 @@
 <template>
-   <span v-if="false" />
+   <span style="display: none" v-frag> </span>
 </template>
 
 <script>

@@ -20,15 +20,13 @@ const ButtonContainer = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
-   right: 0;
-   height: 100%;
-   width: 64px;
-   position: absolute;
+   height: 24px;
+   width: 24px;
    z-index: 1000;
    &.is_active {
       .dt:nth-child(1) {
-         left: 1.5px;
-         top: 3px;
+         left: 0.75px;
+         top: 3.5px;
          transform: rotate(45deg);
       }
       .dt:nth-child(2) {
@@ -51,28 +49,27 @@ const ButtonContainer = styled.div`
       }
       .dt:nth-child(6) {
          left: calc(50% - 2px);
-         top: 11px;
+         top: 10.75px;
          transform: rotate(45deg);
       }
    }
-   @media only screen and (min-width: 1200px) {
+   @media only screen and (min-width: 992px) {
       display: none;
    }
 `
 
-const ToggleButton = styled.div`
+const ToggleButton = styled.span`
    position: relative;
-   margin: 0 4px 0 0;
    transform: rotate(0deg);
-   transition: 0.5s ease-in-out;
-   width: 24px;
+   transition: all 0.5s cubic-bezier(0, 0, 0.38, 0.9);
+   width: 20px;
    height: 18px;
    .dt {
       display: block;
       position: absolute;
-      height: 3px;
-      width: 50%;
-      background-color: var(--toggle-btn);
+      height: 2px;
+      width: 10px;
+      background-color: var(--bg-primary);
       opacity: 1;
       transform: rotate(0deg);
       transition: 0.25s ease-in-out;
@@ -87,11 +84,11 @@ const ToggleButton = styled.div`
    }
    .dt:nth-child(1),
    .dt:nth-child(2) {
-      top: 0;
+      top: 2px;
    }
    .dt:nth-child(3),
    .dt:nth-child(4) {
-      top: 7px;
+      top: 8px;
    }
    .dt:nth-child(5),
    .dt:nth-child(6) {

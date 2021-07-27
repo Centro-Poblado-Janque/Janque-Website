@@ -27,3 +27,6 @@ build-app/
 .env
 prepros.config 
  
+# page for testing components 
+
+pages/test

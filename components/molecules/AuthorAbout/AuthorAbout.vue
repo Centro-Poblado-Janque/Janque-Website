@@ -1,12 +1,13 @@
 <template>
-   <footer class="m-about--author md-flex flex--center shrink:10%">
-      <Img :src="src" alt="no alt" class="md-sz-20 md-rd" />
+   <footer class="m-about--author ly-flex fl-center">
+      <Img :src="src" alt="no alt" class="author-img u-radius-circle" />
       <Time :time="`${time} minutos`" />
-      <Date :date="date" :with_icon="true" />
+      <Date :date="formatDate" :icon="true" />
    </footer>
 </template>
 
 <script>
+import { format } from '@/lib/dateFormatter.js'
 export default {
    components: {
       Img: () => import('@/components/atoms/Image/Image.vue'),
@@ -17,6 +18,15 @@ export default {
       src: String,
       time: Number,
       date: String,
+   },
+
+   mounted() {
+      this.formatDate = format(this.date) || '20 de ener. 2010'
+   },
+   data() {
+      return {
+         formatDate: '',
+      }
    },
 }
 

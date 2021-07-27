@@ -12,7 +12,7 @@
                :alt="notices.slug"
                class="img-background"
             />
-            <Container class="container-reset">
+            <Container class="-reset">
                <div class="post-metadates">
                   <h1 class="a-title is-light">{{ notices.title }}</h1>
                   <span class="read-time">
@@ -27,18 +27,18 @@
             </Container>
          </template>
          <template #links>
-            <div class="redirect_links container">
+            <div class="redirect_links ">
                <NuxtLink to="/"><FontAwesomeIcon :icon="faHome"/></NuxtLink>
                <NuxtLink class="after" :to="`./../noticias`">Noticias</NuxtLink>
                <NuxtLink class="after" :to="'/blog/' + notices.slug">{{ notices.title }}</NuxtLink>
             </div>
          </template>
          <template>
-            <section class="blog-post lg-grid-7">
+            <section class="blog-post grid--col-7">
                <CardContent :article="notices" :document="true" />
             </section>
-            <section class="lg-grid-3">
-               <CardContent class="_s-author md-flex">
+            <section class="grid--col-3">
+               <CardContent class="_s-author ly-flex">
                   <img
                      class="avatar-model"
                      :src="
@@ -78,7 +78,7 @@
                   </ul>
                </CardContent>
             </section>
-            <div id="disqus_thread" class="disqus-comment lg-grid-10 pd-especial discus"></div>
+            <div id="disqus_thread" class="disqus-comment grid--col-10 pd-especial discus"></div>
          </template>
       </ViewSlug>
    </MainContent>
@@ -176,7 +176,6 @@ export default {
    font-family: var(--open-sans-font);
    h2 {
       line-height: 1.7rem;
-      font-family: var(--nunito-font);
       font-size: 1.5rem;
       padding: 15px 5px;
       font-weight: bold;
@@ -214,7 +213,6 @@ export default {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   font-family: var(--noto-font);
    p {
       padding: 0;
    }

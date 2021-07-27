@@ -1,0 +1,43 @@
+// ----------------------------------------------------------------
+//     @settings sass (C) 2021
+// ----------------------------------------------------------------
+
+@import './mixin';
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$is_monitor: 1700px;
+
+@mixin media-from($size) {
+    @media screen and(min-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-to($size) {
+    @media screen and(max-width: $size) {
+        @content;
+    }
+}
+
+@mixin image($path) {
+    background: url($path) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+@mixin image-gradient($path) {
+    background-image: linear-gradient(45deg, #2f2e2d9c 24%, rgba(41, 196, 169, 0) 100%), url($path);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@function to-rem($num, $var) {
+    @return $num * $var + rem;
+}
+
+@function rem($num) {
+    @return ($num / 16) + rem;
+}

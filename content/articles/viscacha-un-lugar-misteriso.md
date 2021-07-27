@@ -6,7 +6,7 @@ alt: my first blog post
 time: 10
 date: 05 de diciembre del 2020
 author: Alex Segundo
-twitter: '@asegundo'
+twitter: '@asegundo442'
 avatar: avatar-alex.jpg
 ---
 

@@ -2,16 +2,16 @@
    <div>
       <Copyright>Copyright 2020 - {{ date }} © | Centro Poblado Janque</Copyright>
       <IconContainer>
-         <BrandLink href="#">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faFacebook" />
          </BrandLink>
-         <BrandLink href="#">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faInstagram" />
          </BrandLink>
-         <BrandLink href="#">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faYoutube" />
          </BrandLink>
-         <BrandLink href="#">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faLinkedin" />
          </BrandLink>
       </IconContainer>
@@ -24,15 +24,21 @@ import { faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin } from '@fort
 import styled from 'vue-styled-components'
 
 const BrandIcon = styled(FontAwesomeIcon)`
-   font-size: 1.5rem;
+   font-size: 1.25rem;
 `
 
 const BrandLink = styled.a`
-   padding: 0.5rem;
-   display: inline-block;
-   text-align: center;
+   width: 40px;
+   height: 40px;
    margin: 0 15px;
-   color: var(--blue-depth);
+   border-radius: 50%;
+   background-color: #f0852d;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   &:hover {
+      color: var(--bg-primary);
+   }
 `
 
 const IconContainer = styled.div`
@@ -41,7 +47,7 @@ const IconContainer = styled.div`
    justify-content: center;
    width: 100%;
    @media (min-width: 1200px) {
-      width: 20%;
+      width: 30%;
       justify-content: space-around;
    }
 `
@@ -49,6 +55,7 @@ const IconContainer = styled.div`
 const Copyright = styled.h5`
    font-size: 1em;
    text-align: center;
+   padding: 1.25rem 0;
    @media (min-width: 1200px) {
       text-align: left;
    }

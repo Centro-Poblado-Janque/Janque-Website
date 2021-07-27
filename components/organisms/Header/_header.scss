@@ -1,108 +1,40 @@
-@import '~/assets/scss/customs/mixin';
+@import '~/assets/scss/customs/settings';
 
-.nav-grid-wrapper {
-    @media screen and(min-width: $xl) {
-        grid-template-columns: 3fr 6fr;
-        grid-template-rows: 100%;
-    }
-    grid-template-rows: 64px 1fr;
-    height: inherit;
+@mixin active-scroll {
+    height: var(--mobile-nav-size);
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--bg-light-100);
 }
-.MenuContainer {
-    height: calc(100vh - 64px);
+.header-wide {
     width: 100%;
-    position: absolute;
-    top: 0;
-    pointer-events: none;
-    z-index: 3;
-    color: teal;
-    transition: all 0.25s ease-in-out;
-    @media screen and(min-width: $xl) {
-        top: 0;
-        height: 100px;
-        pointer-events: auto;
-        transform: translateX(0);
-    }
-    &.is_active {
-        transform: translateX(0);
-        pointer-events: auto;
-    }
-    &.active-scroll {
-        background-color: var(--bg-color-second);
-        height: 64px;
-        border-bottom: 1px solid var(--dt-grey);
-    }
-}
-.Header {
-    width: 100%;
+    height: var(--mobile-nav-size);
     position: fixed;
+    z-index: 50;
     top: 0;
-    right: 0;
-    height: 64px;
-    z-index: 999;
-    transition: all 0.25s ease-in-out;
     left: 0;
+    transition: all 240ms cubic-bezier(0.4, 0.14, 0.3, 1);
+    border-bottom: 1px solid transparent;
+    &.active-scroll {
+        @include active-scroll;
+    }
+    @include media-from($xl) {
+        height: var(--desktop-nav-size);
+    }
+}
+.header {
+    height: 100%;
+    & > * {
+        flex-grow: 1;
+    }
+    @include media-from($xl) {
+        padding: 0 3rem;
+    }
 }
 
-.menu-background {
-    width: 300%;
-    height: 250px;
-    position: absolute;
-    left: -120%;
-    top: 20vh;
-    z-index: -1;
-    background-color: var(--bg-drawer);
-    visibility: hidden;
-    transition: all 0.25s cubic-bezier(0.83, 0.65, 0.47, 1);
-    &.top {
-        transform: rotate(-45deg) translateY(-300%) scaleY(0);
-    }
-    &.bottom {
-        transform: rotate(-45deg) translateY(330%) scaleY(0);
-    }
-}
 .drawer-out {
-    .MenuContainer {
-        @media only screen and(max-width: $xl) {
-            background-color: var(--bg-color-second);
-            height: 64px;
-            border-bottom: 1px solid var(--dt-grey);
+    @include media-to($xl) {
+        .header-wide {
+            @include active-scroll;
         }
-    }
-    .menu-background {
-        transition: all 0.5s cubic-bezier(0.83, 0.65, 0.47, 1);
-        visibility: visible;
-        &.bottom {
-            transform: rotate(-45deg) translateY(250%) scaleY(4.1);
-        }
-        &.top {
-            transform: rotate(-45deg) translateY(-150%) scaleY(4.1);
-        }
-    }
-    .Menu--item {
-        opacity: 1;
-        transform: translateX(0px);
-        transition: transform 0.35s, opacity 0.5s ease-in;
-        &:nth-child(2) {
-            transition-delay: 0.2s;
-        }
-        &:nth-child(3) {
-            transition-delay: 0.3s;
-        }
-        &:nth-child(4) {
-            transition-delay: 0.4s;
-        }
-        &:nth-child(5) {
-            transition-delay: 0.5s;
-        }
-        &:nth-child(6) {
-            transition-delay: 0.6s;
-        }
-    }
-    .Menu--search {
-        opacity: 1;
-        transform: translateX(0px);
-        transition: transform 0.35s, opacity 0.5s ease-in;
-        transition-delay: 0.1s;
     }
 }

@@ -173,13 +173,7 @@
          fill="#dda2a6"
       />
       <rect x="466.6" y="119.3" width="283.36" height="271.7" fill="#fff" />
-      <text
-         x="540"
-         y="280"
-         font-size="80"
-         fill="tomato"
-         style="font-family: var(--noto-font);font-weight: 600"
-      >
+      <text x="540" y="280" font-size="80" fill="tomato">
          404
       </text>
       <path

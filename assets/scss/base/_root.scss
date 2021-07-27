@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+html {
+    background-color: var(--base-background);
+    scroll-behavior: smooth;
+    font-size: var(--base-font-size);
+    line-height: 1.35rem;
+}
+>>>>>>> dev-master
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +25,7 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     color: var(--base-color);
-    font-family: var(--global-font), var(--optional-font);
+    font-family: var(--global-font);
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
@@ -38,10 +47,15 @@ button {
     outline: none;
     border: none;
     display: inline-block;
+    background-color: transparent;
 }
 input {
     outline: none;
     border: none;
+}
+p {
+    line-height: normal;
+    font-family: var(--paragraph-font);
 }
 h1,
 h2,
@@ -51,7 +65,12 @@ h5,
 h6 {
     font-weight: normal;
     line-height: normal;
+    font-family: var(--title-font);
 }
 [role~='button'] {
     cursor: pointer;
+}
+
+hr {
+    border: none;
 }

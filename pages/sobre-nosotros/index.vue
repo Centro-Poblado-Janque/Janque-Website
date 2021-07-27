@@ -19,7 +19,10 @@
 
 <script>
 export default {
-   transition: 'slide-bottom',
+   transition: {
+      name: 'fade',
+      mode: 'out-in',
+   },
    components: {
       MapsLocation: () => import('@/components/utils/GoogleMaps.vue'),
       AboutUsTemplate: () => import('@/components/templates/AboutUsTemplate/AboutUsTemplate.vue'),

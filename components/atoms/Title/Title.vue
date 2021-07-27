@@ -3,7 +3,7 @@
    <h2 v-else-if="isLink" class="a-title">
       <NuxtLink :to="path">{{ text }}</NuxtLink>
    </h2>
-   <h2 v-else class="a-title">{{ text }}</h2>
+   <h2 v-else :class="['a-title', big_text && 'big-text', center && 'text-center']">{{ text }}</h2>
 </template>
 
 <script>
@@ -22,6 +22,8 @@ export default {
          type: String,
          default: 'Type title',
       },
+      big_text: { type: String },
+      center: String,
    },
 }
 </script>
