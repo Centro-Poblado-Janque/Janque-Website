@@ -5,13 +5,13 @@
       </header>
 
       <div class="history-main">
-         <div class="container md-grid md-grid-3 with-full-gap">
+         <div class=" l-section ly-grid l-section ly-grid-3 gap">
             <slot> </slot>
          </div>
       </div>
 
       <aside class="history-footer">
-         <div class="container md-grid">
+         <div class=" l-section ly-grid">
             <slot name="footer"> </slot>
          </div>
       </aside>
@@ -33,7 +33,7 @@ export default {
 
    &-head {
       min-height: 100vh;
-      @include image-gradient('~/assets/img/history.png');
+      @include image-gradient('~/assets/img/history-bg.jpg');
    }
 }
 </style>

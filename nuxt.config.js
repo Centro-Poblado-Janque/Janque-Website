@@ -11,11 +11,7 @@ export default {
     env: {
         baseURL: process.env.NODE_ENV == 'production' ? process.env.BASE_URL : 'http://localhost:3000',
     },
-    loadingIndicator: {
-        name: 'fading-circle',
-        color: 'teal',
-        background: 'white',
-    },
+    loadingIndicator: '~/components/utils/loading.vue',
     loading: {
         color: 'teal',
         height: '2px',

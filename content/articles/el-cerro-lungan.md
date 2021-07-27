@@ -6,7 +6,7 @@ alt: cerro lungan
 time: 8
 date: 20 de enero del 2021
 author: Alex Segundo
-twitter: '@asegundo'
+twitter: '@asegundo442'
 avatar: avatar-alex.jpg
 ---
 

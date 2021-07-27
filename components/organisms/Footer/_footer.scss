@@ -2,13 +2,14 @@
 
 .m-footer {
     position: relative;
-    background-color: #f3f3f3;
-    padding: 1rem 0 2rem 0;
-    color: #353a3a;
+    background-color: var(--bg-footer); //#02b69e;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    color: var(--color-footer);
     width: 100%;
     //box-shadow: 4px 0 12px rgba(160, 152, 145, 0.281);
 }
 .footer--separator {
-    margin: 1rem 0;
-    border-bottom: 1px solid #eeb27a98;
+    margin: 1.5rem 0;
+    border-bottom: 1px solid var(--nav-border-bottom);
 }

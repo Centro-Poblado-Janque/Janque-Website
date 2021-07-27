@@ -1,5 +1,5 @@
 <template>
-   <div class="m-card-content pd-especial md-radius:3" v-if="document">
+   <div class="m-card-content pd-especial u-radius:3" v-if="document">
       <NuxtContent :document="article" />
    </div>
    <div class="m-card-content pd-1 line" v-else>

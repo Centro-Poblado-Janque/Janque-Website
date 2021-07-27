@@ -2,79 +2,84 @@
 
 //============#>   NIGHT  : COLOR SCHEME =====|
 
-    $-v-night-dark              : #101010;
-    $-v-night-primary           : #161616;
-    $-v-night-100               : #2c2d2d;
-    $-v-night-150               : #353636;
-    $-v-night-200               : #3d3e3e;
+    $-v-night-900               : #15181c;
+    $-v-night-800               : #1c2025;
+    $-v-night-700               : #272B30;
+    $-v-night-600               : #33363B;
+    $-v-night-500               : #3E4146;
+    $-v-night-400               : #494D51;
+    $-v-night-300               : #55585C;
+    $-v-night-200               : #606366;
+    $-v-night-100               : #6B6E71;
 
 //============#>   SMOKE  : COLOR SCHEME ========|
 
-    $-v-smoke-dark              : #dcdcdc;
-    $-v-smoke-light             : #fefefe;
+    $-v-smoke-900               : #8E9092;
+    $-v-smoke-800               : #999B9D;
+    $-v-smoke-700               : #A4A6A8;
+    $-v-smoke-600               : #B0B1B3;
+    $-v-smoke-500               : #BBBCBE;
+    $-v-smoke-400               : #C6C7C9;
+    $-v-smoke-300               : #D2D2D3;
+    $-v-smoke-200               : #E8E9E9;
+    $-v-smoke-100               : #fefefe;
 
 //============#>    BLUE   : COLOR BRANDS ========|
 
-    $-v-blue-dark               : #13232A;
-    $-v-blue-primary            : #264653;
-    $-v-blue-100                : #2D5362;
-    $-v-blue-150                : #335F70;
-    $-v-blue-200                : #335F70;
-    $-v-blue-250                : #335F70;
+    $-v-blue-900                : #213138;
+    $-v-blue-800                : #28444e;
+    $-v-blue-700                : #2D5362;
+    $-v-blue-600                : #335F70;
+    $-v-blue-500                : #335F70;
+    $-v-blue-400                : #335F70;
     $-v-blue-300                : #47829A;
-    $-v-blue-350                : #4D8EA8;
-    $-v-blue-400                : #5798B2;
-    $-v-blue-450                : #65A1B8;
-    $-v-blue-500                : #73A9BF;
+    $-v-blue-200                : #4D8EA8;
+    $-v-blue-100                : #5798B2;
 
 //============#>   GREEN  : COLOR BRANDS ========|
  
-    $-v-green-dark               : #1A6158;
-    $-v-green-primary            : #228174;
-    $-v-green-100                : #228174;
-    $-v-green-150                : #2BA191;
-    $-v-green-200                : #2FB1A0;
-    $-v-green-250                : #33C1AE;
-    $-v-green-300                : #3ECCB9;
-    $-v-green-350                : #4ED0BF;
-    $-v-green-400                : #5ED4C4;
-    $-v-green-450                : #6ED8CA;
-    $-v-green-500                : #7EDDD0;
+    $-v-green-900                : #1A6158;
+    $-v-green-800                : #228174;
+    $-v-green-700                : #228174;
+    $-v-green-600                : #2BA191;
+    $-v-green-500                : #02cdb2;
+    $-v-green-400                : #52fde6;
+    $-v-green-300                : #91feef;
+    $-v-green-200                : #d0fef8;
+    $-v-green-100                : #effffd;
 
 //============#>   YELLOW  : COLOR BRANDS ========|
 
-    $-v-yellow-dark              : #B1871B;
-    $-v-yellow-primary           : #E2B33C;
-    $-v-yellow-100               : #E4BA4E;
-    $-v-yellow-150               : #E7C15F;
-    $-v-yellow-200               : #E7C15F;
-    $-v-yellow-250               : #ECCE83;
+    $-v-yellow-900               : #B1871B;
+    $-v-yellow-800               : #E2B33C;
+    $-v-yellow-700               : #E4BA4E;
+    $-v-yellow-600               : #E7C15F;
+    $-v-yellow-500               : #E7C15F;
+    $-v-yellow-400               : #ECCE83;
     $-v-yellow-300               : #EED595;
-    $-v-yellow-350               : #F3E4B9;
-    $-v-yellow-400               : #EED595;
+    $-v-yellow-200               : #F3E4B9;
+    $-v-yellow-100               : #EED595;
 
 //============#>   ORANGE  : COLOR BRANDS ========|
 
-    $-v-orange-dark             : #BF5D0D;
-    $-v-orange-primary          : #F0852D;
-    $-v-orange-100              : #F29040;
-    $-v-orange-150              : #F39B53;
-    $-v-orange-200              : #F4A666;
-    $-v-orange-250              : #F6B179;
-    $-v-orange-300              : #F7BC8D;
-    $-v-orange-350              : #F8C8A0;
-    $-v-orange-400              : #FEF4EC;
+    $-v-orange-900              : #a5510c;
+    $-v-orange-800              : #c9630e;
+    $-v-orange-700              : #ee7511;
+    $-v-orange-600              : #f18a36;
+    $-v-orange-500              : #f39f5a;
+    $-v-orange-400              : #f6b57f;
+    $-v-orange-300              : #f8caa3;
+    $-v-orange-200              : #fbdfc8;
+    $-v-orange-100              : #fef4ed;
 
 //============#>    RED   : COLOR BRANDS ========|
 
-    $-v-red-dark                : #C53D1B;
-    $-v-red-primary             : #FF3C2E;
-    $-v-red-100                 : #E45C3A;
-    $-v-red-150                 : #E76A4B;
-    $-v-red-200                 : #E9795D;
-    $-v-red-250                 : #EB886F;
+    $-v-red-900                 : #C53D1B;
+    $-v-red-800                 : #FF3C2E;
+    $-v-red-700                 : #E45C3A;
+    $-v-red-600                 : #E76A4B;
+    $-v-red-500                 : #E9795D;
+    $-v-red-400                 : #EB886F;
     $-v-red-300                 : #EE9781;
-    $-v-red-350                 : #F0A693;
-    $-v-red-400                 : #F3B5A5;
-    $-v-red-450                 : #F8D2C9;
-    $-v-red-500                 : #FDF0ED;
+    $-v-red-200                 : #F0A693;
+    $-v-red-100                 : #F3B5A5;

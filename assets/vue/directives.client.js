@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import frag from 'vue-frag'
 
 Vue.directive('scroll', {
     inserted: function(el, binding) {
@@ -7,7 +8,7 @@ Vue.directive('scroll', {
                 window.removeEventListener('scroll', f)
             }
         }
-        window.addEventListener('scroll', f)
+        window.addEventListener('scroll', f, { passive: true })
     },
 })
 
@@ -21,3 +22,12 @@ Vue.directive('resize', {
         window.addEventListener('resize', f)
     },
 })
+
+/**
+ * @temporally
+ * @Vue {directive: frag}
+ *  Move this script when upgrading to Nuxt3 and remove the root nodes of each component that uses them
+ *  Delete this dependencie when upgrading to Nuxt3
+ */
+
+Vue.directive('frag', frag)

@@ -1,16 +1,10 @@
 @import '~/assets/scss/customs/settings';
 
-.module--header {
-    position: relative;
-}
-
 @mixin active-scroll {
     height: var(--mobile-nav-size);
     background-color: var(--bg-light);
     border-bottom: 1px solid var(--bg-light-100);
-    @include normal-shadow;
 }
-
 .header-wide {
     width: 100%;
     height: var(--mobile-nav-size);
@@ -23,7 +17,7 @@
     &.active-scroll {
         @include active-scroll;
     }
-    @include media-responsive($xl) {
+    @include media-from($xl) {
         height: var(--desktop-nav-size);
     }
 }
@@ -32,13 +26,13 @@
     & > * {
         flex-grow: 1;
     }
-    @include media-responsive($xl) {
+    @include media-from($xl) {
         padding: 0 3rem;
     }
 }
 
 .drawer-out {
-    @include max-responsive($xl) {
+    @include media-to($xl) {
         .header-wide {
             @include active-scroll;
         }

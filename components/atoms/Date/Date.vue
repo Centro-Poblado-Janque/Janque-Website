@@ -1,26 +1,42 @@
 <template>
-   <div class="a-date" v-if="with_icon == true">
-      <FontAwesone :icon="faCalendar" class="bg-teal" />
+   <span :class="[$style['date'], $style[css]]" v-if="icon">
+      <FontAwesone :icon="faCalendar" css="m8-calendar" />
       <time>{{ date }}</time>
-   </div>
-   <div class="a-date" v-else>
+   </span>
+   <span :class="$style['date']" v-else>
       <time>{{ date }}</time>
-   </div>
+   </span>
 </template>
 
 <script>
 import { faCalendar } from '@/components/utils/icons/faCalendar'
-
 export default {
-   props: {
-      date: String,
-   },
    components: {
       FontAwesone: () => import('@/components/atoms/FontAwesone/FontAwesone.vue'),
    },
+   props: {
+      date: String,
+      icon: Boolean,
+      css: String,
+   },
    data: () => ({
       faCalendar,
-      with_icon: true,
    }),
 }
 </script>
+
+<style lang="scss" module>
+.date {
+   &.atention {
+      display: inline-flex;
+      padding: 0.5rem;
+      align-items: center;
+      background-color: var(--bg-atention);
+      border-radius: 4px;
+      color: white;
+   }
+   time {
+      margin-left: 0.5rem;
+   }
+}
+</style>

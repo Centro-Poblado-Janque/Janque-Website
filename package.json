@@ -23,7 +23,9 @@
     "core-js": "^3.8.1",
     "nuxt": "^2.14.12",
     "swiper": "^6.7.5",
-    "vue-styled-components": "^1.6.0"
+    "vue-frag": "^1.1.5",
+    "vue-styled-components": "^1.6.0",
+    "vue2-simple-carousel": "^0.3.22"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

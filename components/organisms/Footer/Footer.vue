@@ -1,9 +1,9 @@
 <template>
    <footer id="main-footer" class="m-footer">
-      <div class="container">
+      <div class="l-section">
          <BrandLogotype />
          <hr class="footer--separator" />
-         <div class="md-grid md-grid-2">
+         <div class="ly-grid ly-grid:lg-2">
             <FooterSection
                title="Sobre el sitio"
                :icon="faGlobe"
@@ -17,7 +17,6 @@
          </div>
          <FollowIcons />
       </div>
-      <div class="homepage--dots"></div>
    </footer>
 </template>
 

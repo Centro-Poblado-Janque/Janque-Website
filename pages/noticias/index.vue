@@ -7,7 +7,7 @@
       />
       <NewsTemplate>
          <template #header>
-            <div class="news-header md-radius:6">Hola Mundo</div>
+            <div class="news-header u-radius:6">Hola Mundo</div>
          </template>
          <template>
             <PostCard
@@ -31,7 +31,20 @@
 
 <script>
 export default {
-   transition: 'slide-bottom',
+   transition: {
+      name: 'fade',
+      mode: 'out-in',
+      beforeEnter(el) {
+         console.log(el)
+      },
+      enter(el, done) {
+         done()
+         console.log(el)
+      },
+      beforeLeave(el) {
+         console.log(el)
+      },
+   },
    components: {
       NewsTemplate: () => import('@/components/templates/NewsTemplate/NewsTemplate.vue'),
       PostCard: () => import('@/components/organisms/Post/PostCard.vue'),

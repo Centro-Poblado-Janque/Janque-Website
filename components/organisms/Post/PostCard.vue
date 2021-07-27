@@ -1,20 +1,24 @@
 <template>
    <article v-if="type == 'notice'" class="o-notice--post" data-aos="fade-down">
-      <Photo :src="'resources/img/' + image" :alt="alt" />
+      <div class="img-container i-100">
+         <Photo :src="'resources/img/' + image" :alt="alt" />
+      </div>
       <Content :title="title" :content="content" :path="path.slug" :urlname="path.page" />
       <AuthorAbout :src="'resources/img/' + post.avatar" :time="post.time" :date="post.date" />
    </article>
 
-   <article v-else class="o-blog--post md-radius:3 md-flex dir:column" data-aos="fade-up">
-      <Photo
-         class="flow:5"
-         :src="'resources/img/' + image"
-         :alt="alt"
-         :path="path.slug"
-         :urlname="path.page"
-      />
-      <Content class="flow:3" :title="title" :content="content" :path="path.slug" :urlname="path.page" />
-      <AuthorAbout class="flow:2" :src="'resources/img/' + post.avatar" :time="post.time" :date="post.date" />
+   <article v-else class="o-blog--post u-radius:3 ly-flex dir:column" data-aos="fade-up">
+      <div class="img-container post-img">
+         <Photo
+            :src="'resources/img/' + image"
+            :alt="alt"
+            :path="path.slug"
+            :urlname="path.page"
+            :container="true"
+         />
+      </div>
+      <Content :title="title" :content="content" :path="path.slug" :urlname="path.page" />
+      <AuthorAbout :src="'resources/img/' + post.avatar" :time="post.time" :date="post.date" />
    </article>
 </template>
 

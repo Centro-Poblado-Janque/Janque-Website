@@ -2,16 +2,16 @@
    <div>
       <Copyright>Copyright 2020 - {{ date }} © | Centro Poblado Janque</Copyright>
       <IconContainer>
-         <BrandLink href="#" class="md-flex">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faFacebook" />
          </BrandLink>
-         <BrandLink href="#" class="md-flex">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faInstagram" />
          </BrandLink>
-         <BrandLink href="#" class="md-flex">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faYoutube" />
          </BrandLink>
-         <BrandLink href="#" class="md-flex">
+         <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faLinkedin" />
          </BrandLink>
       </IconContainer>
@@ -24,7 +24,7 @@ import { faFacebook, faTwitter, faInstagram, faYoutube, faLinkedin } from '@fort
 import styled from 'vue-styled-components'
 
 const BrandIcon = styled(FontAwesomeIcon)`
-   font-size: 1.5rem;
+   font-size: 1.25rem;
 `
 
 const BrandLink = styled.a`
@@ -55,6 +55,7 @@ const IconContainer = styled.div`
 const Copyright = styled.h5`
    font-size: 1em;
    text-align: center;
+   padding: 1.25rem 0;
    @media (min-width: 1200px) {
       text-align: left;
    }

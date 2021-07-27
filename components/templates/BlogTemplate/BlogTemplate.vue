@@ -1,24 +1,30 @@
 <template>
-   <section class="blog-section">
-      <header class="blog-head container">
-         <slot name="header"> </slot>
+   <section class="blog-section  page--gradient">
+      <header class="blog-head  l-section ly-grid l-section ly-grid-9 grid-center">
+         <div class="grid--col-3 ly-sticky">
+            <slot name="header-content"> </slot>
+         </div>
+         <div class="grid--col-6">
+            <slot name="header-img"> </slot>
+         </div>
       </header>
 
-      <div class="blog-main container md-grid md-grid-6 gap">
-         <section class="lg-grid-4">
+      <div class="blog-main  l-section ly-grid l-section ly-grid-8 gap">
+         <section class="grid--col-5">
             <slot name="principal"> </slot>
          </section>
-         <section class="lg-grid-2">
+         <section class="grid--col-3 ly-flex dir:column">
+            <Title text="Ultimas Entradas" class="mb-1" />
             <slot name="recent"></slot>
          </section>
       </div>
 
-      <div class="blog-main container md-grid md-grid-3 gap">
+      <div class="blog-main  l-section ly-grid l-section ly-grid-3 gap ly-grid:lg-2">
          <slot></slot>
       </div>
 
-      <aside class="blog-footer">
-         <div class="container md-grid">
+      <aside class="blog-footer pb-2">
+         <div class=" l-section ly-grid">
             <slot name="footer"> </slot>
          </div>
       </aside>
@@ -39,11 +45,19 @@ export default {}
       transition: all 0.1s ease-in-out;
    }
    &-main {
-      margin-top: 3rem;
+      margin-top: 4rem;
       margin-bottom: 3rem;
    }
    &-footer {
       width: 100%;
    }
+}
+
+.description {
+   display: inline-block;
+   margin-top: 1rem;
+   font-size: 1.5rem;
+   line-height: 1.75rem;
+   color: #6b6a7c;
 }
 </style>

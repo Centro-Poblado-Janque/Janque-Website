@@ -1,19 +1,19 @@
 <template>
-   <section class="news-section">
-      <header class="news-head ">
-         <div class="container">
+   <section v-frag>
+      <header class="news-head">
+         <div class="l-section">
             <slot name="header"> </slot>
          </div>
       </header>
 
       <div class="news-main">
-         <div class="container md-grid md-grid-3 gap">
+         <div class=" l-section ly-grid l-section ly-grid-3 gap">
             <slot> </slot>
          </div>
       </div>
 
       <aside class="news-footer">
-         <div class="container md-grid">
+         <div class=" l-section ly-grid">
             <slot name="footer"> </slot>
          </div>
       </aside>

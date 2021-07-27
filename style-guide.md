@@ -15,9 +15,9 @@
 
   > These styles are for layout. They do not define behavior. They are general styles, and do not mix with components
 
-  - **Normal** `prefix = 'ly'` example `class="ly-grid"`
+  - **Normal** `prefix = 'ly'` example `class="l-section ly-grid"`
   - **Modidy** `symbol = ':'` example `class="grid-col:md-12"`
-  - **Override** `suffix = '--mut'` example `class="ly-grid--mut"`
+  - **Override** `suffix = '--mut'` example `class="l-section ly-grid--mut"`
 
 - ### Modular Styles
 

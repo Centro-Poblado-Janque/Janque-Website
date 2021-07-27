@@ -1,11 +1,17 @@
 <template>
    <div class="page-loader-md5" v-if="!isloaded">
-      <div class="cube-md5">J</div>
-      <div class="cube-md5">A</div>
-      <div class="cube-md5">N</div>
-      <div class="cube-md5">Q</div>
-      <div class="cube-md5">U</div>
-      <div class="cube-md5">E</div>
+      <div class="spinner">
+         <div class="double-bounce1"></div>
+         <div class="double-bounce2"></div>
+      </div>
+      <div>
+         <div class="cube-md5">J</div>
+         <div class="cube-md5">A</div>
+         <div class="cube-md5">N</div>
+         <div class="cube-md5">Q</div>
+         <div class="cube-md5">U</div>
+         <div class="cube-md5">E</div>
+      </div>
    </div>
 </template>
 
@@ -30,10 +36,13 @@ export default {
       },
    },
    mounted() {
-      setTimeout(() => {
-         this.executeInit()
-         this.isloaded = true
-      }, 500)
+      this.$nextTick(() => {
+         this.$nuxt.$loading.start()
+         setTimeout(() => {
+            this.isloaded = true
+            this.$nuxt.$loading.finish()
+         }, 500)
+      })
    },
    beforeDestroy() {
       window.removeEventListener('load')
@@ -47,6 +56,7 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
 // -----------------------------------------------------
 .page-loader-md5 {
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
    position: fixed;
@@ -54,7 +64,7 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
    left: 0;
    width: 100vw;
    height: 100vh;
-   background-color: var(--bg-second);
+   background-color: #02b69e;
    z-index: 1200;
    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
@@ -95,6 +105,56 @@ $colors: #8cc271, #69beeb, #f5aa39, #e9643b, #408f77, #043746;
    }
    50% {
       transform: translateX(0);
+   }
+}
+.spinner {
+   width: 40px;
+   height: 40px;
+
+   position: relative;
+   margin: 3rem auto;
+   margin-top: -3rem;
+}
+
+.double-bounce1,
+.double-bounce2 {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   background-color: #333;
+   opacity: 0.6;
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   -webkit-animation: sk-bounce 2s infinite ease-in-out;
+   animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+   -webkit-animation-delay: -1s;
+   animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+   0%,
+   100% {
+      -webkit-transform: scale(0);
+   }
+   50% {
+      -webkit-transform: scale(1);
+   }
+}
+
+@keyframes sk-bounce {
+   0%,
+   100% {
+      transform: scale(0);
+      -webkit-transform: scale(0);
+   }
+   50% {
+      transform: scale(1);
+      -webkit-transform: scale(1);
    }
 }
 </style>

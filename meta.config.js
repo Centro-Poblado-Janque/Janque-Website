@@ -14,13 +14,13 @@ export default {
         { hid: 'favicon', rel: 'apple-touch-icon', href: `${host}/logo.svg` },
         { hid: 'url', rel: 'canonical', href: host },
         { rel: 'publiher', href: "<a href='https://alexsegundo.com/about'></a>" },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
             href:
-                'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,400&family=Roboto:wght@100;300;400&display=swap',
+                'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,400&family=Viga&display=swap',
             rel: 'stylesheet',
         },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-        { href: 'https://fonts.googleapis.com/css2?family=Viga&display=swap', rel: 'stylesheet' },
     ],
     meta: [
         { charset: 'UTF-8' },

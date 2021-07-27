@@ -1,5 +1,5 @@
 <template>
-   <div :class="[$style.switchContainer]" class="md-flex fl-center">
+   <div :class="[$style.switchContainer]" class="ly-flex fl-center">
       <div :class="[$style.switch]">
          <input type="checkbox" id="theme__toggle" :class="$style.checkbox" v-model="checked" />
          <label for="theme__toggle" :class="$style['after']" />

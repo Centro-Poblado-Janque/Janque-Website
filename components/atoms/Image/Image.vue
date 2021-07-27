@@ -1,5 +1,9 @@
 <template>
-   <img :src="src" :alt="alt" class="atom-image" />
+   <img :src="src" :alt="alt" class="image" v-if="src" />
+
+   <div v-else class="img-container">
+      <slot></slot>
+   </div>
 </template>
 
 <script>

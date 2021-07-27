@@ -1,7 +1,7 @@
 <template>
-   <header v-scroll="handleScroll" :class="['module--header', activeMenu && 'drawer-out']">
-      <section class="header-wide" :class="[activeScroll && 'active-scroll']">
-         <div class="header container md-flex fl-center">
+   <header v-scroll="handleScroll" :class="['ly-relative', activeMenu && 'drawer-out']">
+      <section class="header-wide" :class="css_by_events">
+         <div class="header l-section ly-flex fl-center">
             <ThemeButton />
             <BrandLogotype />
             <nav class="menu-desktop">
@@ -10,8 +10,10 @@
             <ToggleButton @open="OpenMenu" :class="activeMenu && 'is_active'" />
          </div>
       </section>
-      <nav :class="[activeMenu && 'is_active']" class="menu-mobile pt-1">
-         <Menu @close="HideMenu" />
+      <nav :class="[activeMenu && 'is_active']" class="menu-mobile">
+         <div class="menu-background pt-1">
+            <Menu @close="HideMenu" />
+         </div>
       </nav>
    </header>
 </template>
@@ -28,7 +30,10 @@ export default {
    },
    methods: {
       handleScroll() {
+         let current = window.pageYOffset
+         this.downUpScroll > current ? (this.hidden = true) : (this.hidden = false)
          window.pageYOffset > 2 ? (this.activeScroll = true) : (this.activeScroll = false)
+         this.downUpScroll = window.pageYOffset
       },
       OpenMenu() {
          this.activeMenu = !this.activeMenu
@@ -39,12 +44,19 @@ export default {
    },
    data() {
       return {
+         downUpScroll: null,
+         hidden: false,
          activeMenu: false,
          activeScroll: false,
       }
    },
+   computed: {
+      css_by_events() {
+         return [this.activeScroll && 'active-scroll', (this.hidden && 'visible') || 'not-visible']
+      },
+   },
    mounted() {
-      console.log(this.$router)
+      this.downUpScroll = window.pageYOffset
    },
 }
 </script>

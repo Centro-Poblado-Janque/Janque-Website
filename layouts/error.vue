@@ -1,11 +1,7 @@
 <template>
    <div :class="$style.pageNotFound">
-      <Container>
-         <div :class="$style.override">
-            <span :class="$style.error_img_contain"> </span>
-            <div :class="$style.error_help"></div>
-         </div>
-      </Container>
+      <ErrorBackground />
+      <ErrorBackgroundText />
    </div>
 </template>
 
@@ -13,6 +9,10 @@
 import error_icon from './../static/error_favicon.svg'
 
 export default {
+   components: {
+      ErrorBackground: () => import('@/components/utils/design/error.image.vue'),
+      ErrorBackgroundText: () => import('@/components/utils/design/animate404.image.vue'),
+   },
    head() {
       return {
          title: this.error_title,
@@ -127,34 +127,6 @@ export default {
       linear-gradient(79deg, rgb(16, 23, 23), rgb(16, 23, 23));
    & ~ footer {
       display: none;
-   }
-}
-.override {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   @media screen and (min-width: $xl) {
-      flex-direction: row;
-   }
-}
-.error_help {
-   text-align: center;
-   @media screen and (min-width: $xl) {
-      padding-left: 2rem;
-   }
-}
-.error_img_contain {
-   display: block;
-   margin-top: 1rem;
-   svg {
-      width: 100%;
-      height: auto;
-   }
-   @media screen and (min-width: $xl) {
-      svg {
-         width: 90%;
-      }
    }
 }
 </style>

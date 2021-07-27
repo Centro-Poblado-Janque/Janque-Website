@@ -11,13 +11,13 @@ $xl: 1200px;
 $xxl: 1400px;
 $is_monitor: 1700px;
 
-@mixin media-responsive($size) {
+@mixin media-from($size) {
     @media screen and(min-width: $size) {
         @content;
     }
 }
 
-@mixin max-responsive($size) {
+@mixin media-to($size) {
     @media screen and(max-width: $size) {
         @content;
     }

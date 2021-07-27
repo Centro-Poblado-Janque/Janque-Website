@@ -8,11 +8,11 @@
       <ViewSlug>
          <template #header>
             <img
-               :src="'http://localhost:3000/resources/img/' + article.img"
+               :src="'https://cp-janque.com/resources/img/' + article.img"
                :alt="article.slug"
                class="absolute-wide img-background is-img"
             />
-            <div class="container">
+            <div class="l-section">
                <div class="post-metadates">
                   <h1 class="a-title is-light">{{ article.title }}</h1>
                   <span class="read-time">
@@ -28,7 +28,7 @@
          </template>
 
          <template #links>
-            <div class="redirect_links container">
+            <div class="redirect_links ">
                <NuxtLink to="/"><FontAwesomeIcon :icon="faHome"/></NuxtLink>
                <NuxtLink class="after" :to="`./../blog`">Blog</NuxtLink>
                <NuxtLink class="after" :to="'/blog/' + article.slug">{{ article.title }}</NuxtLink>
@@ -36,14 +36,14 @@
          </template>
 
          <template>
-            <section class="blog-post lg-grid-7">
+            <section class="blog-post grid--col-7">
                <CardContent :article="article" :document="true" />
             </section>
-            <section class="lg-grid-3">
-               <CardContent class="_s-author md-flex">
+            <section class="grid--col-3">
+               <CardContent class="_s-author ly-flex">
                   <img
                      class="avatar-model"
-                     :src="'http://localhost:3000/resources/img/' + article.avatar"
+                     :src="'https://cp-janque.com/resources/img/' + article.avatar"
                      :alt="article.alt"
                   />
                   <span class="author-dates">
@@ -59,17 +59,9 @@
                      </a>
                   </span>
                </CardContent>
-               <CardContent class="position-sticky">
-                  <ul>
-                     <li v-for="ids of id" :key="ids.id">
-                        <a :href="`#${ids.id}`" class="content_item">
-                           {{ ids.text }}
-                        </a>
-                     </li>
-                  </ul>
-               </CardContent>
+               <DisplayList class="ly-sticky" :list="id" :property="['id', 'text']" />
             </section>
-            <div id="disqus_thread" class="disqus-comment lg-grid-10 pd-especial discus"></div>
+            <div id="disqus_thread" class="disqus-comment grid--col-10 pd-especial discus"></div>
          </template>
       </ViewSlug>
    </MainContent>
@@ -83,6 +75,7 @@ export default {
    components: {
       ViewSlug: () => import('@/components/templates/BlogTemplate/ViewSlug.vue'),
       CardContent: () => import('@/components/molecules/CardContent/CardContent.vue'),
+      DisplayList: () => import('@/components/molecules/DisplayList/Display.vue'),
       FontAwesomeIcon,
    },
    head() {
@@ -108,7 +101,10 @@ export default {
    width: 100%;
 }
 .img-background {
-   filter: brightness(0.5);
+   width: 100%;
+   filter: blur(1.5px) brightness(0.75);
+   height: 100%;
+   object-fit: cover;
 }
 .redirect_links {
    position: relative;
@@ -150,10 +146,8 @@ export default {
    }
 }
 .blog-post {
-   font-family: var(--open-sans-font);
    h2 {
       line-height: 1.7rem;
-      font-family: var(--nunito-font);
       font-size: 1.5rem;
       padding: 15px 5px;
       font-weight: bold;
@@ -191,7 +185,6 @@ export default {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   font-family: var(--noto-font);
    p {
       padding: 0;
    }
@@ -209,18 +202,6 @@ export default {
       }
    }
 }
-.content_item {
-   display: block;
-   color: var(--blue-depth);
-   line-height: 1.5;
-   margin-bottom: 0.5rem;
-   padding: 0.25rem 1rem;
-   &:hover {
-      background-color: #2a3b47;
-      border-radius: 0.25rem;
-      color: silver;
-   }
-}
 .blue-color {
    color: var(--blue-depth-200);
 }
@@ -228,6 +209,7 @@ export default {
    // background-color: rgba(58, 58, 58, 0.056);
    border-radius: 3px;
    border: 1px solid #8c858144;
+   background-color: var(--bg-light);
 }
 ._s-author {
    margin-bottom: 1.5rem;
