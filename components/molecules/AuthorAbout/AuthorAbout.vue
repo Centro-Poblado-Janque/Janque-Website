@@ -2,7 +2,7 @@
    <footer class="m-about--author ly-flex fl-center">
       <Img :src="src" alt="no alt" class="author-img u-radius-circle" />
       <Time :time="`${time} minutos`" />
-      <Date :date="formatDate" :icon="true" />
+      <Date :date="formatDate(date)" :icon="true" />
    </footer>
 </template>
 
@@ -19,14 +19,11 @@ export default {
       time: Number,
       date: String,
    },
-
-   mounted() {
-      this.formatDate = format(this.date) || '20 de ener. 2010'
-   },
-   data() {
-      return {
-         formatDate: '',
-      }
+   methods: {
+      formatDate(date) {
+         const options = { year: 'numeric', month: 'long', day: 'numeric' }
+         return new Date(date).toLocaleDateString('es', options)
+      },
    },
 }
 

@@ -14,6 +14,11 @@ exports.definition = {
     prefix: prefix,
     iconName: iconName,
     icon: [width, height, ligatures, unicode, svgPathData],
+    xml: {
+        height: height,
+        width: width,
+        path: svgPathData,
+    },
 }
 
 exports.faClock = exports.definition

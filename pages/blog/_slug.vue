@@ -13,17 +13,7 @@
                class="absolute-wide img-background is-img"
             />
             <div class="l-section">
-               <div class="post-metadates">
-                  <h1 class="a-title is-light">{{ article.title }}</h1>
-                  <span class="read-time">
-                     <FontAwesomeIcon :icon="faClock" />
-                     {{ article.time }} minutos
-                  </span>
-                  <span class="current-time">
-                     <FontAwesomeIcon :icon="faCalendar" />
-                     {{ article.date }}
-                  </span>
-               </div>
+               <ArticleHeaderInfo :info="article" />
             </div>
          </template>
 
@@ -76,6 +66,7 @@ export default {
       ViewSlug: () => import('@/components/templates/BlogTemplate/ViewSlug.vue'),
       CardContent: () => import('@/components/molecules/CardContent/CardContent.vue'),
       DisplayList: () => import('@/components/molecules/DisplayList/Display.vue'),
+      ArticleHeaderInfo: () => import('@/components/organisms/Sections/ArticleHeaderInfo.vue'),
       FontAwesomeIcon,
    },
    head() {
@@ -157,11 +148,6 @@ export default {
          padding-top: 0;
          padding-bottom: calc(5px + 1rem);
       }
-   }
-   p {
-      line-height: 1.8;
-      font-size: 1rem;
-      padding-bottom: 1.5rem;
    }
    @media screen and (min-width: 1024px) {
       h2 {

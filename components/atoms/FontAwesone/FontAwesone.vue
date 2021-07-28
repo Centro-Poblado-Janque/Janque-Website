@@ -7,7 +7,7 @@
       class="svg-inline--fa fa-calendar fa-w-16"
       fill="none"
    >
-      <path v-for="path in icon.xml.path" :key="path" :d="path" :class="css" />
+      <path v-for="path in icon.xml.path" :key="path" :d="path" :class="css" fill="currentColor" />
    </svg>
 </template>
 

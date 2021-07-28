@@ -34,6 +34,12 @@ $is_monitor: 1700px;
     background-repeat: no-repeat;
 }
 
+@mixin img-center() {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
 @function to-rem($num, $var) {
     @return $num * $var + rem;
 }

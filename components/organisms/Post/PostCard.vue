@@ -1,6 +1,6 @@
 <template>
    <article v-if="type == 'notice'" class="o-notice--post" data-aos="fade-down">
-      <div class="img-container i-100">
+      <div class="img-container">
          <Photo :src="'resources/img/' + image" :alt="alt" />
       </div>
       <Content :title="title" :content="content" :path="path.slug" :urlname="path.page" />

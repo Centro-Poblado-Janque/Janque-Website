@@ -5,6 +5,9 @@
             <slot name="header"> </slot>
          </div>
       </header>
+      <section class="l-section">
+         <slot name="news-types"></slot>
+      </section>
 
       <div class="news-main">
          <div class=" l-section ly-grid l-section ly-grid-3 gap">
@@ -43,8 +46,11 @@ export default {
       width: 100%;
    }
 }
-.news-header {
+.principal-notice {
    height: 45vh;
-   @include image-gradient('~/assets/img/janque-day.png');
+   @include img-center;
+}
+.notice-dots {
+   background-color: var(--bg-light-100);
 }
 </style>

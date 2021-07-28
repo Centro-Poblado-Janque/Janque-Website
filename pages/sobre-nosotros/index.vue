@@ -10,7 +10,7 @@
             <img src="~/assets/img/blog_background.jpg" alt="" />
          </template>
          <template #grid-7>
-            <h2>Ubicacion de Janque</h2>
+            <Title text="Ubicacion de Janque" />
             <MapsLocation />
          </template>
       </AboutUsTemplate>
@@ -26,9 +26,6 @@ export default {
    components: {
       MapsLocation: () => import('@/components/utils/GoogleMaps.vue'),
       AboutUsTemplate: () => import('@/components/templates/AboutUsTemplate/AboutUsTemplate.vue'),
-   },
-   mounted() {
-      console.log(this.$route)
    },
 }
 </script>
