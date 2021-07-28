@@ -66,11 +66,14 @@
     --nav-icon-color            : #{$-v-orange-500};
     --nav-border-bottom         : #{$-v-smoke-300};
 
+    --scroll-bg                 : #{$-v-smoke-700};
+
 }
 :root[data-theme="light"]{
 
     --base-color                : #{$-v-blue-900};
     --base-background           : #fbfbfe;
+    --color: #ec615b;
 
     --bg-light                  : #{$-v-smoke-100};
     --bg-light-100              : #{$-v-smoke-200};
@@ -101,6 +104,7 @@
 
     --navigate-item-color       : #c4beb4;
     --nav-border-bottom         : #{$-v-night-600};
+    --scroll-bg                 : #{$-v-night-600};
 }
 
 
@@ -111,14 +115,14 @@
         --sz--scroll-size: 10px !important;
         height: var(--sz--scroll-size);
         width: var(--sz--scroll-size);
-        background-color: var(--bg-color-primary);
+        background-color: var(--bg-light);
         &-thumb{
-            background-color: var(--bg-scroll-thumb);
+            background-color: var(--scroll-bg);
             border-radius: 5px;
             transition: all .5s ease-in-out;
-            border: 2px solid var(--bg-color-primary);
+            border: 2px solid var(--base-background);
             &:hover{
-                background-color: #3d5363;
+                background-color: #464f55;
             }
         }
         &-button{

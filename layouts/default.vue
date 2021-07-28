@@ -19,9 +19,6 @@ export default {
    transitions: {
       name: 'fade',
       mode: 'in-out',
-      beforeEnter(el) {
-         console.log(el)
-      },
    },
    components: {
       VHeader,
@@ -30,7 +27,6 @@ export default {
    },
    methods: {
       setDiscusThread() {
-         //document.getElementById('__nuxt').replaceChild(this.$el, document.querySelectorAll('#__layout')[0])
          const d = document.createElement('script')
          d.async = true
          d.src = '//cp-janque-com.disqus.com/count.js'

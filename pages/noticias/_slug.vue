@@ -12,19 +12,9 @@
                :alt="notices.slug"
                class="img-background"
             />
-            <Container class="-reset">
-               <div class="post-metadates">
-                  <h1 class="a-title is-light">{{ notices.title }}</h1>
-                  <span class="read-time">
-                     <FontAwesomeIcon :icon="faClock" />
-                     {{ notices.time }} minutos
-                  </span>
-                  <span class="current-time">
-                     <FontAwesomeIcon :icon="faCalendar" />
-                     {{ notices.date }}
-                  </span>
-               </div>
-            </Container>
+            <div class="l-section">
+               <ArticleHeaderInfo :info="notices" />
+            </div>
          </template>
          <template #links>
             <div class="redirect_links ">
@@ -34,7 +24,7 @@
             </div>
          </template>
          <template>
-            <section class="blog-post grid--col-7">
+            <section class="notice-post grid--col-7">
                <CardContent :article="notices" :document="true" />
             </section>
             <section class="grid--col-3">
@@ -68,15 +58,7 @@
                      </a>
                   </span>
                </CardContent>
-               <CardContent class="position-sticky">
-                  <ul>
-                     <li v-for="ids of id" :key="ids.id">
-                        <a :href="`#${ids.id}`" class="content_item">
-                           {{ ids.text }}
-                        </a>
-                     </li>
-                  </ul>
-               </CardContent>
+               <DisplayList class="ly-sticky" :list="id" :property="['id', 'text']" />
             </section>
             <div id="disqus_thread" class="disqus-comment grid--col-10 pd-especial discus"></div>
          </template>
@@ -92,6 +74,8 @@ export default {
    components: {
       ViewSlug: () => import('@/components/templates/BlogTemplate/ViewSlug.vue'),
       CardContent: () => import('@/components/molecules/CardContent/CardContent.vue'),
+      DisplayList: () => import('@/components/molecules/DisplayList/Display.vue'),
+      ArticleHeaderInfo: () => import('@/components/organisms/Sections/ArticleHeaderInfo.vue'),
       FontAwesomeIcon,
    },
    head() {
@@ -172,24 +156,16 @@ export default {
       padding-left: 10px;
    }
 }
-.blog-post {
-   font-family: var(--open-sans-font);
+.notice-post {
    h2 {
       line-height: 1.7rem;
       font-size: 1.5rem;
-      padding: 15px 5px;
+      padding: 1rem 0.5rem;
       font-weight: bold;
-      color: #299b86;
-      position: relative;
       &:nth-child(1) {
          padding-top: 0;
          padding-bottom: calc(5px + 1rem);
       }
-   }
-   p {
-      line-height: 1.8;
-      font-size: 1rem;
-      padding-bottom: 1.5rem;
    }
    @media screen and (min-width: 1024px) {
       h2 {
@@ -230,27 +206,14 @@ export default {
       }
    }
 }
-.content_item {
-   display: block;
-   color: var(--blue-depth);
-   line-height: 1.5;
-   margin-bottom: 0.5rem;
-   padding: 0.25rem 1rem;
-   &:hover {
-      background-color: #2a3b47;
-      border-radius: 0.25rem;
-      color: silver;
-   }
-}
 .blue-color {
    color: var(--blue-depth-200);
 }
 .disqus-comment {
-   // background-color: rgba(58, 58, 58, 0.056);
    border-radius: 3px;
    border: 1px solid #8c858144;
 }
 ._s-author {
    margin-bottom: 1.5rem;
-}</style
->notices
+}
+</style>

@@ -6,6 +6,8 @@ alt: lluvia en Janque
 time: 8
 date: 20 de enero del 2021
 author: Alex Segundo
+type: ambiental
+avatar: avatar-alex.jpg
 ---
 
 ## Lluvias fuertes en Janque

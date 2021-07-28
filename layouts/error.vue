@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import error_icon from './../static/error_favicon.svg'
-
 export default {
    components: {
       ErrorBackground: () => import('@/components/utils/design/error.image.vue'),
@@ -23,7 +21,7 @@ export default {
                content: 'This page no exicts with response 404 - Not Found',
             },
          ],
-         link: [{ hid: 'favicon', rel: 'icon', href: error_icon }],
+         link: [{ hid: 'favicon', rel: 'icon', href: require('./../static/error_favicon.svg') }],
       }
    },
    data: () => ({

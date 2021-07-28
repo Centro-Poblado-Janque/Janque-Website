@@ -12,7 +12,7 @@
    >
       <style type="text/css">
          .st0 {
-            fill: #e8e8e8;
+            fill: grey;
          }
          .st1 {
             fill: #ffffff;
@@ -21,7 +21,7 @@
             stroke-miterlimit: 10;
          }
          .st2 {
-            fill: #161616;
+            fill: #495153;
          }
          .st3 {
             fill: #ec615b;
@@ -45,7 +45,7 @@
             stroke-miterlimit: 10;
          }
          .st8 {
-            fill: #5222d0;
+            fill: var(--bg-atention);
          }
          .st9 {
             fill: none;
