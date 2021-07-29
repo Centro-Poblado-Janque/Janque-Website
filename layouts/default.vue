@@ -43,6 +43,7 @@ export default {
          once: true,
          duration: 1000,
       })
+      console.log(process.env.baseURL)
       this.setDiscusThread()
    },
 }

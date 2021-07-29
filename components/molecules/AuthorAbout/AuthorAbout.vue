@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { format } from '@/lib/dateFormatter.js'
 export default {
    components: {
       Img: () => import('@/components/atoms/Image/Image.vue'),

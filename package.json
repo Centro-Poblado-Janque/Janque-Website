@@ -1,12 +1,13 @@
 {
   "name": "cp-janque-website",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "this projects is an website of c.p. janque",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "SET NODE_ENV=dev & nuxt",
     "gulp": "gulp",
-    "build": "nuxt build",
+    "build": "NODE_ENV=production & nuxt build",
     "generate": "nuxt generate"
   },
   "keywords": [],
@@ -22,12 +23,11 @@
     "aos": "^2.3.4",
     "core-js": "^3.8.1",
     "nuxt": "^2.14.12",
-    "swiper": "^6.7.5",
     "vue-frag": "^1.1.5",
-    "vue-styled-components": "^1.6.0",
-    "vue2-simple-carousel": "^0.3.22"
+    "vue-styled-components": "^1.6.0"
   },
   "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1",
     "autoprefixer": "^9.8.6",
     "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
