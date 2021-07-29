@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "description": "this projects is an website of c.p. janque",
   "main": "index.js",
+  "private": "true",
   "scripts": {
     "dev": "nuxt",
     "gulp": "gulp",
     "build": "nuxt build",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true
   },
   "keywords": [],
   "author": "alex segundo",
@@ -28,11 +33,19 @@
     "vue2-simple-carousel": "^0.3.22"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@nuxt/test-utils": "^0.2.2",
+    "@vue/test-utils": "^1.2.2",
     "autoprefixer": "^9.8.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^27.0.6",
     "dotenv": "^8.2.0",
     "gulp": "^4.0.2",
     "gulp-tinypng-extended": "^3.0.2",
+    "jest": "^27.0.6",
     "sass": "^1.32.0",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "vue-jest": "^3.0.7"
   }
 }

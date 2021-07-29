@@ -7,7 +7,7 @@
       <AuthorAbout :src="'resources/img/' + post.avatar" :time="post.time" :date="post.date" />
    </article>
 
-   <article v-else class="o-blog--post u-radius:3 ly-flex dir:column" data-aos="fade-up">
+   <article v-else class="o-blog--post u-radius:3 ly-grid" data-aos="fade-up">
       <div class="img-container post-img">
          <Photo
             :src="'resources/img/' + image"

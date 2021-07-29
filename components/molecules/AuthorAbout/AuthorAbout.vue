@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import { format } from '@/lib/dateFormatter.js'
 export default {
    components: {
       Img: () => import('@/components/atoms/Image/Image.vue'),
@@ -21,7 +20,7 @@ export default {
    },
    methods: {
       formatDate(date) {
-         const options = { year: 'numeric', month: 'long', day: 'numeric' }
+         const options = { year: 'numeric', month: 'short', day: 'numeric' }
          return new Date(date).toLocaleDateString('es', options)
       },
    },

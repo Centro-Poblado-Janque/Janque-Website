@@ -19,12 +19,12 @@
 
          <template #principal>
             <PostCard
-               :content="articles[0].description"
-               :image="articles[0].img"
-               :title="articles[0].title"
-               :alt="articles[0].slug"
-               :path="{ slug: articles[0].slug, page: 'blog-slug' }"
-               :post="{ avatar: articles[0].avatar, time: articles[0].time, date: articles[0].createdAt }"
+               :content="articles[1].description"
+               :image="articles[1].img"
+               :title="articles[1].title"
+               :alt="articles[1].slug"
+               :path="{ slug: articles[1].slug, page: 'blog-slug' }"
+               :post="{ avatar: articles[1].avatar, time: articles[1].time, date: articles[1].createdAt }"
             />
          </template>
 
@@ -54,7 +54,7 @@
          </template>
 
          <template #footer>
-            <button @click="getPosts">PRINT</button>
+            <PrevNext :prev="prev" :next="next" />
          </template>
       </BlogTemplate>
    </MainContent>
@@ -71,6 +71,7 @@ export default {
       BlogTemplate: () => import('@/components/templates/BlogTemplate/BlogTemplate.vue'),
       PostCard: () => import('@/components/organisms/Post/PostCard.vue'),
       TinyCard: () => import('@/components/organisms/Post/TinyCard.vue'),
+      PrevNext: () => import('@/components/molecules/PrevNext/prev-next.vue'),
    },
    methods: {
       async getPosts() {
@@ -87,26 +88,29 @@ export default {
       const articles = await $content('articles', params.slug)
          .only(['title', 'description', 'img', 'slug', 'author', 'date', 'time', 'avatar', 'createdAt'])
          .sortBy('createdAt', 'desc')
+         .skip(3)
+         .limit(6)
          .fetch()
       const recentArticles = await $content('articles', params.slug)
          .only(['title', 'description', 'img', 'slug', 'author', 'date', 'time', 'avatar', 'createdAt'])
-         .sortBy('createdAt', 'asc')
+         .sortBy('createdAt', 'desc')
          .limit(3)
+         .fetch()
+      const [prev, next] = await $content('articles')
+         .only(['title', 'slug'])
+         .sortBy('createdAt', 'asc')
          .fetch()
       return {
          articles,
          recentArticles,
+         prev,
+         next,
       }
    },
    data() {
       return {
          data: [],
       }
-   },
-   computed: {
-      counter() {
-         return this.$store.getters['getCounter']
-      },
    },
 }
 </script>

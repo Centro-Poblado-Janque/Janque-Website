@@ -8,7 +8,7 @@
       <ViewSlug>
          <template #header>
             <img
-               :src="'https://cp-janque.com/resources/img/' + article.img"
+               :src="'/resources/img/' + article.img"
                :alt="article.slug"
                class="absolute-wide img-background is-img"
             />

@@ -1,7 +1,7 @@
 ---
 title: La misteriosa piedra de la plaza central
 description: La piedra de la plaza central tiene una historia
-img: home_img.png
+img: monolito.jpg
 alt: 'janque-monolito'
 time: 6
 date: 20 de agosto del 2020
