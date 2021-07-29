@@ -1,7 +1,7 @@
 ---
 title: Viscacha, no te arriesges a visitarla.
 description: Viscacha es el lugar donde abunda el misterio...
-img: hack.jpg
+img: antivo-coral.jpg
 alt: my first blog post
 time: 10
 date: 05 de diciembre del 2020
@@ -10,8 +10,15 @@ twitter: '@asegundo442'
 avatar: avatar-alex.jpg
 ---
 
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate atque cumque ipsum tempora autem aliquam optio unde magnam quo, velit nulla! Quod esse omnis quasi fugit dolorem quos quibusdam iusto aspernatur, consequuntur ex voluptates obcaecati, saepe incidunt voluptate, perferendis sit sunt eos sapiente ipsam. Enim eveniet molestias saepe ullam voluptates amet sint corporis quaerat corrupti quod praesentium nihil dolor pariatur quae obcaecati neque aliquid eligendi non, harum tenetur recusandae reprehenderit omnis. Necessitatibus commodi quisquam fugiat error adipisci eos excepturi ducimus tenetur voluptatem debitis, pariatur tempora velit iusto voluptates atque? Beatae, similique assumenda! Commodi, alias! Odio necessitatibus accusamus provident. Amet praesentium a rerum cupiditate ipsam tempore commodi molestias placeat culpa accusantium impedit asperiores repellat minima, harum nobis numquam dolor veritatis optio saepe aliquid? Possimus nostrum nesciunt suscipit tempore alias ab ad. Ut illo praesentium consequuntur possimus adipisci eaque eligendi minus unde. Natus voluptates quam suscipit explicabo ratione, repellendus vel repudiandae quia aliquam provident odit aspernatur eum ipsa quas excepturi dolorum accusamus tenetur necessitatibus? Quisquam eaque molestias sunt animi. Et perferendis accusantium quae mollitia reiciendis, aliquam adipisci incidunt numquam ducimus, nisi inventore laboriosam laudantium aliquid officiis provident? Alias accusamus ratione dignissimos, ullam architecto nihil ipsa, a nam, sint accusantium asperiores quisquam repudiandae hic cupiditate aliquam. Assumenda ab totam voluptatibus, blanditiis eum temporibus amet nisi tempora iusto, harum, error excepturi quasi tempore.
+En este post te contamos porque decimos que **_no te arriesges a visitarla_**, pues resulta que la historia es un poco compleja y dificil de contar en pocas lineas. Entre otras cosas tambien podría sonar algo estúpido e increible, y es eso justamente lo que lo hace misterioso y tenebroso a la vez.
 
-## Mas datos
+## La historia
 
-Dolore, placeat. Enim blanditiis eligendi sequi repellat minus qui commodi repellendus, pariatur quod cum animi ducimus voluptatem placeat perspiciatis iusto laboriosam ut officia et exercitationem hic. Debitis autem atque quidem, enim iste, inventore, quisquam ut perferendis hic earum eligendi modi sed alias maxime voluptatum voluptas mollitia possimus numquam architecto aliquid. Libero tenetur minima nemo? Adipisci voluptate sunt aliquam quas odio magnam aliquid deserunt! Ratione accusamus dignissimos neque ex enim assumenda eos accusantium natus error, recusandae incidunt. A corrupti ut adipisci deserunt quo recusandae aliquid rerum officiis, nam deleniti illum vitae id temporibus, blanditiis exercitationem veritatis ex iusto voluptatibus inventore necessitatibus odio corporis? Dignissimos corporis ducimus dolorem. Quos optio placeat quisquam deleniti quidem est, atque vitae, doloremque alias magnam illo magni eveniet? Quis exercitationem aliquam nihil minima quos, dolorum optio? Saepe consequatur sunt, provident ex earum eum, sed eos beatae totam reiciendis dolores exercitationem tenetur molestias fugiat distinctio error minus officiis ipsam ullam, soluta laborum. Nostrum eum nemo voluptatibus voluptate. Quisquam perferendis, non fugiat quia architecto labore accusantium molestias illum provident corporis exercitationem laboriosam debitis blanditiis fugit soluta magnam repellat quos consectetur expedita minima delectus excepturi accusamus alias pariatur! Rem animi eos at culpa magnam maxime explicabo, nesciunt odit ex! A fugiat optio voluptatibus ipsum iusto nam facere reprehenderit incidunt totam. Totam, minus numquam vero harum necessitatibus labore illo iusto vel veritatis odio corporis quidem nesciunt cupiditate. Vel culpa dolore hic incidunt et a velit beatae, quibusdam iure, autem molestiae quaerat enim laudantium recusandae magnam, fuga commodi veritatis quia sunt! Sint aliquid fugit nam explicabo! Inventore cum totam sed ut provident, facilis optio libero aperiam reprehenderit minus ad molestiae minima animi soluta iste dolores quos iure tenetur eius obcaecati voluptatum. Dolores, exercitationem?
+No hace mas de 20 años atras aproximadamente solia vivir una 'persona' en aquel lugar y en otros lugares de la zona, y decimos persona entre comillas porque no era una persona normal.
+Y lo de anormal lo lleva porque solia comer niños y personas, pues en resumen era un canival o algo asi en el tiempo actual
+
+## ¿Y porque el misterio?
+
+Segun cuenta un poblador, el personaje de esta historia se parecia mucho a una anciana avandonada, cuya comida no pasaba de ser tierra cocinada (exótica por cierto), a menos que por ahi se encontrara una persona para devorarlo.
+
+¿Que porque no comia animales? eso no se sabe.

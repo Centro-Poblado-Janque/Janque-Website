@@ -1,7 +1,7 @@
 <template>
    <article class="o-tiny--post mb-1 ly-relative" data-aos="fade-down">
       <Photo :src="'resources/img/' + image" :alt="alt" class="tiny-background" />
-      <Date :date="date" css="atention" :icon="true" />
+      <Date :date="formatDate(date)" css="atention" :icon="true" />
       <Title :text="title" :isLink="true" :path="{ name: path.page, params: { slug: path.slug } }" />
    </article>
 </template>
@@ -33,6 +33,12 @@ export default {
       path: {
          type: Object,
          required: true,
+      },
+   },
+   methods: {
+      formatDate(date) {
+         const options = { year: 'numeric', month: 'short', day: 'numeric' }
+         return new Date(date).toLocaleDateString('es', options)
       },
    },
 }

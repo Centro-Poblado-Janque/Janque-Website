@@ -1,7 +1,7 @@
 ---
 title: Una colina rara con la forma de la letra M
 description: Sepa porque la colina tiene una forma de M
-img: test_2.png
+img: home_img.png
 alt: my first blog post
 time: 4
 date: 03 de septiembre del 2020

@@ -29,9 +29,15 @@
 }
 
 .sumarry {
-    --sumarry: 2rem;
+    --sumarry: 1.5rem;
     font-size: var(--sumarry);
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: center;
+}
+
+@include media-from($lg) {
+    :root {
+        --sumarry: 2rem;
+    }
 }

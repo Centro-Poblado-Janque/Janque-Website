@@ -2,13 +2,20 @@
    <MainContent>
       <HomeTemplate>
          <template #header>
-            <Carousel></Carousel>
+            <SlideShow />
          </template>
 
          <template #first-section>
             <div class="ly-flex dir:column">
-               <Title text="Buscas un lugar en donde pasar las vacaciones" big_text="true" center="true" />
-               <Typography type="sumarry" content="Visita Janque y descubre las marravillas que tiene" />
+               <Title
+                  text="Quieres descubrir nuevas culturas y conocer mas el Perú"
+                  big_text="true"
+                  center="true"
+               />
+               <Typography
+                  type="sumarry"
+                  content="Descubre la cultura janqueña y sorprendete de lo que puede ofrecerte"
+               />
             </div>
             <ImgContainer>
                <img src="~/assets/img/janque-first.jpg" class="u-radius:6" />
@@ -25,7 +32,7 @@ export default {
       mode: 'out-in',
    },
    components: {
-      Carousel: () => import('@/components/utils/widgets/Carousel.vue'),
+      SlideShow: () => import('@/components/utils/widgets/SlideShow.vue'),
       HomeTemplate: () => import('@/components/templates/HomeTemplate/HomeTemplate.vue'),
       ImgContainer: () => import('@/components/atoms/Image/Image.vue'),
    },

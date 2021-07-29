@@ -9,7 +9,7 @@
     @media screen and(min-width: $md) {
         padding: 2rem;
     }
-    padding: 0.9rem;
+    padding: 1rem;
     &.discus {
         padding-top: 0.25rem;
         padding-bottom: 0.25rem;
@@ -25,7 +25,8 @@
 .nuxt-content {
     p {
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
     }
     @include media-from($lg) {
         p {

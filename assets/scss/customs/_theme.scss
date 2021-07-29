@@ -22,7 +22,7 @@
     --global-font               : 'Roboto','Open Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     --navigation-font           : 'Viga','Noto Sans JP', 'Roboto', sans-serif;
     --paragraph-font            : 'Open Sans', 'Roboto', sans-serif;
-    --title-font                : 'Viga', 'Roboto' serif;
+    --title-font                : 'Viga', 'Roboto', serif;
     --title-big-font            : 'Titillium Web';
 
 //=========#######  COLOR NOT CHANGE THEME =============|
@@ -67,13 +67,13 @@
     --nav-border-bottom         : #{$-v-smoke-300};
 
     --scroll-bg                 : #{$-v-smoke-700};
+    --bg-lighter                : #{$-v-smoke-100};
 
 }
 :root[data-theme="light"]{
 
     --base-color                : #{$-v-blue-900};
     --base-background           : #fbfbfe;
-    --color: #ec615b;
 
     --bg-light                  : #{$-v-smoke-100};
     --bg-light-100              : #{$-v-smoke-200};
@@ -105,6 +105,8 @@
     --navigate-item-color       : #c4beb4;
     --nav-border-bottom         : #{$-v-night-600};
     --scroll-bg                 : #{$-v-night-600};
+
+    --bg-lighter                : #{$-v-night-900};
 }
 
 

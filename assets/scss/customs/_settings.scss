@@ -47,3 +47,19 @@ $is_monitor: 1700px;
 @function rem($num) {
     @return ($num / 16) + rem;
 }
+
+@mixin compile($breakpoint, $class, $property, $value) {
+    @each $sizes, $values in $breakpoint {
+        @include media-from($values) {
+            .#{$sizes}\:#{$class} {
+                #{$property}: $value;
+            }
+        }
+    }
+}
+
+$media: (
+    md: $md,
+    lg: $lg,
+    xl: $xl,
+);

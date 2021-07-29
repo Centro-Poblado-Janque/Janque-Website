@@ -7,7 +7,7 @@
       </span>
       <span class="current-time">
          <FontAwesone :icon="faCalendar" css="m8-calendar" />
-         {{ info.date }}
+         {{ formatDate(info.createdAt) }}
       </span>
    </div>
 </template>
@@ -27,6 +27,12 @@ export default {
          faClock,
          faCalendar,
       }
+   },
+   methods: {
+      formatDate(date) {
+         const options = { year: 'numeric', month: 'long', day: 'numeric' }
+         return new Date(date).toLocaleDateString('es', options)
+      },
    },
 }
 </script>

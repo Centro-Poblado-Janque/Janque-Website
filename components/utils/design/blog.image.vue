@@ -2409,10 +2409,6 @@
       </g>
    </svg>
 </template>
-
-<script>
-export default {}
-</script>
 <style lang="scss">
 @import '~/assets/scss/customs/settings';
 

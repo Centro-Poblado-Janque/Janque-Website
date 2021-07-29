@@ -1,8 +1,13 @@
 .o-blog--post {
     background-color: var(--bg-light-accent);
+    border: 1px solid transparent;
     &:hover {
         border: 1px solid var(--bg-light-100);
     }
+    /*  .m-about--author {
+        position: absolute;
+        bottom: 0;
+    } */
 }
 .o-notice--post {
     position: relative;
