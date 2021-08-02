@@ -1,7 +1,7 @@
 <template>
-   <section class="blog-section  page--gradient">
-      <header class="blog-head  l-section ly-grid l-section ly-grid-9 grid-center">
-         <div class="grid--col-3 ly-sticky">
+   <section class="blog-section page--gradient">
+      <header class="blog-head l-section ly-grid l-section ly-grid-9">
+         <div class="grid--col-3 ly-sticky l-center">
             <slot name="header-content"> </slot>
          </div>
          <div class="grid--col-6">
@@ -10,7 +10,7 @@
       </header>
 
       <div class="blog-main  l-section ly-grid l-section ly-grid-8 gap">
-         <section class="grid--col-5">
+         <section class="grid--col-5 l-center">
             <slot name="principal"> </slot>
          </section>
          <section class="grid--col-3 ly-flex dir:column">

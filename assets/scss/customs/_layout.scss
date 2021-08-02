@@ -5,7 +5,8 @@
 .l-section {
     width: 100%;
     max-width: var(--max-width);
-    margin: 0 auto 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: var(--l-section-padding);
     padding-right: var(--l-section-padding);
 }
@@ -39,7 +40,6 @@ $positions: relative, static, absolute;
     height: 100vh;
 }
 
-// =========================================================================================== <=
 // ====================================================================================== //
 //          @grid system styles                        alex-segundo 2021                  //
 // ====================================================================================== //
@@ -51,10 +51,6 @@ $positions: relative, static, absolute;
     width: 100%;
     &.gap {
         row-gap: var(--grid-gap);
-    }
-    &.grid-center {
-        align-items: center;
-        align-content: space-between;
     }
 }
 
@@ -77,9 +73,30 @@ $positions: relative, static, absolute;
     }
 }
 
+.ly-flex,
+.l-center,
+.l-main-center,
+.l-main-separate,
+.l-main-space {
+    display: flex;
+    flex-wrap: wrap;
+}
+.l-center {
+    align-items: center;
+    align-content: center;
+}
+.l-main-center {
+    justify-content: center;
+}
+.l-main-space {
+    justify-content: space-around;
+}
+.l-main-separate {
+    justify-content: space-between;
+}
+
 .ly-flex {
     display: flex;
-    flex-wrap: nowrap;
     &.fl-center {
         justify-content: space-between;
         align-items: center;

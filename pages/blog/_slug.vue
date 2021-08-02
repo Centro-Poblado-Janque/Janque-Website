@@ -30,7 +30,7 @@
                <CardContent :article="article" :document="true" />
             </section>
             <section class="grid--col-3">
-               <CardContent class="_s-author ly-flex">
+               <CardContent class="_s-author l-center">
                   <img
                      class="avatar-model"
                      :src="'https://cp-janque.com/resources/img/' + article.avatar"
@@ -99,7 +99,7 @@ export default {
 }
 .redirect_links {
    position: relative;
-   margin-bottom: 1rem;
+   margin-bottom: 2rem;
    a {
       color: var(--grey-200);
       &::after {
@@ -142,7 +142,7 @@ export default {
       font-size: 1.5rem;
       padding: 15px 5px;
       font-weight: bold;
-      color: #f0852d;
+      color: #1fa18e;
       position: relative;
       &:nth-child(1) {
          padding-top: 0;

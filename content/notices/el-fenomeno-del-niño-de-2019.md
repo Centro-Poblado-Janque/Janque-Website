@@ -7,7 +7,7 @@ time: 8
 date: 20 de enero del 2021
 author: Alex Segundo
 type: ambiental
-avatar: avatar-alex.jpg
+avatar: notice.svg
 ---
 
 ## Lluvias fuertes en Janque

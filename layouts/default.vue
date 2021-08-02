@@ -34,16 +34,12 @@ export default {
          document.getElementById('__nuxt').insertAdjacentElement('afterend', d)
       },
    },
-   computed: {
-      setVisible() {},
-   },
    mounted() {
       AOS.init({
          easing: 'ease-out-back',
          once: true,
          duration: 1000,
       })
-      console.log(process.env.baseURL)
       this.setDiscusThread()
    },
 }

@@ -9,7 +9,3 @@ author: Alex Segundo
 twitter: '@asegundo442'
 avatar: avatar-alex.jpg
 ---
-
-## El Cerro Lungan
-
-Hoy dia hablaremos acerca del cerro lungan y mas cosas como estas

@@ -1,6 +1,12 @@
 <template>
    <div>
-      <Copyright>Copyright 2020 - {{ date }} © | Centro Poblado Janque</Copyright>
+      <Copyright>
+         No es pagina oficial de Janque
+         <br />
+         Hecho con 😘 por
+         <a href="http://alexsegundo.com" target="_blank" rel="noopener noreferrer">Alex Segundo</a> | 2020 -
+         {{ date }} ©
+      </Copyright>
       <IconContainer>
          <BrandLink href="#" class="ly-flex">
             <BrandIcon :icon="faFacebook" />
@@ -58,6 +64,11 @@ const Copyright = styled.h5`
    padding: 1.25rem 0;
    @media (min-width: 1200px) {
       text-align: left;
+   }
+   a {
+      &:hover {
+         color: var(--bg-primary);
+      }
    }
 `
 

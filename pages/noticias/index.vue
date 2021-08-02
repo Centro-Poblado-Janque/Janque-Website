@@ -15,19 +15,13 @@
          </div>
 
          <template #news-types>
-            <DisplayList
-               css="ly-flex overflow-x fl-space"
-               class="ly-sticky notice-dots"
-               :list="tag"
-               :property="['type', 'type']"
-               :toUpper="true"
-            />
+            <DisplayCategory :items="tag" :property="['type', 'type']" path="noticias" />
          </template>
 
          <template>
             <PostCard
                type="notice"
-               v-for="news of notices"
+               v-for="news of noticesByTag"
                :key="news.slug"
                :content="news.description"
                :image="news.img"
@@ -37,9 +31,7 @@
                :post="{ avatar: news.avatar, time: news.time, date: news.createdAt }"
             />
          </template>
-         <template #footer>
-            <p>Footer</p>
-         </template>
+         <template #footer> </template>
       </NewsTemplate>
    </MainContent>
 </template>
@@ -54,7 +46,18 @@ export default {
       NewsTemplate: () => import('@/components/templates/NewsTemplate/NewsTemplate.vue'),
       PostCard: () => import('@/components/organisms/Post/PostCard.vue'),
       Swiper: () => import('@/components/utils/Swiper.vue'),
-      DisplayList: () => import('@/components/molecules/DisplayList/Display.vue'),
+      DisplayCategory: () => import('@/components/organisms/TabSection/tab-section.vue'),
+   },
+   watch: {
+      '$route.query.tags': {
+         immediate: true,
+         async handler(tags) {
+            this.noticesByTag = await this.$content('notices')
+               .only(['title', 'description', 'img', 'slug', 'author', 'date', 'time', 'createdAt', 'avatar'])
+               .where({ type: { $eq: tags || 'cultural' } })
+               .fetch()
+         },
+      },
    },
    async asyncData({ $content, params }) {
       const notices = await $content('notices', params.slug)
@@ -73,6 +76,12 @@ export default {
       return {
          notices,
          tag: filtered,
+      }
+   },
+   data() {
+      return {
+         query: '',
+         noticesByTag: [],
       }
    },
 }

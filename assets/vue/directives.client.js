@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import frag from 'vue-frag'
 
+import VueAgile from 'vue-agile'
+
+Vue.use(VueAgile)
+
 Vue.directive('scroll', {
     inserted: function(el, binding) {
         let f = function(evt) {

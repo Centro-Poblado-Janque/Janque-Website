@@ -6,7 +6,7 @@
          </template>
 
          <template #first-section>
-            <div class="ly-flex dir:column">
+            <div class="ly-flex dir:column l-center l-main-center">
                <Title
                   text="Quieres descubrir nuevas culturas y conocer mas el Perú"
                   big_text="true"
@@ -32,7 +32,7 @@ export default {
       mode: 'out-in',
    },
    components: {
-      SlideShow: () => import('@/components/utils/widgets/SlideShow.vue'),
+      SlideShow: () => import('@/components/utils/widgets/SliderHome.vue'),
       HomeTemplate: () => import('@/components/templates/HomeTemplate/HomeTemplate.vue'),
       ImgContainer: () => import('@/components/atoms/Image/Image.vue'),
    },

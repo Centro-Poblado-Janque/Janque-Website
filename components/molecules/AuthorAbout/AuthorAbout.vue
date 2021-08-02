@@ -1,8 +1,10 @@
 <template>
    <footer class="m-about--author ly-flex fl-center">
       <Img :src="src" alt="no alt" class="author-img u-radius-circle" />
-      <Time :time="`${time} minutos`" />
-      <Date :date="formatDate(date)" :icon="true" />
+      <div class="ly-flex">
+         <Time :time="`${time} minutos`" />
+         <Date :date="formatDate(date)" :icon="true" css="left" />
+      </div>
    </footer>
 </template>
 

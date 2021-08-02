@@ -7,10 +7,30 @@
       />
       <AboutUsTemplate>
          <template #header>
-            <img src="~/assets/img/blog_background.jpg" alt="" />
+            <div class="skew-img grid--col-5">
+               <figure class="skew-a">
+                  <img src="~/assets/img/vista-carretera.jpg" alt="" />
+               </figure>
+               <figure class="skew-b">
+                  <img src="~/assets/img/history.png" alt="" />
+               </figure>
+            </div>
+            <div class="grid--col-5 l-center l-main-center p-1">
+               <Title text="Que es Janque" big_text="true" />
+               <Typography
+                  type="sumarry"
+                  content="Janque es un centro poblado del distrito de Incahuasi, ubicado en la region Lambayeque, al norte del Perú."
+               />
+               <Typography
+                  type="sumarry"
+                  content="Es uno de los centros poblados mas grandes actualmente de Incahuasi; con una rica cultura y una gastronomía muy diversa. 
+                  Cuya población aun preserva ideologías de sus ancestros, tanto descendientes de los indígenas como de los españoles."
+               />
+            </div>
          </template>
+
          <template #grid-7>
-            <Title text="Ubicacion de Janque" />
+            <Title text="Ubicación" />
             <MapsLocation />
          </template>
       </AboutUsTemplate>

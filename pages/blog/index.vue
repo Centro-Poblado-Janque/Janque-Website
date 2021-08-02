@@ -19,6 +19,7 @@
 
          <template #principal>
             <PostCard
+               :principal="true"
                :content="articles[1].description"
                :image="articles[1].img"
                :title="articles[1].title"
@@ -54,7 +55,9 @@
          </template>
 
          <template #footer>
-            <PrevNext :prev="prev" :next="next" />
+            <p class="description">
+               Publicamos nuevos articulos cada semana, no te lo pierdas
+            </p>
          </template>
       </BlogTemplate>
    </MainContent>

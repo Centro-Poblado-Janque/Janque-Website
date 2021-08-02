@@ -1,6 +1,6 @@
 <template>
    <section class="history-section">
-      <header class="history-head">
+      <header class="history-head bg-img-center">
          <slot name="header"> </slot>
       </header>
 
@@ -29,6 +29,10 @@ export default {
 .history {
    &-section {
       display: block;
+   }
+   &-head {
+      min-height: 100vh;
+      @include image-gradient('~/assets/img/history-bg.jpg');
    }
 }
 </style>

@@ -38,5 +38,8 @@ export default {
    time {
       margin-left: 0.5rem;
    }
+   &.left {
+      margin-left: 0.75rem;
+   }
 }
 </style>

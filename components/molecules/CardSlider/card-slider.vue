@@ -20,7 +20,7 @@ export default {
    padding: 2rem;
    -webkit-backdrop-filter: blur(20px);
    backdrop-filter: blur(20px);
-   background-color: rgba(0, 0, 0, 0.404);
+   background-color: rgba(0, 0, 0, 0.541);
    // text style
    .normal {
       color: silver;

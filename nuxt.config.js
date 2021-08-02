@@ -8,6 +8,7 @@ export default {
     plugins: ['~/assets/vue/directives.client.js', '~/components/global'],
     css: ['~/assets/scss/index.scss'],
     srcDir: './',
+    dev: process.env.NODE_ENV !== 'production',
     env: {
         baseURL: process.env.NODE_ENV == 'dev' ? `http://localhost:3000` : 'https://cp-janque.com',
     },

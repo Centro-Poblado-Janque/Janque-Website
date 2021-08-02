@@ -1,27 +1,20 @@
 <template>
-   <section class="m-swiper ly-relative full-wide" ref="swiper">
-      <div class="slides ly-flex" ref="slides">
-         <div
-            v-for="(slides, index) in slidesData"
-            :class="{ 'active-slide': index == count }"
-            :key="index"
-            class="slide--item ly-relative"
-         >
-            <img :src="slides.img" alt="carousel-img" class="slide--img" />
-            <div class="slide--content ly-flex fl-center">
-               <article class="l-section ly-flex fl-center">
-                  <CardSlide :content="slides" />
-               </article>
-            </div>
+   <VueAgile :initial-slide="3" :autoplay="true" :speed="400">
+      <div v-for="(slides, index) in slidesData" :key="index" class="slide ">
+         <img :src="slides.img" alt="carousel-img" class="slide--img" />
+         <div class="slide--content ly-flex fl-center">
+            <article class="l-section ly-flex fl-center">
+               <CardSlide :content="slides" />
+            </article>
          </div>
       </div>
-      <button @click="prevSlide" class="chevron left">
+      <template slot="prevButton">
          <FontAwesomeIcon :icon="faChevronLeft" />
-      </button>
-      <button @click="nextSlide" class="chevron right">
+      </template>
+      <template slot="nextButton">
          <FontAwesomeIcon :icon="faChevronRight" />
-      </button>
-   </section>
+      </template>
+   </VueAgile>
 </template>
 
 <script>
@@ -57,20 +50,6 @@ export default defineComponent({
 
       return { slidesData, faChevronLeft, faChevronRight }
    },
-   methods: {
-      update() {},
-      nextSlide() {
-         this.count > this.slidesData.length - 2 ? (this.count = 0) : this.count++
-      },
-      prevSlide() {
-         this.count <= 0 ? (this.count = this.slidesData.length - 1) : this.count--
-      },
-   },
-   data() {
-      return {
-         count: 0,
-      }
-   },
 })
 </script>
 
@@ -79,19 +58,15 @@ export default defineComponent({
 .m-swiper {
    --chevron-left: 1rem;
    --chevron-right: 1rem;
-   --top-chevron: 80%;
    margin: 0;
    width: 100vw;
    height: 100vh;
    overflow: hidden;
 }
-.chevron {
-   position: absolute;
+.agile__nav-button {
    padding: 1rem;
-   z-index: 3;
    display: inline-block;
    font-size: 2rem;
-   top: var(--top-chevron);
    color: rgb(179, 179, 179);
    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -130,15 +105,19 @@ export default defineComponent({
    top: var(--desktop-nav-size);
 }
 
-.active-slide .slide--content {
-   animation: to-top 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
+.agile__slide--active .slide--content {
+   animation: to-top 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
+:root {
+   --top-chevron: 80%;
+}
 @include media-from($md) {
+   :root {
+      --top-chevron: 45%;
+   }
    .m-swiper {
       --chevron-left: 2rem;
       --chevron-right: 2.5rem;
-      --top-chevron: 45%;
    }
 }
 
@@ -152,5 +131,20 @@ export default defineComponent({
       max-width: 100%;
       min-width: 100%;
    }
+}
+.agile__list {
+   user-select: none;
+   min-height: 100vh;
+   .slide {
+      height: 100vh;
+      cursor: grab;
+   }
+}
+.agile__actions {
+   padding: 1rem;
+   width: 100%;
+   position: absolute;
+   z-index: 4;
+   top: var(--top-chevron);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
    <header v-scroll="handleScroll" :class="['ly-relative', activeMenu && 'drawer-out']">
       <section class="header-wide" :class="css_by_events">
-         <div class="header l-section ly-flex fl-center">
+         <div class="header l-section l-center">
             <ThemeButton />
             <BrandLogotype />
             <nav class="menu-desktop">

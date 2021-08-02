@@ -12,7 +12,7 @@ avatar: avatar-alex.jpg
 
 ## La misteriosa piedra de la plaza central
 
-Cuando lleguen a Janque, mas concretamente a su plaza central, notaran que hya una piedra en el centro. Esto puede parecer extraño pero es que esta piedra tiene una extraña historia tambien. Aunque haya muchas versiones, casi la mayoria apunta a lo mismo: que no es de por ahi cercano.
+Digamos que ya visitaron Janque, conocieron toda su gente, la manera de vivir de sus pobladores, la comida, bebidas como el cañazo o la chicha de maiz. Recorrieron todo el pueblo; quizás por ahi divisaron una piedra en el centro del pueblo, pero seguramente nunca se preguntaron como llegó ahí. ¡Ajam!, pues resulta que no es tan sencillo como tu piensas, tampoco es del otro mundo o en la manera como construían los incas. Sin embargo, todo tiene su explicación, pues esta lo tiene, y es bastante peculiar.
 
 Descubramos entonces juntos esa maravillosa historia
 
@@ -23,3 +23,5 @@ No te preucupers si no sabes nada de los mochicas, enemos una historia completa 
 Pues resulta que los mochicas eran radicales
 
 ## Quedó de los hacendados
+
+Janque antiguamente fue una gran hacienda

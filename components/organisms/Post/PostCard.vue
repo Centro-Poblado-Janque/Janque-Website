@@ -1,5 +1,5 @@
 <template>
-   <article v-if="type == 'notice'" class="o-notice--post" data-aos="fade-down">
+   <article v-if="type == 'notice'" class="o-notice--post u-radius:4" data-aos="fade-down">
       <div class="img-container">
          <Photo :src="'resources/img/' + image" :alt="alt" />
       </div>
@@ -7,7 +7,7 @@
       <AuthorAbout :src="'resources/img/' + post.avatar" :time="post.time" :date="post.date" />
    </article>
 
-   <article v-else class="o-blog--post u-radius:3 ly-grid" data-aos="fade-up">
+   <article v-else :class="`o-blog--post u-radius:3 ly-grid ${principal && 'principal'}`" data-aos="fade-up">
       <div class="img-container post-img">
          <Photo
             :src="'resources/img/' + image"
@@ -56,6 +56,10 @@ export default {
       path: {
          type: Object,
          required: true,
+      },
+      principal: {
+         type: Boolean,
+         default: false,
       },
    },
 }

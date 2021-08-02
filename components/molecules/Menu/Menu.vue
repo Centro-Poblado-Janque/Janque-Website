@@ -1,5 +1,8 @@
 <template data-component="Menu">
    <ul class="ly-flex dir:column fl-space">
+      <Item>
+         <SearchModel @close="$emit('close')" />
+      </Item>
       <Item :forLink="true" @click.native="$emit('close')">
          <NextLink
             path="/"
@@ -46,9 +49,6 @@
             data-action="blog"
             :icon="faBlog"
          />
-      </Item>
-      <Item>
-         <SearchModel @close="$emit('close')" />
       </Item>
    </ul>
 </template>

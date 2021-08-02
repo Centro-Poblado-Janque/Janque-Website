@@ -6,6 +6,13 @@
         display: block;
         .ly-flex {
             flex-direction: row !important;
+
+            //========//do the implementation later
+
+            /* li:first-child {
+                order: 1;
+                display: none;
+            } */
         }
     }
 }
@@ -30,13 +37,13 @@
     transform: translateY(2rem);
     transition: all 250ms cubic-bezier(0.13, 0.8, 0.42, 0.67);
     transition-delay: 100ms;
+    // for desktop displaying none
     @include media-from($lg) {
         display: none;
     }
     &.is_active {
         transform: translateY(0);
         transition-timing-function: cubic-bezier(0.6, 0.36, 0.2, 0.89);
-        transition-delay: 0;
         opacity: 1;
         pointer-events: auto;
         background-color: #4f505070;
@@ -50,5 +57,12 @@
     .link-item {
         padding: 0.5rem 0;
         border-bottom: 1px solid var(--nav-border-bottom);
+        /* fix bug navigation error */
+        .link {
+            width: 100%;
+        }
+    }
+    .list-item:first-child {
+        padding-bottom: 0.5rem;
     }
 }

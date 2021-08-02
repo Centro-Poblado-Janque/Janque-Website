@@ -10,7 +10,7 @@
       </section>
 
       <div class="news-main">
-         <div class=" l-section ly-grid l-section ly-grid-3 gap">
+         <div class=" l-section ly-grid l-section ly-grid-3 gap ly-grid:lg-2">
             <slot> </slot>
          </div>
       </div>

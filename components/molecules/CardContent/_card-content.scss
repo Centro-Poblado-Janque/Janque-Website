@@ -2,7 +2,7 @@
 
 .m-card-content {
     position: relative;
-    border: 1px solid #8c858144;
+    border: 1px solid var(--border-post);
     background-color: var(--bg-light);
 }
 .pd-especial {
@@ -27,6 +27,13 @@
         font-size: 1rem;
         line-height: 1.7;
         margin-bottom: 1.5rem;
+    }
+    a {
+        color: teal;
+        text-decoration: underline;
+        &:hover {
+            color: #098fa7;
+        }
     }
     @include media-from($lg) {
         p {

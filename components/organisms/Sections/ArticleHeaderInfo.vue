@@ -1,6 +1,6 @@
 <template>
    <div class="post-metadates">
-      <Title :text="info.title" class="a-title" />
+      <Title :text="info.title" class="txt-big" />
       <span class="read-time">
          <FontAwesone :icon="faClock" />
          {{ info.time }} minutos
@@ -37,4 +37,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.txt-big {
+   font-size: 2.5rem;
+   padding: 1rem 0;
+}
+</style>

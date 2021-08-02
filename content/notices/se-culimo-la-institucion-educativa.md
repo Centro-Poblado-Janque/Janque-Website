@@ -6,8 +6,7 @@ alt: lluvia en Janque
 time: 8
 date: 20 de enero del 2021
 type: cultural
-author: Silvestre Acuña Nuñez
-facebook: 'silvestre.acunanunez'
+avatar: notice.svg
 ---
 
 ## I. E. Nº 10083 "Indoamerica" renueva su imagen.

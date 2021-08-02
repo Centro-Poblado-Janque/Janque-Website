@@ -80,11 +80,12 @@
     --bg-light-accent           : #{$-v-smoke-200};
     --bg-grey                   : #{$-v-night-100};
 
-
+    --border-post               : #{$-v-smoke-200};
     --bg-footer                 : #{$-v-smoke-200};
     --color-footer              : #{$-v-blue-800};
 
     --menu-background           : #{$-v-smoke-200};
+
 }
 :root[data-theme="dark"]{
     --base-color                : #{$-v-smoke-400};
@@ -96,7 +97,7 @@
     --bg-darken                 : #{$-v-night-900};
 
 
-
+    --border-post               : #{$-v-night-700};
     --bg-footer                 : #{$-v-night-800};
     --color-footer              : #{$-v-smoke-900};
 

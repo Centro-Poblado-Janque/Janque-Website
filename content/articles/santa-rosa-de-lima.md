@@ -10,8 +10,6 @@ twitter: '@asegundo442'
 avatar: avatar-alex.jpg
 ---
 
-<!--<img style="height: 600px; width: 100%; object-fit: cover" src="./../resources/img/Santa-Rosa-de-Lima.jpg" alt="other"/> -->
-
 ![santa rosa de lima](./../resources/img/Santa-Rosa-de-Lima.jpg)
 
 ## ¿Quien es Santa Rosa de Lima?
@@ -28,6 +26,12 @@ A temprana edad - emulando a la terciaria dominica santa Catalina de Siena - emp
 
 ## Patrona de Janque
 
-La municiplidad de Janque reconce la labor que hizo Santa Rosa de Lima con la humanidad, por eso lo toman como la patrona del pueblo por su trabajo y coperacion con Dios para con la humanidad, mostrando humildad, y respeto hacia las personas. Lo cual representa muy bien con todo los janqueños y de su procedencia.
+La municiplidad de Janque reconoce la labor que hizo Santa Rosa de Lima, por eso lo toman como la patrona del pueblo por su trabajo y cooperación con Dios para con la humanidad, mostrando humildad, y respeto hacia las personas. Lo cual representa muy bien con todo los janqueños y de su procedencia.
 
-A temprana edad - emulando a la terciaria dominica santa Catalina de Siena - empezó a ayunar tres veces por semana y a realizar severas penitencias en secreto. Su compañero de juegos fue su hermano Hernando, quien siempre la apoyó y ayudó. A los doce años se mudó con su familia hacia Quives, un pueblo a 60 kilómetros de Lima, ubicado en el valle del río Chillón. Es aquí donde recibió la confirmación de manos del futuro santo católico Toribio de Mogrovejo, su padrino fue el sacerdote del pueblo Francisco González. Es en Quives donde, al parecer, empezó con sus mortificaciones contrayendo un reuma muy fuerte, con consecuencias dolorosas para su recuperación, que ella ocultaba a su madre.
+Cada 30 de Agosto de cada año se celebra una fiesta en memoria a ella, y se realiza misas en la iglesia del pueblo con el fin de mostrarle respeto y la fé que tiene el pueblo hacia Dios. Su nombre es muy respetado en esta parte del mundo, y su imagen es clara cuando se refiere a organizaciones, como por ejemplo la banda de músicos "Santa Rosa de Lima" y clubes deportivos; aunque este ultimo ya ha dejado de existir estos ultimos años debido al envejecimiento de la población y del nacimiento de los "milenials".
+
+## La fiesta patronal
+
+La fiesta patronal se reliza en 4 dias, los cuales estan dividos en: _vispera, dia central, y la bajada de arcos_. En la víspera se celebra la subida de arcos a cargo de sus devotos (personas que bajaron el arco el año anterior) y la cena a cargo de los mayordomos. Cada manifestación esta a cargo de la banda de músicos (típico de la zona) que armonisan el lugar con sus melodias, provocando que los invitados terminen bailando.
+
+Estos actos hacen que el lugar se sienta muy ameno y que se respire algría en sus alrededores
